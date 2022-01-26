@@ -39,7 +39,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""AD"",
+                    ""name"": ""LeftArrow|RightArrow"",
                     ""id"": ""d0266e14-2649-4c14-9266-372459d9c406"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -52,7 +52,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""3cc5eb29-46af-4611-a5d5-e4f21d2f7995"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -63,7 +63,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""8e51628b-3842-439c-ade3-8ff713e802f4"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
