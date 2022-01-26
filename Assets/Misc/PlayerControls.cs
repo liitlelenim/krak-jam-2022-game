@@ -35,6 +35,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf15370e-a638-4410-9a2b-3de3f13d99a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -70,6 +79,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""86892d61-32c7-4221-a9ce-4eadb5a8ab82"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2b7ccf0-de88-4fc6-a41b-d08457f47dca"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -79,6 +110,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Horizontal = m_Movement.FindAction("Horizontal", throwIfNotFound: true);
+        m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -139,11 +171,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movement;
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_Horizontal;
+    private readonly InputAction m_Movement_Jump;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
         public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Horizontal => m_Wrapper.m_Movement_Horizontal;
+        public InputAction @Jump => m_Wrapper.m_Movement_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -156,6 +190,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Horizontal.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnHorizontal;
                 @Horizontal.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnHorizontal;
                 @Horizontal.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnHorizontal;
+                @Jump.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -163,6 +200,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Horizontal.started += instance.OnHorizontal;
                 @Horizontal.performed += instance.OnHorizontal;
                 @Horizontal.canceled += instance.OnHorizontal;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
             }
         }
     }
@@ -170,5 +210,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IMovementActions
     {
         void OnHorizontal(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
