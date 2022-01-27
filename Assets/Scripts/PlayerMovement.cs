@@ -19,12 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerControls _controls;
     private Rigidbody2D _rigidbody2D;
-
+    private HackingMode _hackingMode;
 
     private void Awake()
     {
         _controls = new PlayerControls();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _hackingMode = GetComponent<HackingMode>();
     }
 
     private void Start()
@@ -44,12 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += Vector3.right * (_movementAxis * speed * Time.deltaTime);
+        if (!_hackingMode.playerIsHacking)
+            transform.position += Vector3.right * (_movementAxis * speed * Time.deltaTime);
     }
 
     private void Jump()
     {
-        if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance)
+        if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance && !_hackingMode.playerIsHacking)
         {
             _lastJumpTimer = 0f;
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpStrength);

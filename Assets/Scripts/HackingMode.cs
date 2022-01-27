@@ -54,7 +54,7 @@ public class HackingMode : MonoBehaviour
     #region Operations on bits
     void SwitchBetweenBits()
     {
-        bitIndex = Mathf.Clamp(bitIndex, 0, bitsTranform.Length);
+        bitIndex = Mathf.Clamp(bitIndex, 0, bitsTranform.Length - 1);
         Vector2 pointerPos = new Vector2(bitsTranform[bitIndex].position.x, bitsTranform[bitIndex].position.y - 0.75f);
         pointer.position = pointerPos;
     }
