@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="refactor scenes, resolve conflict, add killing player mechanics">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DEVELOP_SCENE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DEVELOP_SCENE.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePalletes/KillingPallete.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePalletes/KillingPallete.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="expand KillingPallete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/DEVELOP_SCENE.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/DEVELOP_SCENE.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Sprites/TilePalletes/KillingPallete.prefab" root0="SKIP_HIGHLIGHTING" />
@@ -86,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643225254912</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="expand KillingPallete">
+      <created>1643298318838</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643298318839</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +114,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="create basic horizontal movement" />
     <MESSAGE value="add basic enemy ai and prefab" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic enemy ai and prefab" />
+    <MESSAGE value="expand KillingPallete" />
+    <option name="LAST_COMMIT_MESSAGE" value="expand KillingPallete" />
   </component>
 </project>
