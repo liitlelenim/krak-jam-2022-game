@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
@@ -20,12 +21,20 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls _controls;
     private Rigidbody2D _rigidbody2D;
     private HackingMode _hackingMode;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+
+    private const string PlayerWalkingBool = "isWalking";
+    private const string PlayerJumpingBool = "isJumping";
+
 
     private void Awake()
     {
         _controls = new PlayerControls();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _hackingMode = GetComponent<HackingMode>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -39,6 +48,16 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _lastLedgeTimer = IsGrounded() ? 0 : _lastLedgeTimer + Time.deltaTime;
+        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0);
+        _animator.SetBool(PlayerWalkingBool, _movementAxis != 0);
+        if (_movementAxis > 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        if(_movementAxis < 0)
+        {
+            _spriteRenderer.flipX = false;
+        }
         _lastJumpTimer += Time.deltaTime;
     }
 
