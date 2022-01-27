@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Rocket
   - Bit
+  - YellowPos1
+  - YellowPos2
+  - YellowPlatform
+  - BrownPos1
+  - BrownPos2
+  - BrownPlatform
   layers:
   - Default
   - TransparentFX
