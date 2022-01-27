@@ -12,15 +12,19 @@ public class HackingMode : MonoBehaviour
 
     PlayerControls playerControls;
     GameObject bitsMenu;
-    Transform pointer;
+    GameObject pointer;
+    GameObject leftArrow;
+    GameObject rightArrow; 
+    GameObject canvas;
     void Awake()
     {
         playerControls = new PlayerControls();
 
         bitsMenu = GameObject.Find("BitsMenu");
-        bitsMenu.SetActive(false);
-
-        pointer = bitsMenu.transform.GetChild(0).transform;
+        pointer = bitsMenu.transform.GetChild(0).gameObject;
+        leftArrow = bitsMenu.transform.GetChild(1).gameObject;
+        rightArrow = bitsMenu.transform.GetChild(2).gameObject;
+        canvas = bitsMenu.transform.GetChild(3).gameObject;
 
         #region Input Actions
         //Hacking start
@@ -38,17 +42,30 @@ public class HackingMode : MonoBehaviour
     #region Variables
     public bool playerIsHacking;
     int bitIndex;
-
+    public float timeSpeed;
     #endregion Variables
     void Update()
     {
         if (playerIsHacking)
         {
-            bitsMenu.SetActive(true);
+            foreach (Transform bit in bitsTranform)
+                bit.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            pointer.SetActive(true);
+            leftArrow.SetActive(true);
+            rightArrow.SetActive(true);
+            canvas.SetActive(true);
             SwitchBetweenBits();
         }
         if (!playerIsHacking)
-            bitsMenu.SetActive(false);
+        {
+            foreach (Transform bit in bitsTranform)
+                bit.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            pointer.SetActive(false);
+            leftArrow.SetActive(false);
+            rightArrow.SetActive(false);
+            canvas.SetActive(false);
+        }
+        Debug.Log(timeSpeed);
     }
 
     #region Operations on bits
@@ -56,14 +73,14 @@ public class HackingMode : MonoBehaviour
     {
         bitIndex = Mathf.Clamp(bitIndex, 0, bitsTranform.Length - 1);
         Vector2 pointerPos = new Vector2(bitsTranform[bitIndex].position.x, bitsTranform[bitIndex].position.y - 0.75f);
-        pointer.position = pointerPos;
+        pointer.transform.position = pointerPos;
     }
 
     void ChangeBitValue()
     {
-        Sprite sprite = bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
         if (playerIsHacking)
         {
+            Sprite sprite = bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
             if (sprite == bitZeroSprite)
             {
                 bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitOneSprite;

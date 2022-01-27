@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class RocketMovement : MonoBehaviour
 {
-    public float rocketSpeed;
-    Vector3 direction;
-    Rigidbody2D rb;
+    #region Assignment
+    EnviormentController rocketDirectionChange;
+    HackingMode hackingMode;
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        direction = transform.parent.GetComponent<RocketLauncher>().direction;
+        rocketDirectionChange = GameObject.Find("RocketControl").GetComponent<EnviormentController>();
+        hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
+        firstDirection = transform.parent.GetComponent<RocketLauncher>().direction;
     }
+    #endregion Assignment
+
+    #region Variables
+    public float rocketSpeed;
+    float localTimeSpeed;
+    [HideInInspector] public Vector3 firstDirection;
+    [HideInInspector] public Vector3 currentDirection;
+
+    #endregion Variables
     void Update()
     {
-        transform.position += direction * rocketSpeed * Time.deltaTime;
+        if (!rocketDirectionChange.bitEquelsOne)
+            currentDirection = firstDirection;
+            transform.position += currentDirection * rocketSpeed * hackingMode.timeSpeed * Time.deltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
