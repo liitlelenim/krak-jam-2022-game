@@ -81,6 +81,94 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Hacking",
+            "id": "0c2a02d8-529e-4679-8be1-c69e5943d2c6",
+            "actions": [
+                {
+                    "name": "Activate",
+                    "type": "Button",
+                    "id": "35be4ba8-6849-4484-a08c-8c85f3f32696",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousBit",
+                    "type": "Button",
+                    "id": "aab13dcb-ef72-45e9-bbbe-6cda98b91b3f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextBit",
+                    "type": "Button",
+                    "id": "3a0dd916-8e8a-4fd7-a826-7beb12e172a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeBit",
+                    "type": "Button",
+                    "id": "711f4679-4c02-4ca9-a074-7a3c2cbd9c43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5b1c0b2d-b2a4-47bd-bd48-800778465cb0",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21350b04-a777-4e92-98ce-d999da721fb7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f924f40a-2cbd-4b1a-aba9-5d21a7962400",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af675634-4c3e-4c7e-bed8-b50fde4ffdb9",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
