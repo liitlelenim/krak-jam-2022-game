@@ -65,9 +65,15 @@ public class HackingMode : MonoBehaviour
         if (playerIsHacking)
         {
             if (sprite == bitZeroSprite)
+            {
                 bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitOneSprite;
+                bitsTranform[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = true;
+            }
             else if (sprite == bitOneSprite)
+            {
                 bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitZeroSprite;
+                bitsTranform[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = false;
+            }
         }
     }
 

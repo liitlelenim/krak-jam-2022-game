@@ -4,44 +4,67 @@ using UnityEngine;
 
 public class EnviormentController : MonoBehaviour
 {
+    #region Assignment
+    Transform bluePlatform;
+    EnviormentController secondBit;
+    void Awake()
+    {
+        bluePlatform = GameObject.Find("BluePlatform").transform;
+        secondBit = GameObject.Find("BlueRotationSecond").GetComponent<EnviormentController>();
+    }
+    #endregion Assignment
+
     #region Variables
-    [Header("Bit Controls")]
+    [Header("Bits")]
     [SerializeField] bool platformsRotation;
     [SerializeField] bool platformsPosition;
-    [SerializeField] bool enemies;
+    [SerializeField] bool enemiesC;
     [SerializeField] bool bullets;
     [SerializeField] bool time;
-    [SerializeField] bool gravity;
+    [SerializeField] bool gravityControl;
+    [Space]
+    public bool bitEquelsOne;
 
     #endregion Variables
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        EnviormentControl();
+    }
+    void UpdateAssignment()
+    {
         
     }
-    void PlatformControl()
+void EnviormentControl()
     {
-
-    }
-    void EnemiesControl()
-    {
-
-    }
-    void BulletsControl()
-    {
-
-    }
-    void TimeControl()
-    {
-
-    }
-    void GravityControl()
-    {
-
+        #region PlatformRotation
+        if (platformsRotation)
+        {
+            if (bitEquelsOne && secondBit.bitEquelsOne)
+            {
+                bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 180f), 5f);
+            }
+            else if (bitEquelsOne && !secondBit.bitEquelsOne)
+            {
+                bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, -90f), 5f);
+            }
+            else if (!bitEquelsOne && secondBit.bitEquelsOne)
+            {
+                bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 90f), 5f);
+            }
+            else
+            {
+                bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 0f), 5f);
+            }
+        }
+        #endregion PlatformRotation
+        #region Gravity
+        if (gravityControl)
+        {
+            if (bitEquelsOne)
+                Physics2D.gravity = new Vector2(0, 9.81f);
+            else
+                Physics2D.gravity = new Vector2(0, -9.81f);
+        }
+        #endregion Gravity
     }
 }
