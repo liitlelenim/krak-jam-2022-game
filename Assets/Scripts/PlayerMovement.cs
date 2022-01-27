@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance)
         {
+            _lastJumpTimer = 0f;
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpStrength);
         }
     }
