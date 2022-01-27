@@ -103,6 +103,94 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Hacking"",
+            ""id"": ""0c2a02d8-529e-4679-8be1-c69e5943d2c6"",
+            ""actions"": [
+                {
+                    ""name"": ""Activate"",
+                    ""type"": ""Button"",
+                    ""id"": ""35be4ba8-6849-4484-a08c-8c85f3f32696"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PreviousBit"",
+                    ""type"": ""Button"",
+                    ""id"": ""aab13dcb-ef72-45e9-bbbe-6cda98b91b3f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextBit"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a0dd916-8e8a-4fd7-a826-7beb12e172a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeBit"",
+                    ""type"": ""Button"",
+                    ""id"": ""711f4679-4c02-4ca9-a074-7a3c2cbd9c43"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5b1c0b2d-b2a4-47bd-bd48-800778465cb0"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21350b04-a777-4e92-98ce-d999da721fb7"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PreviousBit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f924f40a-2cbd-4b1a-aba9-5d21a7962400"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextBit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af675634-4c3e-4c7e-bed8-b50fde4ffdb9"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -111,6 +199,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Horizontal = m_Movement.FindAction("Horizontal", throwIfNotFound: true);
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
+        // Hacking
+        m_Hacking = asset.FindActionMap("Hacking", throwIfNotFound: true);
+        m_Hacking_Activate = m_Hacking.FindAction("Activate", throwIfNotFound: true);
+        m_Hacking_PreviousBit = m_Hacking.FindAction("PreviousBit", throwIfNotFound: true);
+        m_Hacking_NextBit = m_Hacking.FindAction("NextBit", throwIfNotFound: true);
+        m_Hacking_ChangeBit = m_Hacking.FindAction("ChangeBit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,9 +301,73 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public MovementActions @Movement => new MovementActions(this);
+
+    // Hacking
+    private readonly InputActionMap m_Hacking;
+    private IHackingActions m_HackingActionsCallbackInterface;
+    private readonly InputAction m_Hacking_Activate;
+    private readonly InputAction m_Hacking_PreviousBit;
+    private readonly InputAction m_Hacking_NextBit;
+    private readonly InputAction m_Hacking_ChangeBit;
+    public struct HackingActions
+    {
+        private @PlayerControls m_Wrapper;
+        public HackingActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Activate => m_Wrapper.m_Hacking_Activate;
+        public InputAction @PreviousBit => m_Wrapper.m_Hacking_PreviousBit;
+        public InputAction @NextBit => m_Wrapper.m_Hacking_NextBit;
+        public InputAction @ChangeBit => m_Wrapper.m_Hacking_ChangeBit;
+        public InputActionMap Get() { return m_Wrapper.m_Hacking; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(HackingActions set) { return set.Get(); }
+        public void SetCallbacks(IHackingActions instance)
+        {
+            if (m_Wrapper.m_HackingActionsCallbackInterface != null)
+            {
+                @Activate.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnActivate;
+                @Activate.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnActivate;
+                @Activate.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnActivate;
+                @PreviousBit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnPreviousBit;
+                @PreviousBit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnPreviousBit;
+                @PreviousBit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnPreviousBit;
+                @NextBit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
+                @NextBit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
+                @NextBit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
+                @ChangeBit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnChangeBit;
+                @ChangeBit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnChangeBit;
+                @ChangeBit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnChangeBit;
+            }
+            m_Wrapper.m_HackingActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Activate.started += instance.OnActivate;
+                @Activate.performed += instance.OnActivate;
+                @Activate.canceled += instance.OnActivate;
+                @PreviousBit.started += instance.OnPreviousBit;
+                @PreviousBit.performed += instance.OnPreviousBit;
+                @PreviousBit.canceled += instance.OnPreviousBit;
+                @NextBit.started += instance.OnNextBit;
+                @NextBit.performed += instance.OnNextBit;
+                @NextBit.canceled += instance.OnNextBit;
+                @ChangeBit.started += instance.OnChangeBit;
+                @ChangeBit.performed += instance.OnChangeBit;
+                @ChangeBit.canceled += instance.OnChangeBit;
+            }
+        }
+    }
+    public HackingActions @Hacking => new HackingActions(this);
     public interface IMovementActions
     {
         void OnHorizontal(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+    }
+    public interface IHackingActions
+    {
+        void OnActivate(InputAction.CallbackContext context);
+        void OnPreviousBit(InputAction.CallbackContext context);
+        void OnNextBit(InputAction.CallbackContext context);
+        void OnChangeBit(InputAction.CallbackContext context);
     }
 }
