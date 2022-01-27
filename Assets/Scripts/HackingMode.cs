@@ -5,7 +5,6 @@ using UnityEngine;
 public class HackingMode : MonoBehaviour
 {
     #region Assignment
-    [SerializeField] Transform[] bitsTranform;
     [Header("Sprites")]
     [SerializeField] Sprite bitZeroSprite;
     [SerializeField] Sprite bitOneSprite;
@@ -16,10 +15,11 @@ public class HackingMode : MonoBehaviour
     GameObject leftArrow;
     GameObject rightArrow; 
     GameObject canvas;
+    GameObject[] bitsArray;
     void Awake()
     {
         playerControls = new PlayerControls();
-
+        bitsArray = GameObject.FindGameObjectsWithTag("Bit");
         bitsMenu = GameObject.Find("BitsMenu");
         pointer = bitsMenu.transform.GetChild(0).gameObject;
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
@@ -40,15 +40,15 @@ public class HackingMode : MonoBehaviour
     #endregion Assignment
 
     #region Variables
-    public bool playerIsHacking;
+    [HideInInspector] public bool playerIsHacking;
+    [HideInInspector] public float timeSpeed;
     int bitIndex;
-    public float timeSpeed;
     #endregion Variables
     void Update()
     {
         if (playerIsHacking)
         {
-            foreach (Transform bit in bitsTranform)
+            foreach (GameObject bit in bitsArray)
                 bit.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             pointer.SetActive(true);
             leftArrow.SetActive(true);
@@ -58,21 +58,20 @@ public class HackingMode : MonoBehaviour
         }
         if (!playerIsHacking)
         {
-            foreach (Transform bit in bitsTranform)
+            foreach (GameObject bit in bitsArray)
                 bit.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             pointer.SetActive(false);
             leftArrow.SetActive(false);
             rightArrow.SetActive(false);
             canvas.SetActive(false);
         }
-        Debug.Log(timeSpeed);
     }
 
     #region Operations on bits
     void SwitchBetweenBits()
     {
-        bitIndex = Mathf.Clamp(bitIndex, 0, bitsTranform.Length - 1);
-        Vector2 pointerPos = new Vector2(bitsTranform[bitIndex].position.x, bitsTranform[bitIndex].position.y - 0.75f);
+        bitIndex = Mathf.Clamp(bitIndex, 0, bitsArray.Length - 1);
+        Vector2 pointerPos = new Vector2(bitsArray[bitIndex].transform.position.x, bitsArray[bitIndex].transform.position.y - 0.75f);
         pointer.transform.position = pointerPos;
     }
 
@@ -80,16 +79,16 @@ public class HackingMode : MonoBehaviour
     {
         if (playerIsHacking)
         {
-            Sprite sprite = bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
+            Sprite sprite = bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
             if (sprite == bitZeroSprite)
             {
-                bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitOneSprite;
-                bitsTranform[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = true;
+                bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitOneSprite;
+                bitsArray[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = true;
             }
             else if (sprite == bitOneSprite)
             {
-                bitsTranform[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitZeroSprite;
-                bitsTranform[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = false;
+                bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitZeroSprite;
+                bitsArray[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = false;
             }
         }
     }

@@ -17,18 +17,20 @@ public class EnviormentController : MonoBehaviour
     #endregion Assignment
 
     #region Variables
-    [Header("Bits")]
+    [Header("Platforms")][Header("Bits")]
     [SerializeField] bool platformsRotation;
     [SerializeField] bool platformsPosition;
+    [Header("Enemies")]
     [SerializeField] bool enemiesC;
+    [Header("Weapons")]
     [SerializeField] bool rocketDiractionChangeActive;
+    [Header("Time")]
     [SerializeField] bool timeFreeze; 
     [SerializeField] bool slowMotion;
+    [Header("Gravity")]
     [SerializeField] bool gravityControl;
     [Space]
     public bool bitEquelsOne;
-    [SerializeField] private GameObject[] rocketsInScene;
-    Vector3 nextDirection;
     #endregion Variables
     void Update()
     {
@@ -55,9 +57,10 @@ void EnviormentControl()
         #region RocketDirection
         if (rocketDiractionChangeActive && bitEquelsOne)
         {
+            Vector3 nextDirection;
+            GameObject[] rocketsInScene = GameObject.FindGameObjectsWithTag("Rocket");
             secondBit = GameObject.Find("DirectionBit").GetComponent<EnviormentController>();
             thirdBit = GameObject.Find("DirectionSecondBit").GetComponent<EnviormentController>();
-            rocketsInScene = GameObject.FindGameObjectsWithTag("Rocket");
             //up
             if (thirdBit.bitEquelsOne && secondBit.bitEquelsOne)
                 nextDirection = new Vector3(0f, 1f, 0f);
@@ -75,7 +78,7 @@ void EnviormentControl()
                 rocketsInScene[i].GetComponent<RocketMovement>().currentDirection = nextDirection;
         }
         #endregion RocketDirection
-        #region PlatformRotation
+        #region Platform
         if (platformsRotation)
         {
             secondBit = GameObject.Find("BlueRotationSecond").GetComponent<EnviormentController>();
@@ -96,7 +99,12 @@ void EnviormentControl()
                 bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 0f), 5f);
             }
         }
-        #endregion PlatformRotation
+
+        if (platformsPosition)
+        {
+            
+        }
+        #endregion Platform
         #region Gravity
         if (gravityControl)
         {

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpStrength: 14
+  jumpStrength: 12
   maxLedgeTolerance: 0.25
   groundingCheckBox:
   - {x: -0.275, y: -0.5}
@@ -120,25 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ed564b9131a83488dafeb8a36dd22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bitsTranform:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  bitsArray: []
   bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
   bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
   playerIsHacking: 0
+  timeSpeed: 0
 --- !u!50 &7892105819510339999
 Rigidbody2D:
   serializedVersion: 4
@@ -151,10 +137,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 22
+  m_Mass: 34
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 2.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

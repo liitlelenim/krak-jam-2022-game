@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rocket
+  - Bit
   layers:
   - Default
   - TransparentFX
