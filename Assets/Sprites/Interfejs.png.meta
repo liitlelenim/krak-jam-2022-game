@@ -7,10 +7,10 @@ TextureImporter:
     second: Interfejs_0
   - first:
       213: -4736843960431352889
-    second: Interfejs_1
+    second: zero
   - first:
       213: -5355113790991961060
-    second: Interfejs_2
+    second: one
   - first:
       213: -1158452128376056014
     second: Interfejs_3
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interfejs_1
+      name: zero
       rect:
         serializedVersion: 2
         x: 4
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interfejs_2
+      name: one
       rect:
         serializedVersion: 2
         x: 8

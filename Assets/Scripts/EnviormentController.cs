@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class EnviormentController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    #region Variables
+    [Header("Bit Controls")]
+    [SerializeField] bool platformsRotation;
+    [SerializeField] bool platformsPosition;
+    [SerializeField] bool enemies;
+    [SerializeField] bool bullets;
+    [SerializeField] bool time;
+    [SerializeField] bool gravity;
+
+    #endregion Variables
     void Start()
     {
         
@@ -14,5 +23,25 @@ public class EnviormentController : MonoBehaviour
     void Update()
     {
         
+    }
+    void PlatformControl()
+    {
+
+    }
+    void EnemiesControl()
+    {
+
+    }
+    void BulletsControl()
+    {
+
+    }
+    void TimeControl()
+    {
+
+    }
+    void GravityControl()
+    {
+
     }
 }
