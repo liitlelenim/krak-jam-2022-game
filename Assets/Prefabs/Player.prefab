@@ -104,8 +104,8 @@ MonoBehaviour:
   jumpStrength: 12
   maxLedgeTolerance: 0.25
   groundingCheckBox:
-  - {x: -0.275, y: -0.5}
-  - {x: 0.275, y: -0.7}
+  - {x: -0.4, y: -1}
+  - {x: 0.4, y: -1.25}
   jumpCooldown: 0.35
   jumpCutOffFactor: 0.7
 --- !u!114 &7892105819510340000
@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ed564b9131a83488dafeb8a36dd22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bitsArray: []
   bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
   bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
   playerIsHacking: 0
@@ -159,18 +158,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020029545, y: -0.004745662}
+  m_Offset: {x: -0.011720955, y: 0.005436659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 1.0625}
+    oldSize: {x: 1.5, y: 2.125}
     newSize: {x: 1.375, y: 2.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7153497, y: 1.0837485}
+  m_Size: {x: 1.0116867, y: 2.1217303}
   m_EdgeRadius: 0
 --- !u!114 &7892105819510340001
 MonoBehaviour:
