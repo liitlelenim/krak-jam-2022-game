@@ -55,6 +55,7 @@ public class HackingMode : MonoBehaviour
             rightArrow.SetActive(true);
             canvas.SetActive(true);
             SwitchBetweenBits();
+            Time.timeScale = 0;
         }
         if (!playerIsHacking)
         {
@@ -64,6 +65,7 @@ public class HackingMode : MonoBehaviour
             leftArrow.SetActive(false);
             rightArrow.SetActive(false);
             canvas.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 
