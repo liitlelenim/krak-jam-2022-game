@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8058156112113756511}
   - component: {fileID: 5339587231175293286}
   - component: {fileID: 3197943879752810945}
-  - component: {fileID: 2393794861359183917}
   - component: {fileID: 4894643363979099727}
+  - component: {fileID: 1494993266919431399}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Rocket
@@ -101,22 +101,6 @@ MonoBehaviour:
   rocketSpeed: 10
   firstDirection: {x: 0, y: 0, z: 0}
   currentDirection: {x: 0, y: 0, z: 0}
---- !u!58 &2393794861359183917
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3317861377509946755}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!50 &4894643363979099727
 Rigidbody2D:
   serializedVersion: 4
@@ -138,6 +122,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &1494993266919431399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317861377509946755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.046001136, y: -0.004423186}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.84430385, y: 0.6992235}
+  m_EdgeRadius: 0
 --- !u!1 &9151151018488024301
 GameObject:
   m_ObjectHideFlags: 0
