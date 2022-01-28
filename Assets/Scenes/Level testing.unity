@@ -6953,11 +6953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892105819510339997, guid: 2536f301862852f45a899a967baec617, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7892105819510339997, guid: 2536f301862852f45a899a967baec617, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: -7.25
       objectReference: {fileID: 0}
     - target: {fileID: 7892105819510339997, guid: 2536f301862852f45a899a967baec617, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7007,6 +7007,14 @@ PrefabInstance:
       propertyPath: shadedTerrain
       value: 
       objectReference: {fileID: 496420807}
+    - target: {fileID: 7892105819510340002, guid: 2536f301862852f45a899a967baec617, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9744258
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892105819510340002, guid: 2536f301862852f45a899a967baec617, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.007746935
+      objectReference: {fileID: 0}
     - target: {fileID: 7892105819510340003, guid: 2536f301862852f45a899a967baec617, type: 3}
       propertyPath: speed
       value: 12.5
