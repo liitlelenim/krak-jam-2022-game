@@ -30,7 +30,6 @@ public class HackingMode : MonoBehaviour
         pointer = bitsMenu.transform.GetChild(0).gameObject;
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
-        shadedTerrain = bitsMenu.transform.GetChild(3).gameObject;
 
         #region Input Actions
 
