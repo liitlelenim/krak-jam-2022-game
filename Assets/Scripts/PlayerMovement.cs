@@ -48,16 +48,18 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _lastLedgeTimer = IsGrounded() ? 0 : _lastLedgeTimer + Time.deltaTime;
-        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0);
-        _animator.SetBool(PlayerWalkingBool, _movementAxis != 0);
-        if (_movementAxis > 0)
+        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0 && !_hackingMode.playerIsHacking);
+        _animator.SetBool(PlayerWalkingBool, _movementAxis != 0 && !_hackingMode.playerIsHacking);
+        if (_movementAxis > 0 && !_hackingMode.playerIsHacking)
         {
             _spriteRenderer.flipX = true;
         }
-        if(_movementAxis < 0)
+
+        if (_movementAxis < 0 && !_hackingMode.playerIsHacking)
         {
             _spriteRenderer.flipX = false;
         }
+
         _lastJumpTimer += Time.deltaTime;
     }
 
