@@ -14,7 +14,7 @@ public class HackingMode : MonoBehaviour
     GameObject pointer;
     GameObject leftArrow;
     GameObject rightArrow;
-    GameObject canvas;
+    GameObject shadedTerrain;
     GameObject[] bitsArray;
 
     private bool _holdingNextBitButton = false;
@@ -30,7 +30,7 @@ public class HackingMode : MonoBehaviour
         pointer = bitsMenu.transform.GetChild(0).gameObject;
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
-        canvas = bitsMenu.transform.GetChild(3).gameObject;
+        shadedTerrain = bitsMenu.transform.GetChild(3).gameObject;
 
         #region Input Actions
 
@@ -90,7 +90,7 @@ public class HackingMode : MonoBehaviour
             pointer.SetActive(true);
             leftArrow.SetActive(true);
             rightArrow.SetActive(true);
-            canvas.SetActive(true);
+            shadedTerrain.SetActive(true);
             SwitchBetweenBits();
             Time.timeScale = 0;
             if (_holdingNextBitButton || _holdingPreviousBitButton)
@@ -122,7 +122,7 @@ public class HackingMode : MonoBehaviour
             pointer.SetActive(false);
             leftArrow.SetActive(false);
             rightArrow.SetActive(false);
-            canvas.SetActive(false);
+            shadedTerrain.SetActive(false);
             Time.timeScale = 1;
         }
     }
