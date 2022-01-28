@@ -1500,6 +1500,48 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 255778968}
     m_Modifications:
+    - target: {fileID: 1859693188, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693188, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693188, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693188, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693189, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_Text
+      value: 'DIRECTION
+
+
+        00 - DOWN   11 - UP
+
+        10 - LEFT     01 -
+        RIGHT'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693189, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693189, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693189, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859693189, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6608030472074421402, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
       propertyPath: m_Name
       value: ---UI---
