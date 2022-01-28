@@ -58,8 +58,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _lastLedgeTimer = IsGrounded() ? 0 : _lastLedgeTimer + Time.deltaTime;
-        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0 && !_hackingMode.playerIsHacking);
-        _animator.SetBool(PlayerWalkingBool, _movementAxis != 0 && !_hackingMode.playerIsHacking);
+        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0 );
+        _animator.SetBool(PlayerWalkingBool, _movementAxis != 0);
 
         if (_movementAxis > 0 && !_hackingMode.playerIsHacking)
         {
