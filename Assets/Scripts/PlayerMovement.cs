@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Animations;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
@@ -11,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float maxLedgeTolerance = 0.25f;
     private float _lastLedgeTimer = 0f;
-    [SerializeField] private Vector2[] groundingCheckBox = new Vector2[2];
+    [SerializeField] private Vector2[] groundingCheckBox = new Vector2[4];
 
     [SerializeField] private float jumpCooldown = 0.2f;
     private float _lastJumpTimer = 0f;
@@ -27,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private const string PlayerWalkingBool = "isWalking";
     private const string PlayerJumpingBool = "isJumping";
 
+    private bool _gravityReversed = false;
 
     private void Awake()
     {
@@ -47,9 +47,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        _gravityReversed = Physics2D.gravity.y > 0;
+        if (!_hackingMode.playerIsHacking && _gravityReversed)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 180));
+        }
+        else if (!_hackingMode.playerIsHacking && !_gravityReversed)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+
         _lastLedgeTimer = IsGrounded() ? 0 : _lastLedgeTimer + Time.deltaTime;
         _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0 && !_hackingMode.playerIsHacking);
         _animator.SetBool(PlayerWalkingBool, _movementAxis != 0 && !_hackingMode.playerIsHacking);
+
         if (_movementAxis > 0 && !_hackingMode.playerIsHacking)
         {
             _spriteRenderer.flipX = true;
@@ -75,13 +86,13 @@ public class PlayerMovement : MonoBehaviour
         if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance && !_hackingMode.playerIsHacking)
         {
             _lastJumpTimer = 0f;
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpStrength);
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _gravityReversed ? -jumpStrength : jumpStrength);
         }
     }
 
     private void CutOffJump()
     {
-        if (_rigidbody2D.velocity.y > 0)
+        if (_rigidbody2D.velocity.y != 0)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y * jumpCutOffFactor);
         }
@@ -90,8 +101,14 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         Collider2D[] overlapped =
-            Physics2D.OverlapAreaAll((Vector2) transform.position + groundingCheckBox[0],
-                (Vector2) transform.position + groundingCheckBox[1]);
+            Physics2D.OverlapAreaAll((Vector2) transform.position + (_gravityReversed
+                    ? -groundingCheckBox[0]
+                    : groundingCheckBox[0]),
+                (Vector2) transform.position + (_gravityReversed
+                    ? -groundingCheckBox[1]
+                    : groundingCheckBox[1]));
+        Debug.DrawLine((Vector2) transform.position + groundingCheckBox[0],
+            (Vector2) transform.position + groundingCheckBox[1]);
 
         foreach (Collider2D collider in overlapped)
         {
