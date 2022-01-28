@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -17,6 +18,9 @@ public class HackingMode : MonoBehaviour
     [SerializeField] GameObject[] bitsArray;
     Text text;
 
+    private PlayerMovement _playerMovement;
+
+    private bool _openingFrame = false;
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -27,14 +31,12 @@ public class HackingMode : MonoBehaviour
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
         text = GameObject.Find("Instruction").GetComponent<Text>();
         text.text = null;
+        _playerMovement = GetComponent<PlayerMovement>();
+
         #region Input Actions
 
         //Hacking start
-        playerControls.Hacking.Activate.performed += ctx =>
-        {
-            playerIsHacking = !playerIsHacking;
-            HandleDescriptionChange();
-        };
+    
         //Switch bit
         playerControls.Hacking.PreviousBit.performed += _ =>
         {
@@ -53,7 +55,23 @@ public class HackingMode : MonoBehaviour
         playerControls.Hacking.NextBit.canceled += _ => _holdingNextBitButton = false;
         //ChangeBitValue
         playerControls.Hacking.ChangeBit.performed += ctx => ChangeBitValue();
-
+        
+        playerControls.Hacking.Activate.performed += ctx =>
+        {
+            if (!playerIsHacking)
+            {
+                playerIsHacking = true;
+                _openingFrame = true;
+                _playerMovement.enabled = false;
+                HandleDescriptionChange();
+            }
+        };
+        playerControls.Hacking.Quit.performed += _ =>
+        {
+            playerIsHacking = false;
+            _playerMovement.enabled = true;
+            HandleDescriptionChange();
+        };
         #endregion Inpur Actions
     }
 
@@ -85,7 +103,7 @@ public class HackingMode : MonoBehaviour
 
     private void HandleBitIndexChange(int change)
     {
-        if (playerIsHacking)
+        if (playerIsHacking && !_openingFrame)
         {
             bitIndex += change;
             if (bitIndex < 0)
@@ -96,6 +114,7 @@ public class HackingMode : MonoBehaviour
             {
                 bitIndex = 0;
             }
+
             HandleDescriptionChange();
         }
     }
@@ -172,20 +191,28 @@ public class HackingMode : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        _openingFrame = false;
+    }
+
     #region Operations on bits
 
     void SwitchBetweenBits()
     {
-        bitIndex = Mathf.Clamp(bitIndex, 0, bitsArray.Length - 1);
+        if (playerIsHacking)
+        {
+            bitIndex = Mathf.Clamp(bitIndex, 0, bitsArray.Length - 1);
 
-        Vector2 pointerPos = new Vector2(bitsArray[bitIndex].transform.position.x,
-            bitsArray[bitIndex].transform.position.y - 0.75f);
-        pointer.transform.position = pointerPos;
+            Vector2 pointerPos = new Vector2(bitsArray[bitIndex].transform.position.x,
+                bitsArray[bitIndex].transform.position.y - 0.75f);
+            pointer.transform.position = pointerPos;
+        }
     }
 
     void ChangeBitValue()
     {
-        if (playerIsHacking)
+        if (!_openingFrame&&playerIsHacking)
         {
             Sprite sprite = bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
             if (sprite == bitZeroSprite)

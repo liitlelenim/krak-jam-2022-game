@@ -48,11 +48,11 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _gravityReversed = Physics2D.gravity.y > 0;
-        if (!_hackingMode.playerIsHacking && _gravityReversed)
+        if (_gravityReversed)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 180));
         }
-        else if (!_hackingMode.playerIsHacking && !_gravityReversed)
+        else 
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
@@ -77,13 +77,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_hackingMode.playerIsHacking)
             transform.position += Vector3.right * (_movementAxis * speed * Time.deltaTime);
     }
 
     private void Jump()
     {
-        if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance && !_hackingMode.playerIsHacking)
+        if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance)
         {
             _lastJumpTimer = 0f;
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _gravityReversed ? -jumpStrength : jumpStrength);

@@ -87,6 +87,15 @@
             "id": "0c2a02d8-529e-4679-8be1-c69e5943d2c6",
             "actions": [
                 {
+                    "name": "ChangeBit",
+                    "type": "Button",
+                    "id": "711f4679-4c02-4ca9-a074-7a3c2cbd9c43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Activate",
                     "type": "Button",
                     "id": "35be4ba8-6849-4484-a08c-8c85f3f32696",
@@ -114,9 +123,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChangeBit",
+                    "name": "Quit",
                     "type": "Button",
-                    "id": "711f4679-4c02-4ca9-a074-7a3c2cbd9c43",
+                    "id": "f1bb800e-cb49-4afe-adcf-542a9b8e19d9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -159,8 +168,19 @@
                 },
                 {
                     "name": "",
-                    "id": "af675634-4c3e-4c7e-bed8-b50fde4ffdb9",
+                    "id": "70a22575-557d-4998-aaf8-a2e51072ecde",
                     "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af675634-4c3e-4c7e-bed8-b50fde4ffdb9",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
