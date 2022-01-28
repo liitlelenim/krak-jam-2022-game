@@ -14,7 +14,7 @@ public class HackingMode : MonoBehaviour
     GameObject pointer;
     GameObject leftArrow;
     GameObject rightArrow;
-    GameObject shadedTerrain;
+    [SerializeField] private GameObject shadedTerrain;
     GameObject[] bitsArray;
 
     private bool _holdingNextBitButton = false;
