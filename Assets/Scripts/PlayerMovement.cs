@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpCooldown = 0.2f;
     private float _lastJumpTimer = 0f;
-
     [SerializeField] private float jumpCutOffFactor = 0.7f;
 
     private PlayerControls _controls;
@@ -22,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private HackingMode _hackingMode;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+
+    [SerializeField] private Transform jumpParticleSpawnPoint;
+    [SerializeField] private GameObject fallDownParticles;
 
     private const string PlayerWalkingBool = "isWalking";
     private const string PlayerJumpingBool = "isJumping";
@@ -52,13 +54,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 180));
         }
-        else 
+        else
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
 
         _lastLedgeTimer = IsGrounded() ? 0 : _lastLedgeTimer + Time.deltaTime;
-        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0 );
+        _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0);
         _animator.SetBool(PlayerWalkingBool, _movementAxis != 0);
 
         if (_movementAxis > 0 && !_hackingMode.playerIsHacking)
@@ -77,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-            transform.position += Vector3.right * (_movementAxis * speed * Time.deltaTime);
+        transform.position += Vector3.right * (_movementAxis * speed * Time.deltaTime);
     }
 
     private void Jump()
@@ -85,7 +87,8 @@ public class PlayerMovement : MonoBehaviour
         if (_lastJumpTimer > jumpCooldown && _lastLedgeTimer < maxLedgeTolerance)
         {
             _lastJumpTimer = 0f;
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _gravityReversed ? -jumpStrength : jumpStrength);
+            _rigidbody2D.velocity =
+                new Vector2(_rigidbody2D.velocity.x, _gravityReversed ? -jumpStrength : jumpStrength);
         }
     }
 
@@ -106,18 +109,26 @@ public class PlayerMovement : MonoBehaviour
                 (Vector2) transform.position + (_gravityReversed
                     ? -groundingCheckBox[1]
                     : groundingCheckBox[1]));
-        Debug.DrawLine((Vector2) transform.position + groundingCheckBox[0],
-            (Vector2) transform.position + groundingCheckBox[1]);
 
         foreach (Collider2D collider in overlapped)
         {
             if (!collider.CompareTag("Player"))
             {
+                if (_lastLedgeTimer > 0.85f)
+                {
+                    SpawnParticle(fallDownParticles,jumpParticleSpawnPoint);
+                }
+
                 return true;
             }
         }
 
         return false;
+    }
+
+    private void SpawnParticle(GameObject particle, Transform particleTransform)
+    {
+        Destroy(Instantiate(particle, particleTransform.position, particleTransform.rotation), 25f);
     }
 
     private void OnEnable()
