@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class HackingMode : MonoBehaviour
 {
     #region Assignment
-
     [Header("Sprites")] [SerializeField] Sprite bitZeroSprite;
     [SerializeField] Sprite bitOneSprite;
 
@@ -14,14 +12,9 @@ public class HackingMode : MonoBehaviour
     GameObject pointer;
     GameObject leftArrow;
     GameObject rightArrow;
-    [SerializeField] private GameObject shadedTerrain;
-    GameObject[] bitsArray;
-
-    private bool _holdingNextBitButton = false;
-    private bool _holdingPreviousBitButton = false;
-    [SerializeField] private float timeBetweenBitChange = 0.5f;
-    private float _bitChangeTimer = 0f;
-
+    [SerializeField] GameObject shadedTerrain;
+    [SerializeField] GameObject[] bitsArray;
+    TextMesh textMesh;
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -30,6 +23,7 @@ public class HackingMode : MonoBehaviour
         pointer = bitsMenu.transform.GetChild(0).gameObject;
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
+        textMesh = GameObject.Find("Instruction").GetComponent<TextMesh>();
 
         #region Input Actions
 
@@ -61,9 +55,24 @@ public class HackingMode : MonoBehaviour
 
     #region Variables
 
+    private bool _holdingNextBitButton = false;
+    private bool _holdingPreviousBitButton = false;
+    [SerializeField] private float timeBetweenBitChange = 0.5f;
+    private float _bitChangeTimer = 0f;
+
     [HideInInspector] public bool playerIsHacking;
     [HideInInspector] public float timeSpeed;
-    int bitIndex;
+
+    [Header("Instructions")]
+    string rotatePlatform = "ROTATE PLATFORM \n00 - DEFAULT   11 - REVERSE\n10 - LEFT     01 - RIGHT";
+    string switchPlatfrom = "SWITCH PLATFORM POSITION\n0 - FIRST POSITION  \n1 - SECOND POSITION";
+    string rocketControl = "ROCKET CONTROL\n0 - ON   1 - OFF";
+    string rocketFlightDirection = "ROCKET FLIGHT DIRECION \n00 - DOWN   11 - UP\n10 - LEFT     01 - RIGHT";
+    string timeFreeze = "TIME FREEZE\n0 - ON  \n1 - OF";
+    string slowMotion = "SLOW MOTION\n0 - ON  \n1 - OF";
+    string reverseGravity = "REVERSE GRAVITY\n0 - ON   1 - OFF";
+
+    [SerializeField] int bitIndex;
 
     #endregion Variables
 
@@ -131,6 +140,20 @@ public class HackingMode : MonoBehaviour
     void SwitchBetweenBits()
     {
         bitIndex = Mathf.Clamp(bitIndex, 0, bitsArray.Length - 1);
+        if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
+            textMesh.text = rotatePlatform;
+        if (bitIndex == 4 || bitIndex == 5)
+            textMesh.text = switchPlatfrom;
+        if (bitIndex == 9)
+            textMesh.text = rocketControl;
+        if (bitIndex == 10 || bitIndex == 11)
+            textMesh.text = rocketFlightDirection;
+        if (bitIndex == 12)
+            textMesh.text = timeFreeze;
+        if (bitIndex == 13)
+            textMesh.text = slowMotion;
+        if (bitIndex == 14)
+            textMesh.text = reverseGravity;
         Vector2 pointerPos = new Vector2(bitsArray[bitIndex].transform.position.x,
             bitsArray[bitIndex].transform.position.y - 0.75f);
         pointer.transform.position = pointerPos;

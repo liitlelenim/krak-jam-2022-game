@@ -28,6 +28,7 @@ public class EnviormentController : MonoBehaviour
     [SerializeField] bool gravityControl;
     [Space]
     public bool bitEquelsOne;
+
     #endregion Variables
     void Update()
     {
