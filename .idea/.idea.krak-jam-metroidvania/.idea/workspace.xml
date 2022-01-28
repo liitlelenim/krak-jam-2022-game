@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="create character animations and update hit box">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add PathFollowAI ability to walk reversed path">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathFollowAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PathFollowAI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/PathFollowAI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
