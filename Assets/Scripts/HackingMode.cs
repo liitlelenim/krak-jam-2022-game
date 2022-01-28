@@ -4,6 +4,7 @@ using UnityEngine;
 public class HackingMode : MonoBehaviour
 {
     #region Assignment
+
     [Header("Sprites")] [SerializeField] Sprite bitZeroSprite;
     [SerializeField] Sprite bitOneSprite;
 
@@ -15,6 +16,7 @@ public class HackingMode : MonoBehaviour
     [SerializeField] GameObject shadedTerrain;
     [SerializeField] GameObject[] bitsArray;
     Text text;
+
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -24,11 +26,15 @@ public class HackingMode : MonoBehaviour
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
         text = GameObject.Find("Instruction").GetComponent<Text>();
-
+        text.text = null;
         #region Input Actions
 
         //Hacking start
-        playerControls.Hacking.Activate.performed += ctx => playerIsHacking = !playerIsHacking;
+        playerControls.Hacking.Activate.performed += ctx =>
+        {
+            playerIsHacking = !playerIsHacking;
+            HandleDescriptionChange();
+        };
         //Switch bit
         playerControls.Hacking.PreviousBit.performed += _ =>
         {
@@ -65,11 +71,12 @@ public class HackingMode : MonoBehaviour
 
     [Header("Instructions")]
     string rotatePlatform = "ROTATE PLATFORM \n\n00 - DEFAULT   11 - REVERSE\n10 - LEFT        01 - RIGHT";
+
     string switchPlatfrom = "SWITCH PLATFORM POSITION\n\n0 - FIRST POSITION  \n1 - SECOND POSITION";
     string rocketControl = "ROCKET CONTROL\n\n0 - ON   1 - OFF";
     string rocketFlightDirection = "ROCKET FLIGHT DIRECION \n\n00 - DOWN   11 - UP\n10 - LEFT     01 - RIGHT";
-    string timeFreeze = "TIME FREEZE\n\n0 - ON  \n1 - OF";
-    string slowMotion = "SLOW MOTION\n\n0 - ON  1 - OF";
+    string timeFreeze = "TIME FREEZE\n\n0 - ON  \n1 - OFF";
+    string slowMotion = "SLOW MOTION\n\n0 - ON  1 - OFF";
     string reverseGravity = "REVERSE GRAVITY\n\n0 - ON   1 - OFF";
 
     [SerializeField] int bitIndex;
@@ -78,14 +85,43 @@ public class HackingMode : MonoBehaviour
 
     private void HandleBitIndexChange(int change)
     {
-        bitIndex += change;
-        if (bitIndex < 0)
+        if (playerIsHacking)
         {
-            bitIndex = bitsArray.Length - 1;
+            bitIndex += change;
+            if (bitIndex < 0)
+            {
+                bitIndex = bitsArray.Length - 1;
+            }
+            else if (bitIndex > bitsArray.Length - 1)
+            {
+                bitIndex = 0;
+            }
+            HandleDescriptionChange();
         }
-        else if (bitIndex > bitsArray.Length - 1)
+    }
+
+    private void HandleDescriptionChange()
+    {
+        if (playerIsHacking)
         {
-            bitIndex = 0;
+            if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
+                text.text = rotatePlatform;
+            if (bitIndex == 4 || bitIndex == 5)
+                text.text = switchPlatfrom;
+            if (bitIndex == 9)
+                text.text = rocketControl;
+            if (bitIndex == 10 || bitIndex == 11)
+                text.text = rocketFlightDirection;
+            if (bitIndex == 12)
+                text.text = timeFreeze;
+            if (bitIndex == 13)
+                text.text = slowMotion;
+            if (bitIndex == 14)
+                text.text = reverseGravity;
+        }
+        else
+        {
+            text.text = null;
         }
     }
 
@@ -110,10 +146,11 @@ public class HackingMode : MonoBehaviour
                     {
                         HandleBitIndexChange(1);
                     }
-                    else if(_holdingPreviousBitButton)
+                    else if (_holdingPreviousBitButton)
                     {
                         HandleBitIndexChange(-1);
                     }
+
                     _bitChangeTimer = 0;
                 }
             }
@@ -140,20 +177,7 @@ public class HackingMode : MonoBehaviour
     void SwitchBetweenBits()
     {
         bitIndex = Mathf.Clamp(bitIndex, 0, bitsArray.Length - 1);
-        if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
-            text.text = rotatePlatform;
-        if (bitIndex == 4 || bitIndex == 5)
-            text.text = switchPlatfrom;
-        if (bitIndex == 9)
-            text.text = rocketControl;
-        if (bitIndex == 10 || bitIndex == 11)
-            text.text = rocketFlightDirection;
-        if (bitIndex == 12)
-            text.text = timeFreeze;
-        if (bitIndex == 13)
-            text.text = slowMotion;
-        if (bitIndex == 14)
-            text.text = reverseGravity;
+
         Vector2 pointerPos = new Vector2(bitsArray[bitIndex].transform.position.x,
             bitsArray[bitIndex].transform.position.y - 0.75f);
         pointer.transform.position = pointerPos;
