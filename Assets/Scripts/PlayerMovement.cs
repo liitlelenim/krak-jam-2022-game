@@ -110,6 +110,10 @@ public class PlayerMovement : MonoBehaviour
             _lastJumpTimer = 0f;
             _rigidbody2D.velocity =
                 new Vector2(_rigidbody2D.velocity.x, _gravityReversed ? -jumpStrength : jumpStrength);
+            if (_soundsManager != null)
+            {
+                _soundsManager.PlaySound(4,0.15f);
+            }
         }
     }
 
