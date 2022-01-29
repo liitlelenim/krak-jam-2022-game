@@ -1,22 +1,37 @@
 fileFormatVersion: 2
-guid: e77a61b7b84960a47a06c1d18a3c5351
+guid: dee77a82879a8804e86144f2d18adf6b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3500499737396116004
-    second: Punkty_0
+      213: -6496197820926200057
+    second: Points_0
   - first:
-      213: 882380471575641044
-    second: Punkty_1
+      213: -8434047552640082309
+    second: Points_1
   - first:
-      213: 707295329903169407
-    second: Punkty_2
+      213: 1999420608227441455
+    second: Points_2
   - first:
-      213: 7167583603408679927
-    second: Punkty_3
+      213: 1951620888960662809
+    second: Points_3
   - first:
-      213: 1995996791038623656
-    second: Punkty_4
+      213: -6479407393739744047
+    second: Points_4
+  - first:
+      213: -1342895827557564046
+    second: Points_5
+  - first:
+      213: -8798544643471010631
+    second: Points_6
+  - first:
+      213: -7934183310136080214
+    second: Points_7
+  - first:
+      213: 5716004438142333472
+    second: Points_8
+  - first:
+      213: -8395374747174958616
+    second: Points_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +121,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Punkty_0
+      name: Points_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707f60d008ed8d5a0800000000000000
+      internalID: -6496197820926200057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Points_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e9226bf6e34fa80800000000000000
+      internalID: -8434047552640082309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Points_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bfdf5237e5fbb10800000000000000
+      internalID: 1999420608227441455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Points_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d7bbebbdc851b10800000000000000
+      internalID: 1951620888960662809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Points_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc5a150e458416a0800000000000000
+      internalID: -6479407393739744047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Points_5
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42af7d7f6f5449030800000000000000
-      internalID: 3500499737396116004
+      spriteID: 271c31c1c531d5de0800000000000000
+      internalID: -1342895827557564046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punkty_1
+      name: Points_6
       rect:
         serializedVersion: 2
         x: 8
@@ -141,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbf1052d58de3c00800000000000000
-      internalID: 882380471575641044
+      spriteID: 9b49e71734a45e580800000000000000
+      internalID: -8798544643471010631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punkty_2
+      name: Points_7
       rect:
         serializedVersion: 2
         x: 16
@@ -162,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7fcb2aea51d0d900800000000000000
-      internalID: 707295329903169407
+      spriteID: aa88188015e14e190800000000000000
+      internalID: -7934183310136080214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punkty_3
+      name: Points_8
       rect:
         serializedVersion: 2
         x: 24
@@ -183,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f3b613df4f587360800000000000000
-      internalID: 7167583603408679927
+      spriteID: 022b70670c3535f40800000000000000
+      internalID: 5716004438142333472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punkty_4
+      name: Points_9
       rect:
         serializedVersion: 2
         x: 32
@@ -204,8 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8af3da6918433bb10800000000000000
-      internalID: 1995996791038623656
+      spriteID: 8e90a56e523ad7b80800000000000000
+      internalID: -8395374747174958616
       vertices: []
       indices: 
       edges: []
