@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="git add cartridge collection system">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add cartridge holding points ui">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +23,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Partickle effects/Blood.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/CartridgeManager.cs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Partickle effects/Dym 1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFrozenGhostBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/CartridgeManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Partickle effects/Dym 1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/Level testing.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFrozenGhostBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/Level testing.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -47,6 +47,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CartdrigeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -96,7 +97,7 @@
       <workItem from="1643237062246" duration="1833000" />
       <workItem from="1643364155964" duration="1111000" />
       <workItem from="1643410089995" duration="2983000" />
-      <workItem from="1643449127582" duration="9829000" />
+      <workItem from="1643449127582" duration="12167000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -175,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643458506019</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add cartridge holding points ui">
+      <created>1643460885867</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643460885867</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +216,7 @@
     <MESSAGE value="fix player ghost" />
     <MESSAGE value="add blood death particles" />
     <MESSAGE value="git add cartridge collection system" />
-    <option name="LAST_COMMIT_MESSAGE" value="git add cartridge collection system" />
+    <MESSAGE value="add cartridge holding points ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cartridge holding points ui" />
   </component>
 </project>
