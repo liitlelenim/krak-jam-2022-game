@@ -378,8 +378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CartdrigeToGetInLevel: 5
   pointsSprites:
-  - {fileID: -8434047552640082309, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
   - {fileID: 1999420608227441455, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
+  - {fileID: -8434047552640082309, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
   - {fileID: 1951620888960662809, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
   - {fileID: -6479407393739744047, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
   - {fileID: -6479407393739744047, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
