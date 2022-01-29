@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class PlayerLifeController : MonoBehaviour
 {
@@ -23,12 +24,7 @@ public class PlayerLifeController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _boxCollider = GetComponent<BoxCollider2D>();
     }
-
-    private void Update()
-    {
-       
-    }
-
+    
     public void Death()
     {
         if (!_dead)
@@ -38,7 +34,7 @@ public class PlayerLifeController : MonoBehaviour
             _hackingMode.enabled = false;
             _animator.enabled = false;
             _spriteRenderer.sprite = deathSprite;
-            _boxCollider.size = new Vector2(1.75f, 0.65f);
+            _boxCollider.size = new Vector2(1.5f, 0.45f);
             _boxCollider.offset = new Vector2(0.007746935f, -0.012362f);
             Instantiate(bloodParticles, transform.position + transform.up * 1f, Quaternion.identity);
             StartCoroutine(RestartSceneWithDelay());
@@ -47,7 +43,7 @@ public class PlayerLifeController : MonoBehaviour
 
     private IEnumerator RestartSceneWithDelay()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -55,7 +51,12 @@ public class PlayerLifeController : MonoBehaviour
     {
         if (other.GetComponent<PlayerKiller>() != null)
         {
-            Death();
+            if (other.GetComponent<Tilemap>() == null)
+            {
+                Death();
+                {
+                }
+            }
         }
     }
 
@@ -65,5 +66,6 @@ public class PlayerLifeController : MonoBehaviour
         {
             Death();
         }
+
     }
 }
