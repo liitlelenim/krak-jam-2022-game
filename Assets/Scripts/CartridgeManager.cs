@@ -12,7 +12,12 @@ public class CartridgeManager : MonoBehaviour
     public int OwnedCartridgesAmount => OwnedCartridges.Count;
     private SpriteRenderer[] _pointsHolders;
     private SoundsManager _soundsManager;
-
+    
+    //To everyone who is reading this monstrosity
+    //I am sincerely sorry but I have no time and I have to repair
+    //a problem which causes player to get multiple cartridges
+    //I dont know why. It just happens
+    private float _timeFromLastCartridge = 0;
     private void Start()
     {
         _soundsManager = FindObjectOfType<SoundsManager>();
@@ -30,6 +35,7 @@ public class CartridgeManager : MonoBehaviour
 
     private void Update()
     {
+        _timeFromLastCartridge += Time.deltaTime; 
         for (int i = 0; i < OwnedCartridges.Count; i++)
         {
             _pointsHolders[i].sprite = pointsSprites[(int) OwnedCartridges[i]];
@@ -47,9 +53,12 @@ public class CartridgeManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<CartridgeObject>())
+        if (other.gameObject.GetComponent<CartridgeObject>() && _timeFromLastCartridge > 0.1f)
         {
+            _timeFromLastCartridge = 0;
+
             OwnedCartridges.Add(other.GetComponent<CartridgeObject>().Type);
+            Destroy(other.gameObject);
             if (_soundsManager != null)
             {
                 _soundsManager.PlaySound(3);
@@ -59,7 +68,6 @@ public class CartridgeManager : MonoBehaviour
             {
                 LevelManager.LoadNextLevel();
             }
-            Destroy(other.gameObject);
         }
     }
 }
