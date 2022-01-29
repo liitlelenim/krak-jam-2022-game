@@ -8,7 +8,7 @@ public class RocketLauncher : MonoBehaviour
     HackingMode hackingMode;
 
     public Vector3 direction;
-    float timer = 3;
+    [SerializeField] float timer = 3;
     [SerializeField] float timeBetweenShots = 3;
     [SerializeField] float timeBetweenShotsInSlowMotion = 6;
     void Awake()
