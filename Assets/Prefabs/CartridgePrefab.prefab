@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3701897427089908615}
   m_Layer: 0
   m_Name: CartridgePrefab
-  m_TagString: Untagged
+  m_TagString: Cartridge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,12 +46,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  cartridgesSprites:
+  cartridgesSprites0:
   - {fileID: -69393844111607336, guid: 0f59857b434b1b74b896ac7b15c6fd14, type: 3}
   - {fileID: -8924738269853495518, guid: 0f59857b434b1b74b896ac7b15c6fd14, type: 3}
   - {fileID: 5040999817023862614, guid: 0f59857b434b1b74b896ac7b15c6fd14, type: 3}
   - {fileID: 5820321213911465778, guid: 0f59857b434b1b74b896ac7b15c6fd14, type: 3}
   - {fileID: 6435853172401607913, guid: 0f59857b434b1b74b896ac7b15c6fd14, type: 3}
+  cartridgesSprites1:
+  - {fileID: -3429995614518693561, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -8311827793580419105, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -4984563971792090497, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -8955262081952455721, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 2079291454562993216, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  cartridgesSprites2:
+  - {fileID: -3021724433881476958, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -6241926423118075926, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 8297879970616270549, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 3660702642155554487, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 7358459023953380009, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  cartridgesSprites3:
+  - {fileID: 5546847873081662311, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -786114746456215057, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -932817300130210550, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 5305979278565444183, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -7169954538147420942, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  cartridgesSprites4:
+  - {fileID: -2784078281277141449, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 8337941508367904044, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -487878868619601827, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: 4577351639992027412, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
+  - {fileID: -4293205403848584198, guid: 62737b3dc9cea244c9bf98c9243d7661, type: 3}
 --- !u!212 &3701897427089908614
 SpriteRenderer:
   m_ObjectHideFlags: 0
