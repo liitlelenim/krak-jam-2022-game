@@ -214,8 +214,8 @@ MonoBehaviour:
   jumpStrength: 18
   maxLedgeTolerance: 0.25
   groundingCheckBox:
-  - {x: -0.38, y: -1}
-  - {x: 0.38, y: -1.25}
+  - {x: -0.28, y: -1}
+  - {x: 0.28, y: -1.25}
   jumpCooldown: 0.26
   jumpCutOffFactor: 0.7
   jumpParticleSpawnPoint: {fileID: 5902147441994806455}
@@ -273,7 +273,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.12304169}
+  m_Offset: {x: -0.002508998, y: -0.14031419}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -284,7 +284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9589319, y: 1.7555159}
+  m_Size: {x: 0.60265183, y: 1.6294839}
   m_EdgeRadius: 0
 --- !u!114 &7892105819510340001
 MonoBehaviour:
