@@ -48,24 +48,20 @@ public class EnviormentController : MonoBehaviour
     [Header("Bits")]
     [SerializeField] int defaultRotZ_blue;
     [SerializeField] int defaultRotZ_green;
-    [SerializeField] bool rotationBit1;
-    [SerializeField] bool rotationBit2;
-    [SerializeField] bool rotationBit3;
-    [SerializeField] bool rotationBit4;
-    [Space]
-    [SerializeField] bool switchingBit1;
-    [SerializeField] bool switchingBit2;
-    [Header("Enemies")]
-    //[SerializeField] bool enemiesC;
+    bool rotationBit1;
+    bool rotationBit2;
+    bool rotationBit3;
+    bool rotationBit4;
+    bool switchingBit1;
+    bool switchingBit2;
+    //bool enemiesC;
     [Header("Weapons")]
-    public bool rocketControlBit;
-    [SerializeField] bool rocketBit1;
-    [SerializeField] bool rocketBit2;
-    [Header("Time")]
-    [SerializeField] bool timerFreezeBit;
-    [SerializeField] bool slowMotionBit;
-    [Header("Gravity")]
-    [SerializeField] bool gravityControlBit;
+    [HideInInspector] public bool rocketControlBit;
+    bool rocketBit1;
+    bool rocketBit2;
+    bool timerFreezeBit;
+    bool slowMotionBit;
+    bool gravityControlBit;
 
     #endregion Variables
 
@@ -178,7 +174,7 @@ public class EnviormentController : MonoBehaviour
         #region Time
         if (timerFreezeBit)
             hackingMode.timeSpeed = 0f;
-        if (slowMotionBit)
+        else if (slowMotionBit)
             hackingMode.timeSpeed = 0.5f;
         else
             hackingMode.timeSpeed = 1f;
