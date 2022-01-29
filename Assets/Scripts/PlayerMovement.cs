@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform jumpParticleSpawnPoint;
     [SerializeField] private GameObject fallDownParticles;
-
+    [SerializeField] private GameObject runningParticles;
     private const string PlayerWalkingBool = "isWalking";
     private const string PlayerJumpingBool = "isJumping";
 
@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
         _hackingMode = GetComponent<HackingMode>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        runningParticles = Instantiate(runningParticles, jumpParticleSpawnPoint.position,
+            runningParticles.transform.rotation);
+        runningParticles.SetActive(true);
     }
 
     private void Start()
@@ -74,6 +77,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _lastJumpTimer += Time.deltaTime;
+        HandleRunningParticles();
+    }
+
+    private void HandleRunningParticles()
+    {
+        Debug.Log("Velocity:" + _rigidbody2D.velocity.x);
+        Debug.Log("Last ledge:" + _lastLedgeTimer);
+
+        runningParticles.transform.position = jumpParticleSpawnPoint.position;
+        if (_movementAxis != 0)
+        {
+            runningParticles.SetActive(true);
+        }
+        else
+        {
+            runningParticles.SetActive(true);
+        }
     }
 
 
@@ -116,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (_lastLedgeTimer > 0.85f)
                 {
-                    SpawnParticle(fallDownParticles,jumpParticleSpawnPoint);
+                    SpawnParticle(fallDownParticles, jumpParticleSpawnPoint);
                 }
 
                 return true;
