@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CartridgeManager : MonoBehaviour
 {
@@ -54,6 +55,10 @@ public class CartridgeManager : MonoBehaviour
                 _soundsManager.PlaySound(3);
             }
 
+            if (OwnedCartridgesAmount >= CartdrigeToGetInLevel)
+            {
+                LevelManager.LoadNextLevel();
+            }
             Destroy(other.gameObject);
         }
     }
