@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="improve hacking mode">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add running smoke to player">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,19 +24,23 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Partickle effects/Dym 1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/Level testing.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFrozenGhostBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerKiller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PathFollowAI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -85,7 +90,7 @@
       <workItem from="1643237062246" duration="1833000" />
       <workItem from="1643364155964" duration="1111000" />
       <workItem from="1643410089995" duration="2983000" />
-      <workItem from="1643449127582" duration="1524000" />
+      <workItem from="1643449127582" duration="3908000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -122,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643410832935</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add running smoke to player">
+      <created>1643450815683</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643450815683</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +162,7 @@
     <MESSAGE value="create character animations and update hit box" />
     <MESSAGE value="repair hacking mode descriptions" />
     <MESSAGE value="improve hacking mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve hacking mode" />
+    <MESSAGE value="add running smoke to player" />
+    <option name="LAST_COMMIT_MESSAGE" value="add running smoke to player" />
   </component>
 </project>

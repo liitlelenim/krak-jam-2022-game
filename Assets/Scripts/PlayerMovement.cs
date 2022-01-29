@@ -82,17 +82,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleRunningParticles()
     {
-        Debug.Log("Velocity:" + _rigidbody2D.velocity.x);
-        Debug.Log("Last ledge:" + _lastLedgeTimer);
-
         runningParticles.transform.position = jumpParticleSpawnPoint.position;
-        if (_movementAxis != 0)
+        if (_lastLedgeTimer > 0)
         {
-            runningParticles.SetActive(true);
+            var emissionModule = runningParticles.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = false;
         }
         else
         {
-            runningParticles.SetActive(true);
+            var emissionModule = runningParticles.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = true;
         }
     }
 
