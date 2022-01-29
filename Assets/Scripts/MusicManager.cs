@@ -34,6 +34,7 @@ public class MusicManager : MonoBehaviour
         }
 
         _audioSource.clip = musicClips[_currentMusic];
+        _audioSource.volume = 0.05f;
         _audioSource.PlayDelayed(3f);
         StartCoroutine(WaitUntilEndOfTheSong((int) _audioSource.clip.length));
     }

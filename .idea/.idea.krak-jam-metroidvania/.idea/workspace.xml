@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add level manager">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/MUSIC_INIT_SCENE.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/MusicManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/SoundsManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFrozenGhostBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -33,14 +39,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerKiller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PathFollowAI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartdrigeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -91,7 +98,7 @@
       <workItem from="1643364155964" duration="1111000" />
       <workItem from="1643410089995" duration="2983000" />
       <workItem from="1643449127582" duration="12685000" />
-      <workItem from="1643468130484" duration="304000" />
+      <workItem from="1643468130484" duration="818000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -191,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643463935573</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add level manager">
+      <created>1643468481796</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643468481796</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +241,7 @@
     <MESSAGE value="add cartridge holding points ui" />
     <MESSAGE value="add sound manager" />
     <MESSAGE value="add jumping and collecting cartridges sounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jumping and collecting cartridges sounds" />
+    <MESSAGE value="add level manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="add level manager" />
   </component>
 </project>

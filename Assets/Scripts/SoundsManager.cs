@@ -12,12 +12,17 @@ public class SoundsManager : MonoBehaviour
         HandleSound(sounds[soundIndex]);
     }
 
-    private void HandleSound(AudioClip clip)
+    public void PlaySound(int soundIndex, float volumeFactor)
+    {
+        HandleSound(sounds[soundIndex], volumeFactor);
+    }
+
+    private void HandleSound(AudioClip clip, float volumeFactor = 0.3f)
     {
         GameObject sound = new GameObject();
         AudioSource source = sound.AddComponent<AudioSource>();
         source.clip = clip;
-        source.volume = 0.3f;
+        source.volume = volumeFactor;
         source.Play();
         Destroy(sound, source.clip.length + 2f);
     }

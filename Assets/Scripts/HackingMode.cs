@@ -17,13 +17,13 @@ public class HackingMode : MonoBehaviour
     Text keyboardText;
 
     private PlayerMovement _playerMovement;
-
+    private SoundsManager _soundsManager;
     private bool _openingFrame = false;
     void Awake()
     {
         playerControls = new PlayerControls();
         _playerMovement = GetComponent<PlayerMovement>();
-
+        _soundsManager = FindObjectOfType<SoundsManager>();
         bitsArray = GameObject.FindGameObjectsWithTag("Bit");
         bitsMenu = GameObject.Find("BitsMenu");
 
@@ -196,6 +196,10 @@ public class HackingMode : MonoBehaviour
     {
         if (playerIsHacking && !_openingFrame)
         {
+            if (_soundsManager != null)
+            {
+                _soundsManager.PlaySound(1);
+            }
             bitIndex += change;
             if (bitIndex < 0)
             {
@@ -273,6 +277,10 @@ public class HackingMode : MonoBehaviour
     {
         if (!_openingFrame&&playerIsHacking)
         {
+            if (_soundsManager != null)
+            {
+                _soundsManager.PlaySound(0);
+            }
             bitsArray[bitIndex].GetComponent<Bit>().ChangeValue();
         }
     }
