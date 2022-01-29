@@ -114,13 +114,23 @@ public class HackingMode : MonoBehaviour
     string slowMotion = "SLOW MOTION";
     string reverseGravity = "REVERSE GRAVITY";
 
-    string rotationInstruction = "INSTRUCTION\n\n00 - DEFAULT   11 - REVERSED\n10 - LEFT     01 - RIGHT";
-    string switchPlatformInstruction = "INSTRUCTION\n\n0 - FIRST POSITION  \n1 - SECOND POSITION";
-    string turnOn = "INSTRUCTION\n\n0 - ON   1 - OFF";
-    string direction = "INSTRUCTION\n\n00 - DOWN   11 - UP\n10 - LEFT     01 - RIGHT";
+    string rotationInstruction = "INSTRUCTION\n\n" +
+        "00 - DEFAULT   11 - REVERSED\n" +
+        "10 - LEFT     01 - RIGHT";
+    string switchPlatformInstruction = "INSTRUCTION\n\n" +
+        "0 - FIRST POSITION  \n" +
+        "1 - SECOND POSITION";
+    string turnOn = "INSTRUCTION\n\n" +
+        "0 - ON   1 - OFF";
+    string direction = "INSTRUCTION\n\n" +
+        "00 - DOWN   11 - UP\n" +
+        "10 - LEFT     01 - RIGHT";
 
-    string keysInHackingMode = "Z - CHANGE BIT VALUE\n\nX - QUIT HACKING MODE";
-    string keysInPlayMode = "Z - ENTER HACKING MODE\n\n< > - CHARACTER MOVEMENT";
+    string keysInHackingMode = "Z - CHANGE BIT VALUE\n\n" +
+        "X - QUIT HACKING MODE";
+    string keysInPlayMode = "Z - ENTER HACKING MODE\n\n" +
+        "< > - CHARACTER MOVEMENT\n\n" +
+        "X - JUMP";
 
     #endregion Text
 
