@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
                     SpawnParticle(fallDownParticles, jumpParticleSpawnPoint);
                     if (_soundsManager != null)
                     {
-                        _soundsManager.PlaySound(2);
+                        _soundsManager.PlaySound(2,0.15f);
                     }
                 }
 
