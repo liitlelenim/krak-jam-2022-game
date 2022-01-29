@@ -10,9 +10,11 @@ public class CartridgeManager : MonoBehaviour
     [SerializeField] private Sprite[] pointsSprites;
     public int OwnedCartridgesAmount => OwnedCartridges.Count;
     private SpriteRenderer[] _pointsHolders;
+    private SoundsManager _soundsManager;
 
     private void Start()
     {
+        _soundsManager = FindObjectOfType<SoundsManager>();
         OwnedCartridges = new List<CartridgeType>();
         _gottenCartridgesMenu = GameObject.Find("GottenCartridgeMenu");
         _pointsHolders = _gottenCartridgesMenu.GetComponentsInChildren<SpriteRenderer>();
@@ -29,7 +31,7 @@ public class CartridgeManager : MonoBehaviour
     {
         for (int i = 0; i < OwnedCartridges.Count; i++)
         {
-            _pointsHolders[i].sprite = pointsSprites[(int)OwnedCartridges[i]];
+            _pointsHolders[i].sprite = pointsSprites[(int) OwnedCartridges[i]];
         }
     }
 
@@ -47,6 +49,11 @@ public class CartridgeManager : MonoBehaviour
         if (other.gameObject.GetComponent<CartridgeObject>())
         {
             OwnedCartridges.Add(other.GetComponent<CartridgeObject>().Type);
+            if (_soundsManager != null)
+            {
+                _soundsManager.PlaySound(3);
+            }
+
             Destroy(other.gameObject);
         }
     }

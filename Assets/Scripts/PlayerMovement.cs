@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private const string PlayerWalkingBool = "isWalking";
     private const string PlayerJumpingBool = "isJumping";
 
+    private SoundsManager _soundsManager;
     private bool _gravityReversed = false;
 
     private void Awake()
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         runningParticles = Instantiate(runningParticles, jumpParticleSpawnPoint.position,
             runningParticles.transform.rotation);
         runningParticles.SetActive(true);
+        _soundsManager = GameObject.FindObjectOfType<SoundsManager>();
     }
 
     private void Start()
@@ -136,6 +138,10 @@ public class PlayerMovement : MonoBehaviour
                 if (_lastLedgeTimer > 0.85f)
                 {
                     SpawnParticle(fallDownParticles, jumpParticleSpawnPoint);
+                    if (_soundsManager != null)
+                    {
+                        _soundsManager.PlaySound(2);
+                    }
                 }
 
                 return true;

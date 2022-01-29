@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add cartridge holding points ui">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add sound manager">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MUSIC_INIT_SCENE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/Level testing.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/Level testing.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/MUSIC_INIT_SCENE.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -42,12 +45,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerKiller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PathFollowAI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HackingMode.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartdrigeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -97,7 +100,7 @@
       <workItem from="1643237062246" duration="1833000" />
       <workItem from="1643364155964" duration="1111000" />
       <workItem from="1643410089995" duration="2983000" />
-      <workItem from="1643449127582" duration="12167000" />
+      <workItem from="1643449127582" duration="12579000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -183,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643460885867</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add sound manager">
+      <created>1643463641032</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643463641032</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +227,7 @@
     <MESSAGE value="add blood death particles" />
     <MESSAGE value="git add cartridge collection system" />
     <MESSAGE value="add cartridge holding points ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cartridge holding points ui" />
+    <MESSAGE value="add sound manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sound manager" />
   </component>
 </project>
