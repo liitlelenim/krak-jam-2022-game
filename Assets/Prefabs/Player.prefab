@@ -219,6 +219,7 @@ MonoBehaviour:
   jumpCutOffFactor: 0.7
   jumpParticleSpawnPoint: {fileID: 5902147441994806455}
   fallDownParticles: {fileID: 4912352608185708016, guid: c120f6b62bd7b3c46b794daee28088bd, type: 3}
+  runningParticles: {fileID: 7207609745371069281, guid: 77e5bf000bcf61d4ab9c865b5d7badc7, type: 3}
 --- !u!114 &7892105819510340000
 MonoBehaviour:
   m_ObjectHideFlags: 0
