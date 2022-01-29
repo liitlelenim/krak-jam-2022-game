@@ -333,6 +333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e385431c549e49549c8574e284b7ba29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CartdrigeToGetInLevel: 5
+  pointsSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8751675847717126591
 GameObject:
   m_ObjectHideFlags: 0
