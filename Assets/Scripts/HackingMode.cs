@@ -16,7 +16,9 @@ public class HackingMode : MonoBehaviour
     GameObject rightArrow;
     [SerializeField] GameObject shadedTerrain;
     [SerializeField] GameObject[] bitsArray;
-    Text text;
+    Text instructionText;
+    Text bitNameText;
+    Text keyboardText;
 
     private PlayerMovement _playerMovement;
 
@@ -24,19 +26,33 @@ public class HackingMode : MonoBehaviour
     void Awake()
     {
         playerControls = new PlayerControls();
+        _playerMovement = GetComponent<PlayerMovement>();
+
         bitsArray = GameObject.FindGameObjectsWithTag("Bit");
         bitsMenu = GameObject.Find("BitsMenu");
+
         pointer = bitsMenu.transform.GetChild(0).gameObject;
         leftArrow = bitsMenu.transform.GetChild(1).gameObject;
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
-        text = GameObject.Find("Instruction").GetComponent<Text>();
-        text.text = null;
-        _playerMovement = GetComponent<PlayerMovement>();
+        for (int i = 0; i < bitsArray.Length; i++)
+        {
+            Vector3 bitPosition = new Vector3((leftArrow.transform.position.x + (0.6f * (i + 1))), bitsArray[i].transform.position.y);
+            bitsArray[i].transform.position = bitPosition;
+            if (i == bitsArray.Length - 1)
+            {
+                i += 1;
+                rightArrow.transform.position = bitPosition;
+            }
+        }
 
+        instructionText = GameObject.Find("Instruction").GetComponent<Text>();
+
+        bitNameText = GameObject.Find("BitName").GetComponent<Text>();
+
+        keyboardText = GameObject.Find("Keyboard").GetComponent<Text>();
+        keyboardText.text = keysInPlayMode;
         #region Input Actions
 
-        //Hacking start
-    
         //Switch bit
         playerControls.Hacking.PreviousBit.performed += _ =>
         {
@@ -45,7 +61,7 @@ public class HackingMode : MonoBehaviour
             _holdingNextBitButton = false;
         };
         playerControls.Hacking.PreviousBit.canceled += _ => _holdingPreviousBitButton = false;
-
+        //Change bit
         playerControls.Hacking.NextBit.performed += _ =>
         {
             HandleBitIndexChange(1);
@@ -53,9 +69,9 @@ public class HackingMode : MonoBehaviour
             _holdingNextBitButton = true;
         };
         playerControls.Hacking.NextBit.canceled += _ => _holdingNextBitButton = false;
-        //ChangeBitValue
+        //Change bit value
         playerControls.Hacking.ChangeBit.performed += ctx => ChangeBitValue();
-        
+        // Start hacking
         playerControls.Hacking.Activate.performed += ctx =>
         {
             if (!playerIsHacking)
@@ -63,6 +79,7 @@ public class HackingMode : MonoBehaviour
                 playerIsHacking = true;
                 _openingFrame = true;
                 _playerMovement.enabled = false;
+                keyboardText.text = keysInHackingMode;
                 HandleDescriptionChange();
             }
         };
@@ -70,6 +87,7 @@ public class HackingMode : MonoBehaviour
         {
             playerIsHacking = false;
             _playerMovement.enabled = true;
+            keyboardText.text = keysInPlayMode;
             HandleDescriptionChange();
         };
         #endregion Inpur Actions
@@ -87,63 +105,30 @@ public class HackingMode : MonoBehaviour
     [HideInInspector] public bool playerIsHacking;
     [HideInInspector] public float timeSpeed;
 
-    [Header("Instructions")]
-    string rotatePlatform = "ROTATE PLATFORM \n\n00 - DEFAULT   11 - REVERSE\n10 - LEFT        01 - RIGHT";
+    #region Text
+    string rotatePlatform = "ROTATE PLATFORM";
+    string switchPlatfrom = "SWITCH PLATFORM POSITION";
+    string rocketControl = "ROCKET CONTROL";
+    string rocketFlightDirection = "ROCKET FLIGHT DIRECION";
+    string timeFreeze = "TIME FREEZE";
+    string slowMotion = "SLOW MOTION";
+    string reverseGravity = "REVERSE GRAVITY";
 
-    string switchPlatfrom = "SWITCH PLATFORM POSITION\n\n0 - FIRST POSITION  \n1 - SECOND POSITION";
-    string rocketControl = "ROCKET CONTROL\n\n0 - ON   1 - OFF";
-    string rocketFlightDirection = "ROCKET FLIGHT DIRECION \n\n00 - DOWN   11 - UP\n10 - LEFT     01 - RIGHT";
-    string timeFreeze = "TIME FREEZE\n\n0 - ON  \n1 - OFF";
-    string slowMotion = "SLOW MOTION\n\n0 - ON  1 - OFF";
-    string reverseGravity = "REVERSE GRAVITY\n\n0 - ON   1 - OFF";
+    string rotationInstruction = "INSTRUCTION\n\n00 - DEFAULT   11 - REVERSED\n10 - LEFT     01 - RIGHT";
+    string switchPlatformInstruction = "INSTRUCTION\n\n0 - FIRST POSITION  \n1 - SECOND POSITION";
+    string turnOn = "INSTRUCTION\n\n0 - ON   1 - OFF";
+    string direction = "INSTRUCTION\n\n00 - DOWN   11 - UP\n10 - LEFT     01 - RIGHT";
+
+    string keysInHackingMode = "Z - CHANGE BIT VALUE\n\nX - QUIT HACKING MODE";
+    string keysInPlayMode = "Z - ENTER HACKING MODE\n\n< > - CHARACTER MOVEMENT";
+
+    #endregion Text
 
     [SerializeField] int bitIndex;
 
     #endregion Variables
 
-    private void HandleBitIndexChange(int change)
-    {
-        if (playerIsHacking && !_openingFrame)
-        {
-            bitIndex += change;
-            if (bitIndex < 0)
-            {
-                bitIndex = bitsArray.Length - 1;
-            }
-            else if (bitIndex > bitsArray.Length - 1)
-            {
-                bitIndex = 0;
-            }
-
-            HandleDescriptionChange();
-        }
-    }
-
-    private void HandleDescriptionChange()
-    {
-        if (playerIsHacking)
-        {
-            if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
-                text.text = rotatePlatform;
-            if (bitIndex == 4 || bitIndex == 5)
-                text.text = switchPlatfrom;
-            if (bitIndex == 9)
-                text.text = rocketControl;
-            if (bitIndex == 10 || bitIndex == 11)
-                text.text = rocketFlightDirection;
-            if (bitIndex == 12)
-                text.text = timeFreeze;
-            if (bitIndex == 13)
-                text.text = slowMotion;
-            if (bitIndex == 14)
-                text.text = reverseGravity;
-        }
-        else
-        {
-            text.text = null;
-        }
-    }
-
+    #region Update
     void Update()
     {
         if (playerIsHacking)
@@ -187,6 +172,8 @@ public class HackingMode : MonoBehaviour
             leftArrow.SetActive(false);
             rightArrow.SetActive(false);
             shadedTerrain.SetActive(false);
+            instructionText.text = null;
+            bitNameText.text = null;
             Time.timeScale = 1;
         }
     }
@@ -196,8 +183,75 @@ public class HackingMode : MonoBehaviour
         _openingFrame = false;
     }
 
-    #region Operations on bits
+    #endregion Update
 
+    #region Bits
+
+    private void HandleBitIndexChange(int change)
+    {
+        if (playerIsHacking && !_openingFrame)
+        {
+            bitIndex += change;
+            if (bitIndex < 0)
+            {
+                bitIndex = bitsArray.Length - 1;
+            }
+            else if (bitIndex > bitsArray.Length - 1)
+            {
+                bitIndex = 0;
+            }
+
+            HandleDescriptionChange();
+        }
+    }
+    private void HandleDescriptionChange()
+    {
+        if (playerIsHacking)
+        {
+            if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
+            {
+                bitNameText.text = rotatePlatform;
+                instructionText.text = rotationInstruction;
+            }
+            else if (bitIndex == 4 || bitIndex == 5)
+            {
+
+                bitNameText.text = switchPlatfrom;
+                instructionText.text = switchPlatformInstruction;
+            }
+            else if (bitIndex == 9)
+            {
+                bitNameText.text = rocketControl;
+                instructionText.text = turnOn;
+            }
+            else if (bitIndex == 10 || bitIndex == 11)
+            {
+                bitNameText.text = rocketFlightDirection;
+                instructionText.text = direction;
+            }
+            else if (bitIndex == 12)
+            {
+                bitNameText.text = timeFreeze;
+                instructionText.text = turnOn;
+            }
+            else if (bitIndex == 13)
+            {
+                bitNameText.text = slowMotion;
+                instructionText.text = turnOn;
+            }
+            else if (bitIndex == 14)
+            {
+                bitNameText.text = reverseGravity;
+                instructionText.text = turnOn;
+            }
+
+            else
+            {
+                instructionText.text = null;
+                bitNameText.text = null;
+            }
+        }
+    }
     void SwitchBetweenBits()
     {
         if (playerIsHacking)
@@ -209,7 +263,6 @@ public class HackingMode : MonoBehaviour
             pointer.transform.position = pointerPos;
         }
     }
-
     void ChangeBitValue()
     {
         if (!_openingFrame&&playerIsHacking)
@@ -228,7 +281,7 @@ public class HackingMode : MonoBehaviour
         }
     }
 
-    #endregion operations on bits
+    #endregion Bits
 
     #region OnEnable OnDisable
 
