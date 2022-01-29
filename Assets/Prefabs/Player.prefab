@@ -233,8 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ed564b9131a83488dafeb8a36dd22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
-  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
   shadedTerrain: {fileID: 0}
   bitsArray: []
   timeBetweenBitChange: 0.225
@@ -301,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSprite: {fileID: 21300000, guid: 743870df02d39fd489a75d0145a4b143, type: 3}
-  bloodParticles: {fileID: 0}
+  bloodParticles: {fileID: 384750708521827912, guid: d3248e9af349b0b4d955dd18b5eb9bb3, type: 3}
 --- !u!95 &7892105819510340006
 Animator:
   serializedVersion: 3
@@ -335,11 +333,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CartdrigeToGetInLevel: 5
   pointsSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -8434047552640082309, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
+  - {fileID: 1999420608227441455, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
+  - {fileID: 1951620888960662809, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
+  - {fileID: -6479407393739744047, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
+  - {fileID: -6479407393739744047, guid: dee77a82879a8804e86144f2d18adf6b, type: 3}
 --- !u!1 &8751675847717126591
 GameObject:
   m_ObjectHideFlags: 0
