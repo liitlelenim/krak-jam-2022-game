@@ -30,11 +30,13 @@ public class EnviormentController : MonoBehaviour
     public bool bitEquelsOne;
 
     #endregion Variables
+
+    #region Hacking Execution
     void Update()
     {
         EnviormentControl();
     }
-void EnviormentControl()
+    void EnviormentControl()
     {
         #region Time
         if (timeFreeze)
@@ -159,4 +161,5 @@ void EnviormentControl()
         }
         #endregion Gravity
     }
+    #endregion Hacking Execution
 }
