@@ -5,11 +5,12 @@ using UnityEngine;
 public class RocketMovement : MonoBehaviour
 {
     #region Assignment
-    EnviormentController rocketDirectionChange;
+    EnviormentController enviormentController;
     HackingMode hackingMode;
+
     void Awake()
     {
-        rocketDirectionChange = GameObject.Find("RocketControl").GetComponent<EnviormentController>();
+        enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
         hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
         firstDirection = transform.parent.GetComponent<RocketLauncher>().direction;
     }
@@ -24,11 +25,10 @@ public class RocketMovement : MonoBehaviour
     #endregion Variables
     void Update()
     {
-        if (!rocketDirectionChange.bitEquelsOne)
+        if (!enviormentController.rocketControlBit)
             currentDirection = firstDirection;
             transform.position += currentDirection * rocketSpeed * hackingMode.timeSpeed * Time.deltaTime;
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);

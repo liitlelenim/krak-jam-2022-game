@@ -328,6 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6608030471817262233}
+  - component: {fileID: 1506484092624593892}
   m_Layer: 0
   m_Name: BitsMenu
   m_TagString: Untagged
@@ -343,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6608030471817262232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.289449, y: -7.0409245, z: 0.9420064}
+  m_LocalPosition: {x: 8.289449, y: -6.25, z: 0.9420064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6608030473322560921}
@@ -367,6 +368,42 @@ Transform:
   m_Father: {fileID: 6608030472074421403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506484092624593892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608030471817262232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationBitValue1: {fileID: 1183055262}
+  rotationBitValue2: {fileID: 692796411}
+  rotationBitValue3: {fileID: 1850613859}
+  rotationBitValue4: {fileID: 1936140960}
+  switchingBitValue1: {fileID: 312477096}
+  switchingBitValue2: {fileID: 103616725}
+  rocketControlBitValue: {fileID: 1122969961}
+  rocketBitValue1: {fileID: 1828738908}
+  rocketBitValue2: {fileID: 654581004}
+  timerFreezeBitValue: {fileID: 80163781}
+  slowMotionBitValue: {fileID: 551379270}
+  gravityControlBitValue: {fileID: 1290497259}
+  rotationBit1: 0
+  rotationBit2: 0
+  rotationBit3: 0
+  rotationBit4: 0
+  switchingBit1: 0
+  switchingBit2: 0
+  rocketControlBit: 0
+  rocketBit1: 0
+  rocketBit2: 0
+  timerFreezeBit: 0
+  slowMotionBit: 0
+  gravityControlBit: 0
 --- !u!1 &6608030471862970375
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030471862970392}
   - component: {fileID: 6608030471862970393}
-  - component: {fileID: 3798838419225033861}
+  - component: {fileID: 1122969961}
   m_Layer: 0
   m_Name: RocketControl
   m_TagString: Bit
@@ -450,7 +487,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3798838419225033861
+--- !u!114 &1122969961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,17 +496,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030471862970375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 1
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030471869414438
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030471869414439}
   - component: {fileID: 6608030471869414456}
-  - component: {fileID: 491560629}
+  - component: {fileID: 1828738908}
   m_Layer: 0
   m_Name: DirectionBit
   m_TagString: Bit
@@ -553,7 +585,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &491560629
+--- !u!114 &1828738908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,17 +594,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030471869414438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030471970656323
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472051435031}
   - component: {fileID: 6608030472051435048}
-  - component: {fileID: 1642445460}
+  - component: {fileID: 551379270}
   m_Layer: 0
   m_Name: SlowMotion
   m_TagString: Bit
@@ -758,7 +785,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1642445460
+--- !u!114 &551379270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -767,17 +794,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472051435030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 1
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030472074421402
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472172381119}
   - component: {fileID: 6608030472172381104}
-  - component: {fileID: 1555861655}
+  - component: {fileID: 103616725}
   m_Layer: 0
   m_Name: BrownChangePosition
   m_TagString: Bit
@@ -893,7 +915,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1555861655
+--- !u!114 &103616725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -902,17 +924,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472172381118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030472488029146
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,14 +940,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472488029147}
   - component: {fileID: 6608030472488029148}
-  - component: {fileID: 1144483454}
+  - component: {fileID: 1936140960}
   m_Layer: 0
   m_Name: GreenRotationSecond
   m_TagString: Bit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6608030472488029147
 Transform:
   m_ObjectHideFlags: 0
@@ -996,7 +1013,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1144483454
+--- !u!114 &1936140960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1005,17 +1022,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472488029146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030472630284510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472630284511}
   - component: {fileID: 6608030472630284496}
-  - component: {fileID: 1618329872}
+  - component: {fileID: 692796411}
   m_Layer: 0
   m_Name: BlueRotationSecond
   m_TagString: Bit
@@ -1099,7 +1111,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1618329872
+--- !u!114 &692796411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1108,17 +1120,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472630284510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 1
 --- !u!1 &6608030472923627525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472923627526}
   - component: {fileID: 6608030472923627527}
-  - component: {fileID: 287315712}
+  - component: {fileID: 1183055262}
   m_Layer: 0
   m_Name: BlueRotationFirst
   m_TagString: Bit
@@ -1202,7 +1209,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &287315712
+--- !u!114 &1183055262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1211,17 +1218,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472923627525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 1
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030472975071708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030472975071709}
   - component: {fileID: 6608030472975071710}
-  - component: {fileID: 409136156}
+  - component: {fileID: 1290497259}
   m_Layer: 0
   m_Name: ReverseGravity
   m_TagString: Bit
@@ -1305,7 +1307,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &409136156
+--- !u!114 &1290497259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1314,17 +1316,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030472975071708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 1
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473022675368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473022675369}
   - component: {fileID: 6608030473022675370}
-  - component: {fileID: 1823866645}
+  - component: {fileID: 1088569174}
   m_Layer: 0
   m_Name: Interfejs_1 (2)
   m_TagString: Bit
@@ -1408,7 +1405,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1823866645
+--- !u!114 &1088569174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1417,17 +1414,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473022675368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473124718662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473124718663}
   - component: {fileID: 6608030473124718680}
-  - component: {fileID: 231288332}
+  - component: {fileID: 111994286}
   m_Layer: 0
   m_Name: Interfejs_1
   m_TagString: Bit
@@ -1511,7 +1503,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &231288332
+--- !u!114 &111994286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1520,17 +1512,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473124718662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473251674110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473251674111}
   - component: {fileID: 6608030473251674096}
-  - component: {fileID: 1900367520}
+  - component: {fileID: 1548934264}
   m_Layer: 0
   m_Name: Interfejs_1 (1)
   m_TagString: Bit
@@ -1614,7 +1601,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1900367520
+--- !u!114 &1548934264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1623,17 +1610,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473251674110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473276542382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473276542383}
   - component: {fileID: 6608030473276542368}
-  - component: {fileID: 1079726782}
+  - component: {fileID: 312477096}
   m_Layer: 0
   m_Name: YellowChangePosition
   m_TagString: Bit
@@ -1717,7 +1699,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1079726782
+--- !u!114 &312477096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1726,17 +1708,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473276542382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 1
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473322560920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,14 +1806,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473440415368}
   - component: {fileID: 6608030473440415369}
-  - component: {fileID: 1846862177}
+  - component: {fileID: 1850613859}
   m_Layer: 0
   m_Name: GreenRotationFirst
   m_TagString: Bit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6608030473440415368
 Transform:
   m_ObjectHideFlags: 0
@@ -1902,7 +1879,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1846862177
+--- !u!114 &1850613859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1911,17 +1888,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473440415607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 1
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473505335604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,14 +1904,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6608030473505335605}
   - component: {fileID: 6608030473505335606}
-  - component: {fileID: 1012979361}
+  - component: {fileID: 80163781}
   m_Layer: 0
   m_Name: TimeFreeze
   m_TagString: Bit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6608030473505335605
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,7 +1977,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1012979361
+--- !u!114 &80163781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2014,17 +1986,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608030473505335604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 1
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0
 --- !u!1 &6608030473586307548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826975808877310495}
   - component: {fileID: 1107615165887912734}
-  - component: {fileID: 4822091312712972496}
+  - component: {fileID: 654581004}
   m_Layer: 0
   m_Name: DirectionSecondBit
   m_TagString: Bit
@@ -2190,7 +2157,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4822091312712972496
+--- !u!114 &654581004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2199,14 +2166,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7623600809173169105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e3f5cd62f6fe042903ace82600cd3d, type: 3}
+  m_Script: {fileID: 11500000, guid: c02954dcf72257a4bb2ba0022c6e2b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsRotation: 0
-  platformsPosition: 0
-  enemiesC: 0
-  rocketDiractionChangeActive: 0
-  timeFreeze: 0
-  slowMotion: 0
-  gravityControl: 0
-  bitEquelsOne: 0
+  bitZeroSprite: {fileID: -4736843960431352889, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  bitOneSprite: {fileID: -5355113790991961060, guid: 05e9ab67b6db5024b905f0c2c1e0aa64, type: 3}
+  valueIsOne: 0

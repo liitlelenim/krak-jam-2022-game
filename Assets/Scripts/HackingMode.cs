@@ -5,10 +5,6 @@ using UnityEngine;
 public class HackingMode : MonoBehaviour
 {
     #region Assignment
-
-    [Header("Sprites")] [SerializeField] Sprite bitZeroSprite;
-    [SerializeField] Sprite bitOneSprite;
-
     PlayerControls playerControls;
     GameObject bitsMenu;
     GameObject pointer;
@@ -36,12 +32,11 @@ public class HackingMode : MonoBehaviour
         rightArrow = bitsMenu.transform.GetChild(2).gameObject;
         for (int i = 0; i < bitsArray.Length; i++)
         {
-            Vector3 bitPosition = new Vector3((leftArrow.transform.position.x + (0.6f * (i + 1))), bitsArray[i].transform.position.y);
+            Vector3 bitPosition = new Vector3((leftArrow.transform.position.x + (0.6f * (i + 1))), bitsArray[i].transform.position.y, 0f);
             bitsArray[i].transform.position = bitPosition;
             if (i == bitsArray.Length - 1)
             {
-                i += 1;
-                rightArrow.transform.position = bitPosition;
+                rightArrow.transform.position = new Vector3(bitsArray[i].transform.position.x + 0.6f, rightArrow.transform.position.y, 0f);
             }
         }
 
@@ -103,7 +98,7 @@ public class HackingMode : MonoBehaviour
     private float _bitChangeTimer = 0f;
 
     [HideInInspector] public bool playerIsHacking;
-    [HideInInspector] public float timeSpeed;
+    [HideInInspector] public float timeSpeed = 1;
 
     #region Text
     string rotatePlatform = "ROTATE PLATFORM";
@@ -218,38 +213,39 @@ public class HackingMode : MonoBehaviour
     {
         if (playerIsHacking)
         {
-            if (bitIndex == 0 || bitIndex == 1 || bitIndex == 2 || bitIndex == 3)
+            string bitName = bitsArray[bitIndex].name;
+            if (bitName == "BlueRotationFirst" || bitName == "BlueRotationSecond" || bitName == "GreenRotationFirst" || bitName == "GreenRotationSecond")
             {
                 bitNameText.text = rotatePlatform;
                 instructionText.text = rotationInstruction;
             }
-            else if (bitIndex == 4 || bitIndex == 5)
+            else if (bitName == "YellowChangePosition" || bitName == "BrownChangePosition")
             {
 
                 bitNameText.text = switchPlatfrom;
                 instructionText.text = switchPlatformInstruction;
             }
-            else if (bitIndex == 9)
+            else if (bitName == "RocketControl")
             {
                 bitNameText.text = rocketControl;
                 instructionText.text = turnOn;
             }
-            else if (bitIndex == 10 || bitIndex == 11)
+            else if (bitName == "DirectionBit" || bitName == "DirectionSecondBit")
             {
                 bitNameText.text = rocketFlightDirection;
                 instructionText.text = direction;
             }
-            else if (bitIndex == 12)
+            else if (bitName == "TimeFreeze")
             {
                 bitNameText.text = timeFreeze;
                 instructionText.text = turnOn;
             }
-            else if (bitIndex == 13)
+            else if (bitName == "SlowMotion")
             {
                 bitNameText.text = slowMotion;
                 instructionText.text = turnOn;
             }
-            else if (bitIndex == 14)
+            else if (bitName == "ReverseGravity")
             {
                 bitNameText.text = reverseGravity;
                 instructionText.text = turnOn;
@@ -277,17 +273,7 @@ public class HackingMode : MonoBehaviour
     {
         if (!_openingFrame&&playerIsHacking)
         {
-            Sprite sprite = bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite;
-            if (sprite == bitZeroSprite)
-            {
-                bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitOneSprite;
-                bitsArray[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = true;
-            }
-            else if (sprite == bitOneSprite)
-            {
-                bitsArray[bitIndex].gameObject.GetComponent<SpriteRenderer>().sprite = bitZeroSprite;
-                bitsArray[bitIndex].gameObject.GetComponent<EnviormentController>().bitEquelsOne = false;
-            }
+            bitsArray[bitIndex].GetComponent<Bit>().ChangeValue();
         }
     }
 
