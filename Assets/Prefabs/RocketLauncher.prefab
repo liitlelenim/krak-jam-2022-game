@@ -97,6 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketRB: {fileID: 4894643363979099727, guid: d6dcced7e8fcb594f960b6ef1b26a58c, type: 3}
   direction: {x: -1, y: 0, z: 0}
-  timer: 0
-  timeBetweenShots: 6
-  timeBetweenShotsInSlowMotion: 12
+  timer: 3
+  timeBetweenShots: 4
+  timeBetweenShotsInSlowMotion: 8

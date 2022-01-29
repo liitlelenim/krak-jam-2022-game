@@ -296,18 +296,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1719084789}
     m_Modifications:
-    - target: {fileID: 623677721397865930, guid: 0b9977babb93d54438949fca53f9757f, type: 3}
-      propertyPath: timer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 623677721397865930, guid: 0b9977babb93d54438949fca53f9757f, type: 3}
-      propertyPath: timeBetweenShots
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 623677721397865930, guid: 0b9977babb93d54438949fca53f9757f, type: 3}
-      propertyPath: timeBetweenShotsInSlowMotion
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5532761580743451323, guid: 0b9977babb93d54438949fca53f9757f, type: 3}
       propertyPath: m_Name
       value: RocketLauncher
