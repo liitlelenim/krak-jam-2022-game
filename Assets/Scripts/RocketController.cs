@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketMovement : MonoBehaviour
+public class RocketController : MonoBehaviour
 {
     #region Assignment
     EnviormentController enviormentController;

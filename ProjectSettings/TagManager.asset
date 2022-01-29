@@ -12,6 +12,8 @@ TagManager:
   - BrownPos1
   - BrownPos2
   - BrownPlatform
+  - BluePlatform
+  - GreenPlatform
   layers:
   - Default
   - TransparentFX

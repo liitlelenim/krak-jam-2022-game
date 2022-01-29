@@ -17,8 +17,8 @@ public class EnviormentController : MonoBehaviour
     [SerializeField] Bit slowMotionBitValue;
     [SerializeField] Bit gravityControlBitValue;
 
-    Transform bluePlatform;
-    Transform greenPlatform;
+    GameObject[] bluePlatform;
+    GameObject[] greenPlatform;
     GameObject[] yellowPos_1;
     GameObject[] yellowPos_2;
     GameObject[] yellowPlaftorm;
@@ -38,14 +38,16 @@ public class EnviormentController : MonoBehaviour
         brownPos_2 = GameObject.FindGameObjectsWithTag("BrownPos2");
         brownPlaftorm = GameObject.FindGameObjectsWithTag("BrownPlatform");
 
-        bluePlatform = GameObject.Find("BluePlatform").transform;
-        greenPlatform = GameObject.Find("GreenPlatform").transform;
+        bluePlatform = GameObject.FindGameObjectsWithTag("BluePlatform");
+        greenPlatform = GameObject.FindGameObjectsWithTag("GreenPlatform");
     }
     #endregion Assignment
 
     #region Variables
     [Header("Platforms")]
     [Header("Bits")]
+    [SerializeField] int defaultRotZ_blue;
+    [SerializeField] int defaultRotZ_green;
     [SerializeField] bool rotationBit1;
     [SerializeField] bool rotationBit2;
     [SerializeField] bool rotationBit3;
@@ -80,41 +82,44 @@ public class EnviormentController : MonoBehaviour
         #region Platform Rotation
         float speed = 5f;
 
-
-        if (rotationBit1 && rotationBit2)
+        for (int i = 0; i < bluePlatform.Length; i++)
         {
-            bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 180f), speed);
+            if (rotationBit1 && rotationBit2)
+            {
+                bluePlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_blue + 180f), speed);
+            }
+            else if (rotationBit1 && !rotationBit2)
+            {
+                bluePlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_blue + -90f), speed);
+            }
+            else if (!rotationBit1 && rotationBit2)
+            {
+                bluePlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_blue + 90f), speed);
+            }
+            else
+            {
+                bluePlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_blue), speed);
+            }
         }
-        else if (rotationBit1 && !rotationBit2)
+        for (int i = 0; i < greenPlatform.Length; i++)
         {
-            bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, -90f), speed);
+            if (rotationBit3 && rotationBit4)
+            {
+                greenPlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_green + 180f), speed);
+            }
+            else if (rotationBit3 && !rotationBit4)
+            {
+                greenPlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_green + -90f), speed);
+            }
+            else if (!rotationBit3 && rotationBit4)
+            {
+                greenPlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_green + 90f), speed);
+            }
+            else
+            {
+                greenPlatform[i].transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, defaultRotZ_green), speed);
+            }
         }
-        else if (!rotationBit1 && rotationBit2)
-        {
-            bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 90f), speed);
-        }
-        else
-        {
-            bluePlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 0f), speed);
-        }
-
-        if (rotationBit3 && rotationBit4)
-        {
-            greenPlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 180f), speed);
-        }
-        else if (rotationBit3 && !rotationBit4)
-        {
-            greenPlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, -90f), speed);
-        }
-        else if (!rotationBit3 && rotationBit4)
-        {
-            greenPlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 90f), speed);
-        }
-        else
-        {
-            greenPlatform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 0f), speed);
-        }
-
         #endregion Platform Rotation
 
         #region Switch Platform Position
@@ -134,13 +139,13 @@ public class EnviormentController : MonoBehaviour
 
         if (switchingBit2)
         {
-            for (int i = 0; i < yellowPlaftorm.Length; i++)
+            for (int i = 0; i < brownPlaftorm.Length; i++)
             {
                 brownPlaftorm[i].transform.position = brownPos_2[i].transform.position;
             }
         }
         else
-            for (int i = 0; i < yellowPlaftorm.Length; i++)
+            for (int i = 0; i < brownPlaftorm.Length; i++)
             {
                 brownPlaftorm[i].transform.position = brownPos_1[i].transform.position;
             }
@@ -166,7 +171,7 @@ public class EnviormentController : MonoBehaviour
                 nextDirection = new Vector3(0f, -1f, 0f);
 
             for (int i = 0; i < rocketsInScene.Length; i++)
-                rocketsInScene[i].GetComponent<RocketMovement>().currentDirection = nextDirection;
+                rocketsInScene[i].GetComponent<RocketController>().currentDirection = nextDirection;
         }
         #endregion RocketDirection
 
