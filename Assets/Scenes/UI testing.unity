@@ -1548,34 +1548,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6608030472172381118, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030472488029146, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030473022675368, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030473124718662, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030473251674110, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030473440415607, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608030473505335604, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
 --- !u!1 &823005832
@@ -1663,30 +1635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7892105819510339999, guid: 2536f301862852f45a899a967baec617, type: 3}
-      propertyPath: m_Mass
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7892105819510339999, guid: 2536f301862852f45a899a967baec617, type: 3}
-      propertyPath: m_GravityScale
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7892105819510340000, guid: 2536f301862852f45a899a967baec617, type: 3}
-      propertyPath: direction
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7892105819510340000, guid: 2536f301862852f45a899a967baec617, type: 3}
       propertyPath: shadedTerrain
       value: 
       objectReference: {fileID: 496420807}
-    - target: {fileID: 7892105819510340003, guid: 2536f301862852f45a899a967baec617, type: 3}
-      propertyPath: speed
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7892105819510340003, guid: 2536f301862852f45a899a967baec617, type: 3}
-      propertyPath: jumpStrength
-      value: 18
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2536f301862852f45a899a967baec617, type: 3}
 --- !u!1 &1187796300
