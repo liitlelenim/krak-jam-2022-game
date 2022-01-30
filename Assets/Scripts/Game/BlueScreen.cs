@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class BlueScreen : MonoBehaviour
 {
-    float timer = 5f;
+    public float timer;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timer -= Time.deltaTime;
+        if (timer > 0)
+            timer -= Time.deltaTime;
         if (timer <= 0)
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
     }
 }

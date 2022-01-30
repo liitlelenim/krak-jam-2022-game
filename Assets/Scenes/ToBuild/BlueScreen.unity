@@ -301,3 +301,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305cbde555fd6f645a856c469de7a150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 4

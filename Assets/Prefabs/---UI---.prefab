@@ -394,18 +394,7 @@ MonoBehaviour:
   gravityControlBitValue: {fileID: 1290497259}
   defaultRotZ_blue: 0
   defaultRotZ_green: 0
-  rotationBit1: 0
-  rotationBit2: 0
-  rotationBit3: 0
-  rotationBit4: 0
-  switchingBit1: 0
-  switchingBit2: 0
   rocketControlBit: 0
-  rocketBit1: 0
-  rocketBit2: 0
-  timerFreezeBit: 0
-  slowMotionBit: 0
-  gravityControlBit: 0
 --- !u!1 &6608030471862970375
 GameObject:
   m_ObjectHideFlags: 0

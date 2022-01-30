@@ -7778,6 +7778,22 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 1704889818458640716, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704889818458640716, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704889818458640716, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704889818458640716, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 6608030471817262233, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.45
@@ -7901,6 +7917,10 @@ PrefabInstance:
     - target: {fileID: 6608030473440415607, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709326380572508286, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80456433ef7847b4e88b69c74ca2cd0f, type: 3}

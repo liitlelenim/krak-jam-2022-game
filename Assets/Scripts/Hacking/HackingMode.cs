@@ -88,7 +88,10 @@ public class HackingMode : MonoBehaviour
         playerControls.Hacking.BackToMenu.performed += ctx =>
         {
             if (playerIsHacking)
+            {
+                playerIsHacking = false;
                 SceneManager.LoadScene(27);
+            }
         };
 
         #endregion Inpur Actions
