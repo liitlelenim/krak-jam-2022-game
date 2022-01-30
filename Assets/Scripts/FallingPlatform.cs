@@ -17,7 +17,7 @@ public class FallingPlatform : MonoBehaviour
     {
         if (!isFalling)
         {
-            speed += Random.Range(0f, 2f);
+            speed += Random.Range(0f, 4f);
             isFalling = true;
         }
         if (destroying)

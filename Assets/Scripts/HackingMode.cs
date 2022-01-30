@@ -121,11 +121,11 @@ public class HackingMode : MonoBehaviour
         "00 - DOWN   11 - UP\n" +
         "10 - LEFT     01 - RIGHT";
 
-    string keysInHackingMode = "Z - CHANGE BIT VALUE\n\n" +
+    string keysInHackingMode = "ARROW UP/DOWN - CHANGE BIT VALUE\n\n" +
         "X - QUIT HACKING MODE";
     string keysInPlayMode = "Z - ENTER HACKING MODE\n\n" +
         "< > - CHARACTER MOVEMENT\n\n" +
-        "X - JUMP";
+        "X / SPACE - JUMP";
 
     #endregion Text
 
