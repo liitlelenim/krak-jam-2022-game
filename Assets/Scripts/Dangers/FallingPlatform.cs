@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallingPlatform : MonoBehaviour
 {
     HackingMode hackingMode;
-    float speed = 10;
+    float speed = 8;
     bool isFalling;
     bool destroying;
     float timer = 2f;
@@ -17,7 +17,7 @@ public class FallingPlatform : MonoBehaviour
     {
         if (!isFalling)
         {
-            speed += Random.Range(0f, 4f);
+            speed += Random.Range(0f, 2f);
             isFalling = true;
         }
         if (destroying)
