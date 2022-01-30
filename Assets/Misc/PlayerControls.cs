@@ -152,6 +152,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BackToMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""c201f34b-0dfa-48bb-9fc7-2252f0f3f9c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -231,6 +240,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""ChangeBit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85681c0d-8f57-47d0-9c56-f68f3373bf49"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BackToMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -248,6 +268,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Hacking_PreviousBit = m_Hacking.FindAction("PreviousBit", throwIfNotFound: true);
         m_Hacking_NextBit = m_Hacking.FindAction("NextBit", throwIfNotFound: true);
         m_Hacking_Quit = m_Hacking.FindAction("Quit", throwIfNotFound: true);
+        m_Hacking_BackToMenu = m_Hacking.FindAction("BackToMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -353,6 +374,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Hacking_PreviousBit;
     private readonly InputAction m_Hacking_NextBit;
     private readonly InputAction m_Hacking_Quit;
+    private readonly InputAction m_Hacking_BackToMenu;
     public struct HackingActions
     {
         private @PlayerControls m_Wrapper;
@@ -362,6 +384,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @PreviousBit => m_Wrapper.m_Hacking_PreviousBit;
         public InputAction @NextBit => m_Wrapper.m_Hacking_NextBit;
         public InputAction @Quit => m_Wrapper.m_Hacking_Quit;
+        public InputAction @BackToMenu => m_Wrapper.m_Hacking_BackToMenu;
         public InputActionMap Get() { return m_Wrapper.m_Hacking; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -386,6 +409,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Quit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
                 @Quit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
                 @Quit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
+                @BackToMenu.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
+                @BackToMenu.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
+                @BackToMenu.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
             }
             m_Wrapper.m_HackingActionsCallbackInterface = instance;
             if (instance != null)
@@ -405,6 +431,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Quit.started += instance.OnQuit;
                 @Quit.performed += instance.OnQuit;
                 @Quit.canceled += instance.OnQuit;
+                @BackToMenu.started += instance.OnBackToMenu;
+                @BackToMenu.performed += instance.OnBackToMenu;
+                @BackToMenu.canceled += instance.OnBackToMenu;
             }
         }
     }
@@ -421,5 +450,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnPreviousBit(InputAction.CallbackContext context);
         void OnNextBit(InputAction.CallbackContext context);
         void OnQuit(InputAction.CallbackContext context);
+        void OnBackToMenu(InputAction.CallbackContext context);
     }
 }

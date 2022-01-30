@@ -1,4 +1,4 @@
-using System;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -15,7 +15,6 @@ public class HackingMode : MonoBehaviour
     Text instructionText;
     Text bitNameText;
     Text keyboardText;
-
     private PlayerMovement _playerMovement;
     private SoundsManager _soundsManager;
     private bool _openingFrame = false;
@@ -77,14 +76,21 @@ public class HackingMode : MonoBehaviour
                 keyboardText.text = keysInHackingMode;
                 HandleDescriptionChange();
             }
+            else if (playerIsHacking)
+            {
+                playerIsHacking = false;
+                _playerMovement.enabled = true;
+                keyboardText.text = keysInPlayMode;
+                HandleDescriptionChange();
+            }
         };
-        playerControls.Hacking.Quit.performed += _ =>
+
+        playerControls.Hacking.BackToMenu.performed += ctx =>
         {
-            playerIsHacking = false;
-            _playerMovement.enabled = true;
-            keyboardText.text = keysInPlayMode;
-            HandleDescriptionChange();
+            if (playerIsHacking)
+                SceneManager.LoadScene(13);
         };
+
         #endregion Inpur Actions
     }
 
@@ -122,10 +128,11 @@ public class HackingMode : MonoBehaviour
         "10 - LEFT     01 - RIGHT";
 
     string keysInHackingMode = "ARROW UP/DOWN - CHANGE BIT VALUE\n\n" +
-        "X - QUIT HACKING MODE";
+        "X - QUIT HACKING MODE\n" +
+        "ESCAPE - QUIT TO MENU";
     string keysInPlayMode = "Z - ENTER HACKING MODE\n\n" +
         "< > - CHARACTER MOVEMENT\n\n" +
-        "X / SPACE - JUMP";
+        "X OR SPACE - JUMP";
 
     #endregion Text
 
