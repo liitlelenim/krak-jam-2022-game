@@ -1081,7 +1081,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SECOND DREAM
+  m_Text: SECOND
 --- !u!222 &1769289956
 CanvasRenderer:
   m_ObjectHideFlags: 0

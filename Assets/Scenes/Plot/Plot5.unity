@@ -850,7 +850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FIFTH DREAM
+  m_Text: FIFTH
 --- !u!222 &1510341777
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -990,9 +990,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "TYM RAZEM SEN BYL KR\xD3TKI\n\nJEDYNE CZEGO SIE DOWIEDZIA\u0141EM TO\n\nTEGO
-    \u017BEBY UNIKA\u0106 RAKIET\n\nS\u0104 WYSTARCZAJ\u0104CO SILNE BY ZNISZCZY\u0106
-    LEKK\u0104 \u015ACIANE\n\n\n\n"
+  m_Text: "TYM RAZEM MOG\u0141EM POCZU\u0106 SI\u0118 BEZPIECZNIE\n\nCHO\u0106 ZAMIAST
+    WSZELAKICH ZAGRO\u017BE\u0143 MIA\u0141EM ZAGATK\u0118 DO ROZWI\u0104ZANIA\n\nMO\u017BE
+    TO MOJA PODR\xD3\u017B ZBLI\u017BA SI\u0118 KU KO\u0143COWI\n\nPRZEKONAJMY SI\u0118\n\n\n\n"
 --- !u!222 &1916460455
 CanvasRenderer:
   m_ObjectHideFlags: 0

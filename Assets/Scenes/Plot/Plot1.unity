@@ -794,7 +794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FIRST DREAM
+  m_Text: FIRST
 --- !u!222 &1271025336
 CanvasRenderer:
   m_ObjectHideFlags: 0
