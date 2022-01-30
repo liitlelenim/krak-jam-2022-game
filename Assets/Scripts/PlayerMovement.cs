@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D collider in overlapped)
         {
-            if (!collider.CompareTag("Player"))
+            if (!collider.CompareTag("Player")&&!collider.isTrigger)
             {
                 if (_lastLedgeTimer > 0.85f)
                 {
