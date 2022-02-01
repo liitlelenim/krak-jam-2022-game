@@ -65,25 +65,6 @@ public class HackingMode : MonoBehaviour
         playerControls.Hacking.NextBit.canceled += _ => _holdingNextBitButton = false;
         //Change bit value
         playerControls.Hacking.ChangeBit.performed += ctx => ChangeBitValue();
-        // Start hacking
-        playerControls.Hacking.Activate.performed += ctx =>
-        {
-            if (!playerIsHacking)
-            {
-                playerIsHacking = true;
-                _openingFrame = true;
-                _playerMovement.enabled = false;
-                keyboardText.text = keysInHackingMode;
-                HandleDescriptionChange();
-            }
-            else if (playerIsHacking)
-            {
-                playerIsHacking = false;
-                _playerMovement.enabled = true;
-                keyboardText.text = keysInPlayMode;
-                HandleDescriptionChange();
-            }
-        };
 
         playerControls.Hacking.BackToMenu.performed += ctx =>
         {
@@ -146,6 +127,33 @@ public class HackingMode : MonoBehaviour
     #region Update
     void Update()
     {
+        InterfaceControl();
+        ActivateHackingMode();
+    }
+    private void LateUpdate()
+    {
+        _openingFrame = false;
+    }
+    void ActivateHackingMode()
+    {
+        playerIsHacking = playerControls.Hacking.Activate.ReadValue<float>() > 0.1f;
+        if (playerIsHacking)
+        {
+            _openingFrame = true;
+            _playerMovement.enabled = false;
+            keyboardText.text = keysInHackingMode;
+            HandleDescriptionChange();
+        }
+        else if (!playerIsHacking)
+        {
+            _playerMovement.enabled = true;
+            keyboardText.text = keysInPlayMode;
+            HandleDescriptionChange();
+        }
+    }
+    void InterfaceControl()
+    {
+
         if (playerIsHacking)
         {
             foreach (GameObject bit in bitsArray)
@@ -191,11 +199,7 @@ public class HackingMode : MonoBehaviour
             bitNameText.text = null;
             Time.timeScale = 1;
         }
-    }
 
-    private void LateUpdate()
-    {
-        _openingFrame = false;
     }
 
     #endregion Update

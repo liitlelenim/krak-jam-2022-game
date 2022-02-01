@@ -44,6 +44,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""3b1ef4a9-1d78-4663-baaa-7f72392d7ec2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -81,6 +90,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""A|D"",
+                    ""id"": ""9fb44344-9732-458e-b4be-a9d70f6eacf9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""011258e5-e120-4ba6-b29e-739b5b8e592c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""cf5d3b31-72f1-4f11-81f8-96ba3c8e72f1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""86892d61-32c7-4221-a9ce-4eadb5a8ab82"",
                     ""path"": ""<Keyboard>/x"",
@@ -99,6 +141,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3ecf6a7-1323-4859-b0e4-5320dfdde09a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7989a657-5e51-4de1-98e6-ed9e4e3c2a76"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a0e123d-c041-4858-bd42-0a0137017639"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -123,7 +198,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""id"": ""35be4ba8-6849-4484-a08c-8c85f3f32696"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -139,15 +214,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": ""NextBit"",
                     ""type"": ""Button"",
                     ""id"": ""3a0dd916-8e8a-4fd7-a826-7beb12e172a0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Quit"",
-                    ""type"": ""Button"",
-                    ""id"": ""f1bb800e-cb49-4afe-adcf-542a9b8e19d9"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -177,6 +243,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""63a06655-af82-4a55-92ce-c242589790be"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""21350b04-a777-4e92-98ce-d999da721fb7"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
@@ -194,17 +271,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""NextBit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""70a22575-557d-4998-aaf8-a2e51072ecde"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -261,13 +327,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Horizontal = m_Movement.FindAction("Horizontal", throwIfNotFound: true);
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
+        m_Movement_Interact = m_Movement.FindAction("Interact", throwIfNotFound: true);
         // Hacking
         m_Hacking = asset.FindActionMap("Hacking", throwIfNotFound: true);
         m_Hacking_ChangeBit = m_Hacking.FindAction("ChangeBit", throwIfNotFound: true);
         m_Hacking_Activate = m_Hacking.FindAction("Activate", throwIfNotFound: true);
         m_Hacking_PreviousBit = m_Hacking.FindAction("PreviousBit", throwIfNotFound: true);
         m_Hacking_NextBit = m_Hacking.FindAction("NextBit", throwIfNotFound: true);
-        m_Hacking_Quit = m_Hacking.FindAction("Quit", throwIfNotFound: true);
         m_Hacking_BackToMenu = m_Hacking.FindAction("BackToMenu", throwIfNotFound: true);
     }
 
@@ -330,12 +396,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_Horizontal;
     private readonly InputAction m_Movement_Jump;
+    private readonly InputAction m_Movement_Interact;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
         public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Horizontal => m_Wrapper.m_Movement_Horizontal;
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
+        public InputAction @Interact => m_Wrapper.m_Movement_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -351,6 +419,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnJump;
+                @Interact.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -361,6 +432,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -373,7 +447,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Hacking_Activate;
     private readonly InputAction m_Hacking_PreviousBit;
     private readonly InputAction m_Hacking_NextBit;
-    private readonly InputAction m_Hacking_Quit;
     private readonly InputAction m_Hacking_BackToMenu;
     public struct HackingActions
     {
@@ -383,7 +456,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Activate => m_Wrapper.m_Hacking_Activate;
         public InputAction @PreviousBit => m_Wrapper.m_Hacking_PreviousBit;
         public InputAction @NextBit => m_Wrapper.m_Hacking_NextBit;
-        public InputAction @Quit => m_Wrapper.m_Hacking_Quit;
         public InputAction @BackToMenu => m_Wrapper.m_Hacking_BackToMenu;
         public InputActionMap Get() { return m_Wrapper.m_Hacking; }
         public void Enable() { Get().Enable(); }
@@ -406,9 +478,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @NextBit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
                 @NextBit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
                 @NextBit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnNextBit;
-                @Quit.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
-                @Quit.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
-                @Quit.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnQuit;
                 @BackToMenu.started -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
                 @BackToMenu.performed -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
                 @BackToMenu.canceled -= m_Wrapper.m_HackingActionsCallbackInterface.OnBackToMenu;
@@ -428,9 +497,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @NextBit.started += instance.OnNextBit;
                 @NextBit.performed += instance.OnNextBit;
                 @NextBit.canceled += instance.OnNextBit;
-                @Quit.started += instance.OnQuit;
-                @Quit.performed += instance.OnQuit;
-                @Quit.canceled += instance.OnQuit;
                 @BackToMenu.started += instance.OnBackToMenu;
                 @BackToMenu.performed += instance.OnBackToMenu;
                 @BackToMenu.canceled += instance.OnBackToMenu;
@@ -442,6 +508,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnHorizontal(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IHackingActions
     {
@@ -449,7 +516,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnActivate(InputAction.CallbackContext context);
         void OnPreviousBit(InputAction.CallbackContext context);
         void OnNextBit(InputAction.CallbackContext context);
-        void OnQuit(InputAction.CallbackContext context);
         void OnBackToMenu(InputAction.CallbackContext context);
     }
 }
