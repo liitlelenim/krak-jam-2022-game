@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    HackingMode hackingMode;
+    EnviormentController enviormentController;
     float speed = 8;
     bool isFalling;
     bool destroying;
     float timer = 2f;
     void Awake()
     {
-        hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
+        enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
     }
     private void Update()
     {
@@ -24,7 +24,7 @@ public class FallingPlatform : MonoBehaviour
             timer -= Time.deltaTime;
         if (timer <= 0)
             Destroy(gameObject);
-        transform.position += Vector3.down * speed * hackingMode.timeSpeed * Time.deltaTime;
+        transform.position += Vector3.down * speed * enviormentController.timeSpeed * Time.deltaTime;
 
     }
     private void OnCollisionEnter2D(Collision2D collision)

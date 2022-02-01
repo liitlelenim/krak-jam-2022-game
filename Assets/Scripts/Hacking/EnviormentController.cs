@@ -25,11 +25,8 @@ public class EnviormentController : MonoBehaviour
     GameObject[] brownPos_1;
     GameObject[] brownPos_2;
     GameObject[] brownPlaftorm;
-    HackingMode hackingMode;
     void Awake()
     {
-        hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
-
         yellowPos_1 = GameObject.FindGameObjectsWithTag("YellowPos1");
         yellowPos_2 = GameObject.FindGameObjectsWithTag("YellowPos2");
         yellowPlaftorm = GameObject.FindGameObjectsWithTag("YellowPlatform");
@@ -62,7 +59,7 @@ public class EnviormentController : MonoBehaviour
     bool timerFreezeBit;
     bool slowMotionBit;
     bool gravityControlBit;
-
+    public float timeSpeed = 1;
     #endregion Variables
 
     #region Hacking Execution
@@ -173,13 +170,12 @@ public class EnviormentController : MonoBehaviour
 
         #region Time
         if (timerFreezeBit)
-            hackingMode.timeSpeed = 0f;
+            timeSpeed = 0f;
         else if (slowMotionBit)
-            hackingMode.timeSpeed = 0.5f;
+            timeSpeed = 0.5f;
         else
-            hackingMode.timeSpeed = 1f;
+            timeSpeed = 1f;
         #endregion Time
-
         #region Gravity
         if (gravityControlBit)
             Physics2D.gravity = new Vector2(0, 9.81f);

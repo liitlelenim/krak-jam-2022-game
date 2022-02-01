@@ -6,12 +6,10 @@ public class RocketController : MonoBehaviour
 {
     #region Assignment
     EnviormentController enviormentController;
-    HackingMode hackingMode;
 
     void Awake()
     {
         enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
-        hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
         firstDirection = transform.parent.GetComponent<RocketLauncher>().direction;
     }
     #endregion Assignment
@@ -27,7 +25,7 @@ public class RocketController : MonoBehaviour
     {
         if (!enviormentController.rocketControlBit)
             currentDirection = firstDirection;
-            transform.position += currentDirection * rocketSpeed * hackingMode.timeSpeed * Time.deltaTime;
+            transform.position += currentDirection * rocketSpeed * enviormentController.timeSpeed * Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

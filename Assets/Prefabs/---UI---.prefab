@@ -395,6 +395,7 @@ MonoBehaviour:
   defaultRotZ_blue: 0
   defaultRotZ_green: 0
   rocketControlBit: 0
+  timeSpeed: 1
 --- !u!1 &6608030471862970375
 GameObject:
   m_ObjectHideFlags: 0

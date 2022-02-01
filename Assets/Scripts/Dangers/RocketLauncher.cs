@@ -5,21 +5,21 @@ using UnityEngine;
 public class RocketLauncher : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rocketRB;
-    HackingMode hackingMode;
-
+    EnviormentController
+ enviormentController;
     public Vector3 direction;
     [SerializeField] float timer = 3;
     [SerializeField] float timeBetweenShots = 3;
     [SerializeField] float timeBetweenShotsInSlowMotion = 6;
     void Awake()
     {
-        hackingMode = GameObject.FindGameObjectWithTag("Player").GetComponent<HackingMode>();
+        enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
     }
     void Update()
     {
-        if (hackingMode.timeSpeed == 0.5f)
+        if (enviormentController.timeSpeed == 0.5f)
             timeBetweenShots = timeBetweenShotsInSlowMotion;
-        if (timer > 0 && hackingMode.timeSpeed != 0f)
+        if (timer > 0 && enviormentController.timeSpeed != 0f)
             timer -= Time.deltaTime;
         if(timer<=0)
         {
