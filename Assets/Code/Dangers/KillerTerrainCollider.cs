@@ -1,25 +1,26 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class KillerTerrainCollider : MonoBehaviour
+namespace Dangers
 {
-    private PlayerLifeController _playerLifeController;
-
-    private void Start()
+    public class KillerTerrainCollider : MonoBehaviour
     {
-        _playerLifeController = transform.parent.GetComponent<PlayerLifeController>();
-    }
+        private PlayerLifeController _playerLifeController;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<PlayerKiller>() != null)
+        private void Start()
         {
-            if (other.GetComponent<Tilemap>() != null)
+            _playerLifeController = transform.parent.GetComponent<PlayerLifeController>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.GetComponent<PlayerKiller>() != null)
             {
-                _playerLifeController.Death();
+                if (other.GetComponent<Tilemap>() != null)
+                {
+                    _playerLifeController.Death();
+                }
             }
         }
     }

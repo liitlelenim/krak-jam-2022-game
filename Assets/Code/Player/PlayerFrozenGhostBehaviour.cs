@@ -1,49 +1,50 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Hacking;
 using UnityEngine;
 
-public class PlayerFrozenGhostBehaviour : MonoBehaviour
+namespace Player
 {
-    [SerializeField] private Sprite[] playerSprites;
-    [SerializeField] private Sprite[] frozenSprites;
-
-    [SerializeField] private SpriteRenderer playerSpriteRenderer;
-    [SerializeField] private HackingMode hackingMode;
-
-    private SpriteRenderer _spriteRenderer;
-
-    private readonly Color _transparentColor = new Color(0, 0, 0, 0);
-    private readonly Color _defaultColor = new Color(1, 1, 1, 1);
-
-    private void Awake()
+    public class PlayerFrozenGhostBehaviour : MonoBehaviour
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+        [SerializeField] private Sprite[] playerSprites;
+        [SerializeField] private Sprite[] frozenSprites;
 
-    private void LateUpdate()
-    {
-        _spriteRenderer.color = hackingMode.playerIsHacking ? _defaultColor : _transparentColor;
-        Sprite playerCurrentSprite = playerSpriteRenderer.sprite;
-        Sprite spriteToDisplay;
-        if (playerCurrentSprite == playerSprites[1])
+        [SerializeField] private SpriteRenderer playerSpriteRenderer;
+        [SerializeField] private HackingMode hackingMode;
+
+        private SpriteRenderer _spriteRenderer;
+
+        private readonly Color _transparentColor = new Color(0, 0, 0, 0);
+        private readonly Color _defaultColor = new Color(1, 1, 1, 1);
+
+        private void Awake()
         {
-            spriteToDisplay = frozenSprites[1];
-        }
-        else if (playerCurrentSprite == playerSprites[2])
-        {
-            spriteToDisplay = frozenSprites[2];
-        }
-        else if (playerCurrentSprite == playerSprites[3])
-        {
-            spriteToDisplay = frozenSprites[3];
-        }
-        else
-        {
-            spriteToDisplay = frozenSprites[0];
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        _spriteRenderer.sprite = spriteToDisplay;
-        _spriteRenderer.flipX = playerSpriteRenderer.flipX;
+        private void LateUpdate()
+        {
+            _spriteRenderer.color = hackingMode.playerIsHacking ? _defaultColor : _transparentColor;
+            Sprite playerCurrentSprite = playerSpriteRenderer.sprite;
+            Sprite spriteToDisplay;
+            if (playerCurrentSprite == playerSprites[1])
+            {
+                spriteToDisplay = frozenSprites[1];
+            }
+            else if (playerCurrentSprite == playerSprites[2])
+            {
+                spriteToDisplay = frozenSprites[2];
+            }
+            else if (playerCurrentSprite == playerSprites[3])
+            {
+                spriteToDisplay = frozenSprites[3];
+            }
+            else
+            {
+                spriteToDisplay = frozenSprites[0];
+            }
+
+            _spriteRenderer.sprite = spriteToDisplay;
+            _spriteRenderer.flipX = playerSpriteRenderer.flipX;
+        }
     }
 }

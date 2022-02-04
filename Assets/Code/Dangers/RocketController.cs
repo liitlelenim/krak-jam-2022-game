@@ -1,34 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using Hacking;
 using UnityEngine;
 
-public class RocketController : MonoBehaviour
+namespace Dangers
 {
-    #region Assignment
-    EnviormentController enviormentController;
-
-    void Awake()
+    public class RocketController : MonoBehaviour
     {
-        enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
-        firstDirection = transform.parent.GetComponent<RocketLauncher>().direction;
-    }
-    #endregion Assignment
+        #region Assignment
+        EnvironmentController _environmentController;
 
-    #region Variables
-    public float rocketSpeed;
-    float localTimeSpeed;
-    [HideInInspector] public Vector3 firstDirection;
-    [HideInInspector] public Vector3 currentDirection;
+        void Awake()
+        {
+            _environmentController = GameObject.Find("BitsMenu").GetComponent<EnvironmentController>();
+            firstDirection = transform.parent.GetComponent<RocketLauncher>().direction;
+        }
+        #endregion Assignment
 
-    #endregion Variables
-    void Update()
-    {
-        if (!enviormentController.rocketControlBit)
-            currentDirection = firstDirection;
-            transform.position += currentDirection * rocketSpeed * enviormentController.timeSpeed * Time.deltaTime;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
+        #region Variables
+        public float rocketSpeed;
+        float localTimeSpeed;
+        [HideInInspector] public Vector3 firstDirection;
+        [HideInInspector] public Vector3 currentDirection;
+
+        #endregion Variables
+        void Update()
+        {
+            if (!_environmentController.rocketControlBit)
+                currentDirection = firstDirection;
+            transform.position += currentDirection * rocketSpeed * _environmentController.TimeSpeed * Time.deltaTime;
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Destroy(gameObject);
+        }
     }
 }

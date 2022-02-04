@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="fix points colors">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CartridgePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CartridgePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/MusicManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/SoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/SoundsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameJams_Scenes/Area1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameJams_Scenes/Area1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,16 +46,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFrozenGhostBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/CartridgeObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/CartridgeManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scripts/CartridgeManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/GameJams_Scenes/Area1.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -49,6 +65,27 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/MusicManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/SoundsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />

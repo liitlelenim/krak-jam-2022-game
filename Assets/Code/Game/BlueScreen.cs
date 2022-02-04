@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BlueScreen : MonoBehaviour
+namespace Game
 {
-    public float timer;
-
-    // Update is called once per frame
-    void FixedUpdate()
+    public class BlueScreen : MonoBehaviour
     {
-        if (timer > 0)
+        public float timer;
+
+        // Update is called once per frame
+        void Update()
+        {
             timer -= Time.deltaTime;
-        if (timer <= 0)
-            SceneManager.LoadScene(1);
+            if (timer <= 0)
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
     }
 }

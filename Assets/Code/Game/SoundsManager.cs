@@ -1,29 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 
-public class SoundsManager : MonoBehaviour
+namespace Game
 {
-    [SerializeField] private AudioClip[] sounds;
-
-    public void PlaySound(int soundIndex)
+    public class SoundsManager : MonoBehaviour
     {
-        HandleSound(sounds[soundIndex]);
-    }
+        [SerializeField] private AudioClip[] sounds;
 
-    public void PlaySound(int soundIndex, float volumeFactor)
-    {
-        HandleSound(sounds[soundIndex], volumeFactor);
-    }
+        public void PlaySound(int soundIndex)
+        {
+            HandleSound(sounds[soundIndex]);
+        }
 
-    private void HandleSound(AudioClip clip, float volumeFactor = 0.3f)
-    {
-        GameObject sound = new GameObject();
-        AudioSource source = sound.AddComponent<AudioSource>();
-        source.clip = clip;
-        source.volume = volumeFactor;
-        source.Play();
-        Destroy(sound, source.clip.length + 2f);
+        public void PlaySound(int soundIndex, float volumeFactor)
+        {
+            HandleSound(sounds[soundIndex], volumeFactor);
+        }
+
+        private void HandleSound(AudioClip clip, float volumeFactor = 0.3f)
+        {
+            GameObject sound = new GameObject();
+            AudioSource source = sound.AddComponent<AudioSource>();
+            source.clip = clip;
+            source.volume = volumeFactor;
+            source.Play();
+            Destroy(sound, source.clip.length + 2f);
+        }
     }
 }

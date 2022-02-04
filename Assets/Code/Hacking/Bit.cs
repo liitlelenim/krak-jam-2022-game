@@ -1,25 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Bit : MonoBehaviour
+namespace Hacking
 {
-    SpriteRenderer spriteRenderer;
-    [Header("Sprites")] 
-    [SerializeField] Sprite bitZeroSprite;
-    [SerializeField] Sprite bitOneSprite;
-    public bool valueIsOne;
-    private void Awake()
+    public class Bit : MonoBehaviour
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+        private SpriteRenderer _spriteRenderer;
+        [Header("Sprites")] [SerializeField] private Sprite bitZeroSprite;
+        [SerializeField] private Sprite bitOneSprite;
+        public bool valueIsOne;
 
-    public void ChangeValue()
-    {
-        valueIsOne = !valueIsOne;
-        if (valueIsOne == true)
-            spriteRenderer.sprite = bitOneSprite;
-        if (valueIsOne == false)
-            spriteRenderer.sprite = bitZeroSprite;
+        private void Awake()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        public void ChangeValue()
+        {
+            valueIsOne = !valueIsOne;
+            _spriteRenderer.sprite = valueIsOne ? bitOneSprite : bitZeroSprite;
+        }
     }
 }

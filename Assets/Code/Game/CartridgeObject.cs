@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using CartridgeType = CartridgeManager.CartridgeType;
+using CartridgeType = Game.CartridgeManager.CartridgeType;
 
 
 public class CartridgeObject : MonoBehaviour

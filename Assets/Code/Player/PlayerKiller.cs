@@ -1,7 +1,10 @@
 
 using UnityEngine;
 
-public class PlayerKiller : MonoBehaviour
+namespace Player
 {
+    public class PlayerKiller : MonoBehaviour
+    {
     
+    }
 }
