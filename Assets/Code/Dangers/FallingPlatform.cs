@@ -1,35 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
+using Hacking;
 using UnityEngine;
 
-public class FallingPlatform : MonoBehaviour
+namespace Dangers
 {
-    EnviormentController enviormentController;
-    float speed = 8;
-    bool isFalling;
-    bool destroying;
-    float timer = 2f;
-    void Awake()
+    public class FallingPlatform : MonoBehaviour
     {
-        enviormentController = GameObject.Find("BitsMenu").GetComponent<EnviormentController>();
-    }
-    private void Update()
-    {
-        if (!isFalling)
+        EnvironmentController _environmentController;
+        float speed = 8;
+        bool isFalling;
+        bool destroying;
+        float timer = 2f;
+        void Awake()
         {
-            speed += Random.Range(0f, 2f);
-            isFalling = true;
+            _environmentController = GameObject.Find("BitsMenu").GetComponent<EnvironmentController>();
         }
-        if (destroying)
-            timer -= Time.deltaTime;
-        if (timer <= 0)
-            Destroy(gameObject);
-        transform.position += Vector3.down * speed * enviormentController.timeSpeed * Time.deltaTime;
+        private void Update()
+        {
+            if (!isFalling)
+            {
+                speed += Random.Range(0f, 2f);
+                isFalling = true;
+            }
+            if (destroying)
+                timer -= Time.deltaTime;
+            if (timer <= 0)
+                Destroy(gameObject);
+            transform.position += Vector3.down * speed * _environmentController.TimeSpeed * Time.deltaTime;
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!collision.collider.CompareTag("Player") || !collision.collider.CompareTag("Cartridge"))
-            destroying = true;
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (!collision.collider.CompareTag("Player") || !collision.collider.CompareTag("Cartridge"))
+                destroying = true;
+        }
     }
 }

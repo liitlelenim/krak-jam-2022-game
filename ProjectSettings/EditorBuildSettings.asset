@@ -6,90 +6,90 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ToBuild/MUSIC_INIT_SCENE.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/MUSIC_INIT_SCENE.unity
     guid: 2672a6d8cde5e4746a3a68e8cd2a75b1
   - enabled: 1
-    path: Assets/Scenes/ToBuild/MainMenu.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/MainMenu.unity
     guid: 49f3b5148411f0443adef8f24a396e16
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot1.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot1.unity
     guid: 800d594de7b25014a933cf159aca1bd2
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Olgi/Poziom 1.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Olgi/Poziom 1.unity
     guid: d33a9710236ce42468d05280ca8757a6
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot2.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot2.unity
     guid: d83366de679301f4cb0b2005c616cff4
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Olgi/Poziom 2.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Olgi/Poziom 2.unity
     guid: 067397d5c46bd21408c38e0594495ae8
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot3.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot3.unity
     guid: ceb8853c6ba43904086975f0432b5d5b
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Olgi/Poziom 3.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Olgi/Poziom 3.unity
     guid: 75d383abe895c8b4b82f07006a1c5520
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot4.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot4.unity
     guid: e0272929ef6ac8049a50de3f50a2a615
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Olgi/Poziom 4.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Olgi/Poziom 4.unity
     guid: 6365608e12e9b7240b5e3ae5e98003b4
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot5.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot5.unity
     guid: 4d8884df5cf9bbf418908c03796adda3
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Olgi/Level 5.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Olgi/Level 5.unity
     guid: 54688e97d221a7a44829f3124d0b3679
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot6.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot6.unity
     guid: e31efde80b915f0498a68bad08aa8055
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_6.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_6.unity
     guid: 552324599f5944042a3e6bbd43028acf
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot7.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot7.unity
     guid: 150e1ad542374fc40a745d24e6c77ad7
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_7.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_7.unity
     guid: 55a923fe4204cc94d9781b244fa09561
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot8.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot8.unity
     guid: 8af607c0fa557834d97d36bdf4104153
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_8.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_8.unity
     guid: 187f4bf4c99531b42ba3607213e07367
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot9.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot9.unity
     guid: 4972db0265888074eb2730e73c323a5e
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_9.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_9.unity
     guid: 12a24b7b98dfd3b4681e75cc40e18496
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot10.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot10.unity
     guid: 25b08f456df2b0e4da91a42b64d6aa24
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_10.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_10.unity
     guid: 1b73a8d1e9a279246b6332c3742945bd
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot11.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot11.unity
     guid: a3ba388dfb682f14093bb22fdd075221
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_11.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_11.unity
     guid: 0b7f30b86d8da6a4c9df2aa7f4eeb32e
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot12.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot12.unity
     guid: 6b5e4a7f7019663439d315f6e0db4748
   - enabled: 1
-    path: Assets/Scenes/ToBuild/Poziomy Gracjana/Level_12.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/Poziomy Gracjana/Level_12.unity
     guid: b514794ba1a894e4d8a577e239539f36
   - enabled: 1
-    path: Assets/Scenes/Plot/Plot13.unity
+    path: Assets/Scenes/GameJams_Scenes/Plot/Plot13.unity
     guid: 7e96e4f45603d79458e479b55e1ab8cc
   - enabled: 1
-    path: Assets/Scenes/ToBuild/BlueScreen.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/BlueScreen.unity
     guid: 40c75f192581a5a4e9c6a82163bb00c9
   - enabled: 1
-    path: Assets/Scenes/ToBuild/FreeMode.unity
+    path: Assets/Scenes/GameJams_Scenes/ToBuild/FreeMode.unity
     guid: d6ccf149e4e7ca846a70ea47e48a2d40
   m_configObjects: {}

@@ -1,89 +1,89 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-public class PathFollowAI : MonoBehaviour
+namespace Dangers
 {
-    public bool ShouldFollow { get; set; } = true;
-    public bool ShouldBeReversed { get; set; } = false;
-    [SerializeField] private float speed = 3f;
-    [SerializeField] Vector2[] path;
-
-    private readonly Vector2 _gridOffset = new Vector2(-0.5f, -0.5f);
-    private int _currentDestination = 0;
-    private Vector2 _destinationDirection;
-
-    private SpriteRenderer _spriteRenderer;
-
-    private void Awake()
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class PathFollowAI : MonoBehaviour
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        ShouldBeReversed = true;
-    }
+        public bool ShouldFollow { get; set; } = true;
+        public bool ShouldBeReversed { get; set; } = false;
+        [SerializeField] private float speed = 3f;
+        [SerializeField] Vector2[] path;
 
-    private void Start()
-    {
-        _destinationDirection = (path[0] + _gridOffset - (Vector2) transform.position).normalized;
-        if (Vector2.Distance(transform.position, path[_currentDestination] + _gridOffset) <= 0.5f)
+        private readonly Vector2 _gridOffset = new Vector2(-0.5f, -0.5f);
+        private int _currentDestination = 0;
+        private Vector2 _destinationDirection;
+
+        private SpriteRenderer _spriteRenderer;
+
+        private void Awake()
         {
-            _currentDestination += ShouldBeReversed ? -1 : 1;
-            if (_currentDestination > path.Length - 1)
-            {
-                _currentDestination = 0;
-            }
-
-            if (_currentDestination < 0)
-            {
-                _currentDestination = path.Length - 1;
-            }
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            ShouldBeReversed = true;
         }
-    }
 
-    private void Update()
-    {
-        if (Vector2.Distance(transform.position, path[_currentDestination] + _gridOffset) <= 0.5f)
+        private void Start()
         {
-            _currentDestination += ShouldBeReversed ? -1 : 1;
-            if (_currentDestination > path.Length - 1)
+            _destinationDirection = (path[0] + _gridOffset - (Vector2) transform.position).normalized;
+            if (Vector2.Distance(transform.position, path[_currentDestination] + _gridOffset) <= 0.5f)
             {
-                _currentDestination = 0;
-            }
+                _currentDestination += ShouldBeReversed ? -1 : 1;
+                if (_currentDestination > path.Length - 1)
+                {
+                    _currentDestination = 0;
+                }
 
-            if (_currentDestination < 0)
-            {
-                _currentDestination = path.Length - 1;
+                if (_currentDestination < 0)
+                {
+                    _currentDestination = path.Length - 1;
+                }
             }
         }
 
-        _destinationDirection = (path[_currentDestination] + _gridOffset - (Vector2) transform.position).normalized;
-
-
-        if (ShouldFollow)
+        private void Update()
         {
-            transform.position += new Vector3(_destinationDirection.x, _destinationDirection.y, 0) *
-                                  (Time.deltaTime * speed);
-            if (_destinationDirection.x >= 0)
+            if (Vector2.Distance(transform.position, path[_currentDestination] + _gridOffset) <= 0.5f)
             {
-                if (ShouldBeReversed)
+                _currentDestination += ShouldBeReversed ? -1 : 1;
+                if (_currentDestination > path.Length - 1)
                 {
-                    _spriteRenderer.flipX = true;
+                    _currentDestination = 0;
                 }
-                else
+
+                if (_currentDestination < 0)
                 {
-                    _spriteRenderer.flipX = false;
+                    _currentDestination = path.Length - 1;
                 }
             }
-            else
+
+            _destinationDirection = (path[_currentDestination] + _gridOffset - (Vector2) transform.position).normalized;
+
+
+            if (ShouldFollow)
             {
-                if (ShouldBeReversed)
+                transform.position += new Vector3(_destinationDirection.x, _destinationDirection.y, 0) *
+                                      (Time.deltaTime * speed);
+                if (_destinationDirection.x >= 0)
                 {
-                    _spriteRenderer.flipX = false;
+                    if (ShouldBeReversed)
+                    {
+                        _spriteRenderer.flipX = true;
+                    }
+                    else
+                    {
+                        _spriteRenderer.flipX = false;
+                    }
                 }
                 else
                 {
-                    _spriteRenderer.flipX = true;
+                    if (ShouldBeReversed)
+                    {
+                        _spriteRenderer.flipX = false;
+                    }
+                    else
+                    {
+                        _spriteRenderer.flipX = true;
+                    }
                 }
             }
         }
