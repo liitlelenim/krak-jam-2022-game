@@ -55,8 +55,6 @@ namespace Player
                 if (other.GetComponent<Tilemap>() == null)
                 {
                     Death();
-                    {
-                    }
                 }
             }
         }

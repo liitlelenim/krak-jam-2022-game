@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="fix points colors">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/SoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/SoundsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameJams_Scenes/Area1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameJams_Scenes/Area1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +28,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/GameJams_Scenes/Area1.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -66,9 +45,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CartridgeObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/KillerTerrainCollider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/PathFollowAI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketLauncher.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/BlueScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/CartridgeManager.cs" />
@@ -79,13 +56,15 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -100,6 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -147,6 +127,7 @@
       <workItem from="1643449127582" duration="12685000" />
       <workItem from="1643468130484" duration="818000" />
       <workItem from="1643485939267" duration="1539000" />
+      <workItem from="1644262996572" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
