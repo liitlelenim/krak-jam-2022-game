@@ -41,11 +41,8 @@ namespace Hacking
                     _rightArrow.transform.position = new Vector3(bitsArray[i].transform.position.x + 0.6f, _rightArrow.transform.position.y, 0f);
                 }
             }
-
             _instructionText = GameObject.Find("Instruction").GetComponent<Text>();
-
             _bitNameText = GameObject.Find("BitName").GetComponent<Text>();
-
             _keyboardText = GameObject.Find("Keyboard").GetComponent<Text>();
             _keyboardText.text = keysInPlayMode;
 
@@ -56,7 +53,6 @@ namespace Hacking
                 _holdingNextBitButton = false;
             };
             _playerControls.Hacking.PreviousBit.canceled += _ => _holdingPreviousBitButton = false;
-            //Change bit
             _playerControls.Hacking.NextBit.performed += _ =>
             {
                 HandleBitIndexChange(1);
@@ -64,10 +60,10 @@ namespace Hacking
                 _holdingNextBitButton = true;
             };
             _playerControls.Hacking.NextBit.canceled += _ => _holdingNextBitButton = false;
-            //Change bit value
-            _playerControls.Hacking.ChangeBit.performed += ctx => ChangeBitValue();
 
-            _playerControls.Hacking.BackToMenu.performed += ctx =>
+            _playerControls.Hacking.ChangeBit.performed += _ => ChangeBitValue();
+
+            _playerControls.Hacking.BackToMenu.performed += _ =>
             {
                 if (playerIsHacking)
                 {
@@ -95,7 +91,6 @@ namespace Hacking
         string timeFreeze = "TIME FREEZE";
         string slowMotion = "SLOW MOTION";
         string reverseGravity = "REVERSE GRAVITY";
-
         string rotationInstruction = "INSTRUCTION\n\n" +
                                      "00 - DEFAULT   11 - REVERSED\n" +
                                      "10 - LEFT     01 - RIGHT";
@@ -107,7 +102,6 @@ namespace Hacking
         string direction = "INSTRUCTION\n\n" +
                            "00 - DOWN   11 - UP\n" +
                            "10 - LEFT     01 - RIGHT";
-
         string keysInHackingMode = "ARROW UP/DOWN - CHANGE BIT VALUE\n\n" +
                                    "X - QUIT HACKING MODE\n" +
                                    "ESCAPE - QUIT TO MENU";
@@ -147,7 +141,6 @@ namespace Hacking
         }
         void InterfaceControl()
         {
-
             if (playerIsHacking)
             {
                 foreach (GameObject bit in bitsArray)
@@ -180,7 +173,6 @@ namespace Hacking
                     _bitChangeTimer = 0;
                 }
             }
-
             if (!playerIsHacking)
             {
                 foreach (GameObject bit in bitsArray)
@@ -193,7 +185,6 @@ namespace Hacking
                 _bitNameText.text = null;
                 Time.timeScale = 1;
             }
-
         }
         private void HandleBitIndexChange(int change)
         {
