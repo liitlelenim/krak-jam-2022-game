@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="fix points colors">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerIdle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerJump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerJump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameJams_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameJams_Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Realise Scenes.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +129,7 @@
       <workItem from="1643449127582" duration="12685000" />
       <workItem from="1643468130484" duration="818000" />
       <workItem from="1643485939267" duration="1539000" />
-      <workItem from="1644262996572" duration="2493000" />
+      <workItem from="1644262996572" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>

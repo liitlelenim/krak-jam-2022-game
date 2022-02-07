@@ -21,7 +21,6 @@ public class CartridgeObject : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = cartridgesSprites0[(int)Type];
-        
     }
 
     private void Update()
