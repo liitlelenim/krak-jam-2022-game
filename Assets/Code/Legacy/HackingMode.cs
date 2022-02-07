@@ -1,10 +1,14 @@
+using System.ComponentModel;
 using Game;
+using Hacking;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Hacking
+
+//IT's legacy version of HackingMode which should be use for debugging only!
+namespace Legacy
 {
     public class HackingMode : MonoBehaviour
     {
@@ -23,6 +27,7 @@ namespace Hacking
         private bool _openingFrame = false;
         void Awake()
         {
+            Debug.LogWarning("You're using legacy version of hacking mode.");
             _playerControls = new PlayerControls();
             _playerMovement = GetComponent<PlayerMovement>();
             _soundsManager = FindObjectOfType<SoundsManager>();

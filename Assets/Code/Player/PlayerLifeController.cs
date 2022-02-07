@@ -1,5 +1,6 @@
 using System.Collections;
 using Hacking;
+using Legacy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
