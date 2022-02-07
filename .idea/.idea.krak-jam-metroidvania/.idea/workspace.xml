@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="fix points colors">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +60,7 @@
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -127,7 +123,7 @@
       <workItem from="1643449127582" duration="12685000" />
       <workItem from="1643468130484" duration="818000" />
       <workItem from="1643485939267" duration="1539000" />
-      <workItem from="1644262996572" duration="851000" />
+      <workItem from="1644262996572" duration="2493000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
