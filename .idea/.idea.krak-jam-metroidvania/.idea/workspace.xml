@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="fix points colors">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/UI/HackingUI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/UI/HackingUI.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/UI/UI_HUD.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sptites/UI/UI_HUD.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingUI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingUI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +31,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -59,15 +67,18 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/FallingPlatform.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/CartridgeObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -131,6 +142,8 @@
       <workItem from="1643468130484" duration="818000" />
       <workItem from="1643485939267" duration="1539000" />
       <workItem from="1644262996572" duration="3664000" />
+      <workItem from="1644403636049" duration="290000" />
+      <workItem from="1644423681297" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-//IT's legacy version of HackingMode which should be use for debugging only!
+//IT's legacy vers  ion of HackingMode which should be use for debugging only!
 namespace Legacy
 {
     public class HackingMode : MonoBehaviour

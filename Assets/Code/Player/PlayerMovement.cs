@@ -73,12 +73,12 @@ namespace Player
             _animator.SetBool(PlayerJumpingBool, _lastLedgeTimer != 0);
             _animator.SetBool(PlayerWalkingBool, _movementAxis != 0);
 
-            if (_movementAxis > 0 && !_hackingMode.playerIsHacking)
+            if (_movementAxis > 0)
             {
                 _spriteRenderer.flipX = true;
             }
 
-            if (_movementAxis < 0 && !_hackingMode.playerIsHacking)
+            if (_movementAxis < 0)
             {
                 _spriteRenderer.flipX = false;
             }
