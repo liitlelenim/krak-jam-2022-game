@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: 6858885641596693067, guid: c89f09c7329afd54e8c236dc4310a673, type: 3}
   - {fileID: -209102047989271674, guid: c89f09c7329afd54e8c236dc4310a673, type: 3}
   playerSpriteRenderer: {fileID: 7892105819510339996}
-  hackingMode: {fileID: 7892105819510340000}
+  hackingMode: {fileID: 0}
 --- !u!1 &7892105819510339998
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,12 +188,12 @@ GameObject:
   - component: {fileID: 7892105819510339997}
   - component: {fileID: 7892105819510339996}
   - component: {fileID: 7892105819510340003}
-  - component: {fileID: 7892105819510340000}
   - component: {fileID: 7892105819510339999}
   - component: {fileID: 7892105819510340001}
   - component: {fileID: 7892105819510340006}
   - component: {fileID: -1384892767166970093}
   - component: {fileID: 3977029227705598192}
+  - component: {fileID: 2474532504821069964}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -292,23 +292,6 @@ MonoBehaviour:
   jumpParticleSpawnPoint: {fileID: 5902147441994806455}
   fallDownParticles: {fileID: 4912352608185708016, guid: c120f6b62bd7b3c46b794daee28088bd, type: 3}
   runningParticles: {fileID: 7207609745371069281, guid: 77e5bf000bcf61d4ab9c865b5d7badc7, type: 3}
---- !u!114 &7892105819510340000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7892105819510339998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ed564b9131a83488dafeb8a36dd22a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shadedTerrain: {fileID: 0}
-  bitsArray: []
-  timeBetweenBitChange: 0.225
-  playerIsHacking: 0
-  timeSpeed: 0
 --- !u!50 &7892105819510339999
 Rigidbody2D:
   serializedVersion: 4
@@ -408,6 +391,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7026518, y: 1.6294839}
   m_EdgeRadius: 0
+--- !u!114 &2474532504821069964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892105819510339998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f1e72241fb8ec48af1260917544661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hackingModeUI: {fileID: 0}
+  goingToNextBitCooldown: 0.25
 --- !u!1 &8751675847717126591
 GameObject:
   m_ObjectHideFlags: 0

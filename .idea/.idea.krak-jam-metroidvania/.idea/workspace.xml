@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/DEBUGTestHackingMechanic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/DebugTestHackingMechanic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/HackingMechanic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/HackingMechanic.cs.meta" afterDir="false" />
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="create new bit mechanics system">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/Bit.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameJams_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameJams_Prefabs/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -70,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnviormentController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/EnvironmentController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/WeakedWall.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerKiller.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Dangers/RocketController.cs" />
@@ -87,6 +75,7 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/HackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/DEBUG_TestHackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />

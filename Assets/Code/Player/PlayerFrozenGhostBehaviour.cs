@@ -10,7 +10,6 @@ namespace Player
         [SerializeField] private Sprite[] frozenSprites;
 
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
-        [SerializeField] private HackingMode hackingMode;
 
         private SpriteRenderer _spriteRenderer;
 
@@ -24,7 +23,6 @@ namespace Player
 
         private void LateUpdate()
         {
-            _spriteRenderer.color = hackingMode.playerIsHacking ? _defaultColor : _transparentColor;
             Sprite playerCurrentSprite = playerSpriteRenderer.sprite;
             Sprite spriteToDisplay;
             if (playerCurrentSprite == playerSprites[1])
