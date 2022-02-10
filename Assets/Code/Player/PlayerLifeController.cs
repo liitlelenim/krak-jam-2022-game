@@ -1,5 +1,6 @@
 using System.Collections;
 using Hacking;
+using Legacy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -12,7 +13,7 @@ namespace Player
         [SerializeField] private GameObject bloodParticles;
         private bool _dead = false;
         private PlayerMovement _playerMovement;
-        private HackingMode _hackingMode;
+        private HackingModeController _hackingMode;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         private BoxCollider2D _boxCollider;
@@ -20,7 +21,7 @@ namespace Player
         private void Awake()
         {
             _playerMovement = GetComponent<PlayerMovement>();
-            _hackingMode = GetComponent<HackingMode>();
+            _hackingMode = GetComponent<HackingModeController>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
             _boxCollider = GetComponent<BoxCollider2D>();
