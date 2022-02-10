@@ -193,6 +193,8 @@ MonoBehaviour:
   - {fileID: 7985628180693645434, guid: 4c5a248bde7f362499dc9e8d3824c5d3, type: 3}
   - {fileID: 7985628180693645434, guid: 4c5a248bde7f362499dc9e8d3824c5d3, type: 3}
   - {fileID: 7985628180693645434, guid: 4c5a248bde7f362499dc9e8d3824c5d3, type: 3}
+  - {fileID: 7985628180693645434, guid: 4c5a248bde7f362499dc9e8d3824c5d3, type: 3}
+  - {fileID: 7985628180693645434, guid: 4c5a248bde7f362499dc9e8d3824c5d3, type: 3}
   currentBitIndicatorTransform: {fileID: 9188507024481473138}
   bitIndicatorOffset: {x: 12.5, y: -100}
   sectionsHolder: {fileID: 2555834760277670348}
