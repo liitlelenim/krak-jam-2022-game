@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="create new bit mechanics system">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="create battery bar">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/UI/UIBatteryRam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sptites/UI/UIBatteryRam.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +25,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Art/Sptites/UI/UIBatteryRam.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -145,7 +147,7 @@
       <workItem from="1644423681297" duration="4756000" />
       <workItem from="1644449262356" duration="704000" />
       <workItem from="1644504225700" duration="7741000" />
-      <workItem from="1644823875253" duration="7624000" />
+      <workItem from="1644823875253" duration="10752000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -273,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644426105814</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="create battery bar">
+      <created>1644831638589</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1644831638589</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +322,7 @@
     <MESSAGE value="player colliders tweak" />
     <MESSAGE value="add going to next level after getting cartridges" />
     <MESSAGE value="scaffold hacking ui sections system" />
-    <option name="LAST_COMMIT_MESSAGE" value="scaffold hacking ui sections system" />
+    <MESSAGE value="create battery bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="create battery bar" />
   </component>
 </project>
