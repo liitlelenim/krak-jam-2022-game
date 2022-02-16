@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/BatteryBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/BatteryBar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping_Profiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,16 +70,16 @@
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerLifeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/IHackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/HackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/DEBUG_TestHackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/BatterySystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />

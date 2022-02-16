@@ -9,6 +9,11 @@ namespace Hacking
     public class BitController : MonoBehaviour
     {
         [SerializeField] private bool initialValue;
+        
+        public bool InitialValue
+        {
+            get => initialValue;
+        }
 
         //Bit mechanic must implement IHackingMechanicInterface to work properly
         [SerializeField, SerializeReference] private HackingMechanic bitMechanic;

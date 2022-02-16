@@ -1,4 +1,5 @@
-using System;
+using System.Linq;
+using Game;
 using Player;
 using UnityEngine;
 
@@ -6,6 +7,10 @@ namespace Hacking
 {
     public class HackingModeController : MonoBehaviour
     {
+        public int ChangedBitsAmount =>
+            _hackingUIController.BitsControllers.Count((controller) =>
+                controller.CurrentValue != controller.InitialValue);
+
         [SerializeField] private GameObject hackingModeUI;
         [SerializeField] private float goingToNextBitCooldown = 0.15f;
         private HackingUIController _hackingUIController;
@@ -17,12 +22,18 @@ namespace Hacking
         private int _currentBitGoingDirection = 0;
         private float _goingToNextBitTimer = 0f;
 
+
+        private RamBarController _ramBarController;
+
+
         private void Awake()
         {
             hackingModeUI.SetActive(false);
             _playerControls = new PlayerControls();
             _playerMovement = FindObjectOfType<PlayerMovement>();
             _hackingUIController = hackingModeUI.GetComponent<HackingUIController>();
+            _ramBarController = FindObjectOfType<RamBarController>();
+
             _playerControls.Hacking.Activate.performed += _ => EnableHackingMode();
             _playerControls.Hacking.Activate.canceled += _ => DisableHackingMode();
 
@@ -36,7 +47,7 @@ namespace Hacking
                     GoToAnotherBit(1);
                 }
             };
-            _playerControls.Hacking.PreviousBit.performed += _ => 
+            _playerControls.Hacking.PreviousBit.performed += _ =>
             {
                 if (_isOpen)
                 {
@@ -64,7 +75,6 @@ namespace Hacking
             {
                 _goingToNextBitTimer = 0;
             }
-       
         }
 
         private void EnableHackingMode()
@@ -88,7 +98,13 @@ namespace Hacking
         {
             if (_isOpen)
             {
-                _hackingUIController.BitsControllers[_currentBitIndex].ChangeValue();
+                if (ChangedBitsAmount < _ramBarController.MaxValue ||
+                    _hackingUIController.BitsControllers[_currentBitIndex].CurrentValue !=
+                    _hackingUIController.BitsControllers[_currentBitIndex].InitialValue)
+                {
+                    _hackingUIController.BitsControllers[_currentBitIndex].ChangeValue();
+                    _ramBarController.CurrentValue = _ramBarController.MaxValue - ChangedBitsAmount;
+                }
             }
         }
 

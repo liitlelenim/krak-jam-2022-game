@@ -1,18 +1,18 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Hacking
 {
     public class HackingUIController : MonoBehaviour
     {
+        public BitController[] BitsControllers { get; private set; }
+        public int BitsAmount => BitsControllers.Length;
         [SerializeField] private GameObject[] hackingUISectionsGameObjects;
         [SerializeField] private RectTransform currentBitIndicatorTransform;
         [SerializeField] private Vector2 bitIndicatorOffset = new Vector2(25f, -100f);
         [SerializeField] private RectTransform sectionsHolder;
+        
         private HackingUISectionController[] _hackingUISectionControllers;
-        public BitController[] BitsControllers { get; private set; }
-        public int BitsAmount => BitsControllers.Length;
 
         private void Awake()
         {
@@ -28,14 +28,12 @@ namespace Hacking
 
             BitsControllers = tempBitsControllers.ToArray();
             SetCurrentBitIndicatorAccordingly(0);
-
         }
 
         public void SetCurrentBitIndicatorAccordingly(int position)
         {
             currentBitIndicatorTransform.SetParent(BitsControllers[position].transform);
             currentBitIndicatorTransform.anchoredPosition = bitIndicatorOffset;
-            ;
         }
     }
 }
