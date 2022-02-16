@@ -63,24 +63,24 @@ namespace Game
             }
 
             _fullBatteryIndicatorsObjects = new GameObject[maxValue];
-            CreateSprite(leftBatterySprite, "LeftBatterySprite");
+            CreateSprite(rightBatterySprite, "RightBatterySprite");
             for (int i = 1; i <= MaxValue; i++)
             {
                 RectTransform batterySpriteTransform = CreateSprite(middleBatterySprite, "MiddleBatterySprite");
-                batterySpriteTransform.anchoredPosition = new Vector2(i * 3 + 0.5f, 0);
+                batterySpriteTransform.anchoredPosition = new Vector2(-i * 3 - 0.5f, 0);
 
                 RectTransform batterySlotSprite = CreateSprite(emptyBatterySlotSprite, "EmptySlotIndicator");
-                batterySlotSprite.anchoredPosition = new Vector2(i * 3, 0);
+                batterySlotSprite.anchoredPosition = new Vector2(-i * 3, 0);
 
                 RectTransform fullBatterySlotIndicator = CreateSprite(fullBatterySlotSprite, "FullSlotIndicator");
-                fullBatterySlotIndicator.anchoredPosition = new Vector2(i * 3, 0);
+                fullBatterySlotIndicator.anchoredPosition = new Vector2(-i * 3, 0);
                 _fullBatteryIndicatorsObjects[i - 1] = fullBatterySlotIndicator.gameObject;
                 _fullBatteryIndicatorsObjects[i - 1].SetActive(false);
             }
 
 
-            RectTransform rightBatterySpriteTransform = CreateSprite(rightBatterySprite, "RightBatterySprite");
-            rightBatterySpriteTransform.anchoredPosition = new Vector2((MaxValue + 1) * 3, 0);
+            RectTransform rightBatterySpriteTransform = CreateSprite(leftBatterySprite, "LeftBatterySprite");
+            rightBatterySpriteTransform.anchoredPosition = new Vector2(-(MaxValue + 1) * 3, 0);
             AdjustBatteryBarValue();
         }
 

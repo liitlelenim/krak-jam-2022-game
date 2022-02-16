@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="create battery bar">
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/BatteryBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/BatteryBar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/GravityHackingUISection.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/UI/HackingMode/HackingUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping_Profiles.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +29,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Art/Sptites/UI/UIBatteryRam.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.2.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -75,10 +78,11 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/IHackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/HackingMechanic.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/Mechanics/DEBUG_TestHackingMechanic.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerFrozenGhostBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Player/BatterySystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Game/BatteryBarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Game/RamBarController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
