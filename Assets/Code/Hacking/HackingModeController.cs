@@ -15,7 +15,6 @@ namespace Hacking
         [SerializeField] private float goingToNextBitCooldown = 0.15f;
         private HackingUIController _hackingUIController;
         private PlayerControls _playerControls;
-        private PlayerMovement _playerMovement;
         private int BitsAmount => _hackingUIController.BitsAmount;
         private int _currentBitIndex = 0;
         private bool _isOpen = false;
@@ -30,7 +29,6 @@ namespace Hacking
         {
             hackingModeUI.SetActive(false);
             _playerControls = new PlayerControls();
-            _playerMovement = FindObjectOfType<PlayerMovement>();
             _hackingUIController = hackingModeUI.GetComponent<HackingUIController>();
             _ramBarController = FindObjectOfType<RamBarController>();
 
@@ -81,7 +79,6 @@ namespace Hacking
         {
             _isOpen = true;
             hackingModeUI.SetActive(true);
-            _playerMovement.enabled = false;
             Time.timeScale = 0;
         }
 
@@ -89,7 +86,6 @@ namespace Hacking
         {
             _isOpen = false;
             hackingModeUI.SetActive(false);
-            _playerMovement.enabled = true;
             Time.timeScale = 1;
             _currentBitGoingDirection = 0;
         }

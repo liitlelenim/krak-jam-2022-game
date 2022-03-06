@@ -1,9 +1,7 @@
 using Game;
-using Hacking;
-using Legacy;
 using UnityEngine;
 
-namespace Player
+namespace Legacy
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
     public class PlayerMovement : MonoBehaviour

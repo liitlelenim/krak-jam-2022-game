@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/CameraPrototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +27,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Code/Legacy/HackingMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerMovementMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EE48075-9F3D-481D-82AD-A245DC74F9FD/69/d3a72ffb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingUISectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B144447-7C1D-41C6-92EF-6C02A8383085/fc/23a673c2/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.2.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -80,6 +83,11 @@
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/BitController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerMovementDefaultMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Legacy/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerMovementController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerMovementMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="24FOR5XtYTESCVeptRN9dl0PyAE" />
@@ -149,6 +157,11 @@
       <workItem from="1644449262356" duration="704000" />
       <workItem from="1644504225700" duration="7741000" />
       <workItem from="1644823875253" duration="10752000" />
+      <workItem from="1645132348508" duration="1229000" />
+      <workItem from="1645220056215" duration="640000" />
+      <workItem from="1645352898966" duration="218000" />
+      <workItem from="1645561124335" duration="7063000" />
+      <workItem from="1646564157920" duration="13314000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -283,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644831638589</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="implement ram functionality">
+      <created>1645044955158</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1645044955158</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +344,26 @@
     <MESSAGE value="add going to next level after getting cartridges" />
     <MESSAGE value="scaffold hacking ui sections system" />
     <MESSAGE value="create battery bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="create battery bar" />
+    <MESSAGE value="implement ram functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement ram functionality" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs</url>
+          <line>108</line>
+          <properties documentPath="D:\UnityProjects\krak-jam-metroidvania\Assets\Code\Player\Movement\PlayerDefaultMovementMode.cs" initialLine="88" containingFunctionPresentation="method 'CalculateCurrentJumpVelocity'">
+            <startOffsets>
+              <option value="3799" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3800" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
