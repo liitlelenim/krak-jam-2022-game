@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Others/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Others/PlayerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Others/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Others/PlayerControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Others/PlayerPhysicsMaterial.physicsMaterial2D" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Others/PlayerPhysicsMaterial.physicsMaterial2D" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +31,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Hacking/HackingModeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Player/Movement/GroundChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProjects/krak-jam-metroidvania/Assets/Others/PlayerControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B144447-7C1D-41C6-92EF-6C02A8383085/fc/23a673c2/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.2.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -167,7 +164,8 @@
       <workItem from="1646773301661" duration="1714000" />
       <workItem from="1646820130113" duration="8918000" />
       <workItem from="1646941160579" duration="3144000" />
-      <workItem from="1647101116562" duration="2019000" />
+      <workItem from="1647101116562" duration="3846000" />
+      <workItem from="1647117511602" duration="2756000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -316,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646589691589</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add jump feature to player default movement mode">
+      <created>1647103217286</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1647103217287</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +364,7 @@
     <MESSAGE value="create battery bar" />
     <MESSAGE value="implement ram functionality" />
     <MESSAGE value="player movement update wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="player movement update wip" />
+    <MESSAGE value="add jump feature to player default movement mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jump feature to player default movement mode" />
   </component>
 </project>

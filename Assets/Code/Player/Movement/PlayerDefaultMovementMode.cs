@@ -8,11 +8,16 @@ namespace Player.Movement
         [Header("Horizontal movement settings")] [SerializeField]
         private float speed = 5f;
 
-        [SerializeField] private AnimationCurve horizontalMovementCurve;
+        [SerializeField] private AnimationCurve accelerationCurve;
+        [SerializeField] private AnimationCurve decelerationCurve;
+
 
         private int _horizontalMovementAxis = 0;
         private float _horizontalMovementTimer = 0.0f;
         [SerializeField] float accelerationLength = 1f;
+        [SerializeField] float decelerationLength = 1f;
+        private bool _shouldDecelerate;
+        private float _decelerateTimer;
 
         [Header("Vertical movement settings")] [SerializeField]
         private float jumpForce;
@@ -21,7 +26,6 @@ namespace Player.Movement
         [SerializeField] private float maxJumpLength;
         [SerializeField] private float minJumpLength;
         [Range(0, 1)] [SerializeField] private float jumpCutOffFactor;
-        private float appliedCutOffFactor = 1;
         private float _timeSinceBeingGrounded = 0;
         private float _timeSinceLastJump = 0;
         private float _currentJumpLength = 0;
@@ -62,6 +66,12 @@ namespace Player.Movement
             _timeSinceLastJump += Time.deltaTime;
             _timeSinceBeingGrounded += Time.deltaTime;
             _timeSinceLastJumpButtonPress += Time.deltaTime;
+            if (_shouldDecelerate)
+            {
+                _decelerateTimer += Time.deltaTime;
+            }
+
+            _decelerateTimer = Mathf.Clamp(_decelerateTimer, 0, decelerationLength);
             if (_isJumping)
             {
                 _currentJumpLength += Time.deltaTime;
@@ -100,28 +110,45 @@ namespace Player.Movement
                 EndJump();
             }
 
+            float curveFactor;
+            if (_shouldDecelerate)
+            {
+                curveFactor = decelerationCurve.Evaluate(_decelerateTimer / decelerationLength);
+            }
+            else
+            {
+                curveFactor = accelerationCurve.Evaluate(_horizontalMovementTimer / accelerationLength);
+            }
+
             _rigidbody2D.velocity =
-                new Vector2(_horizontalMovementAxis * speed *
-                            horizontalMovementCurve.Evaluate(_horizontalMovementTimer / accelerationLength),
+                new Vector2(_horizontalMovementAxis * speed * curveFactor,
                     _rigidbody2D.velocity.y);
         }
 
         private void ChangeMovementAxis(int axis)
         {
-            _horizontalMovementAxis = axis;
             _horizontalMovementTimer = 0;
+            _decelerateTimer = 0;
+            if (axis != 0)
+            {
+                _horizontalMovementAxis = axis;
+                _shouldDecelerate = false;
+            }
+            else
+            {
+                _shouldDecelerate = true;
+            }
         }
 
         private void PerformJump()
         {
             if (CanJump())
             {
-                
                 _timeSinceLastJump = 0;
                 _isJumping = true;
                 _alreadyCutOffJump = false;
                 _shouldCutOffJump = false;
-                _rigidbody2D.AddForce(transform.up*jumpForce);
+                _rigidbody2D.AddForce(transform.up * jumpForce);
             }
         }
 
@@ -138,7 +165,7 @@ namespace Player.Movement
         {
             return _timeSinceLastJump > jumpCooldown && _timeSinceBeingGrounded < coyoteTimeDuration && !_isJumping;
         }
-        
+
         private void OnEnable()
         {
             _playerControls.Enable();
