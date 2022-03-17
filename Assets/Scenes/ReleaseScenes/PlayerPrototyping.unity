@@ -9591,7 +9591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: speed
-      value: 14
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpForce
@@ -9599,11 +9599,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCooldown
-      value: 0.1
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: minJumpLength
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCutOffFactor
@@ -9619,7 +9619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationLength
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpBufferingDuration
