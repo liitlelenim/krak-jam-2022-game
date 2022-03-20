@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Player.Movement
@@ -30,6 +31,11 @@ namespace Player.Movement
         [Range(0, 1)] [SerializeField] private float jumpCutOffFactor;
         [SerializeField] private float maxFallingSpeed = 11;
         [SerializeField] private float midAirDirectionChangeSpeed = 15f;
+        private float _initialPlayerGravityScale;
+        [SerializeField] private float jumpApogeeGravityScale = 4f;
+        [SerializeField] private float jumpApogeeLength = 0.25f;
+        private bool _shouldBeStayingAtApogee = false;
+        private float _apogeeTimer;
         private float _timeSinceBeingGrounded = 0;
         private float _timeSinceLastJump = 0;
         private float _currentJumpLength = 0;
@@ -53,7 +59,7 @@ namespace Player.Movement
             _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
             _playerControls = new PlayerControls();
             _groundCheckers = GetComponentsInChildren<GroundChecker>();
-
+            _initialPlayerGravityScale = _rigidbody2D.gravityScale;
             _playerControls.Movement.Horizontal.performed += ctx =>
             {
                 ChangeMovementAxis((int) ctx.ReadValue<float>());
@@ -81,6 +87,7 @@ namespace Player.Movement
             {
                 _currentJumpLength += Time.deltaTime;
             }
+
 
             bool isGroundedDuringCurrentFrame = false;
             foreach (GroundChecker checker in _groundCheckers)
@@ -111,6 +118,10 @@ namespace Player.Movement
                     _rigidbody2D.velocity =
                         new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y * jumpCutOffFactor);
                 }
+
+                _shouldBeStayingAtApogee = false;
+                _rigidbody2D.gravityScale = _initialPlayerGravityScale;
+                _apogeeTimer = 0;
             }
         }
 
@@ -132,6 +143,27 @@ namespace Player.Movement
             if (_currentJumpLength > maxJumpLength)
             {
                 EndJump();
+            }
+
+            if (!_shouldBeStayingAtApogee && _isJumping && _currentJumpLength > minJumpLength &&
+                !_shouldBeStayingAtApogee && !_alreadyCutOffJump)
+            {
+                if (Mathf.Abs(_rigidbody2D.velocity.y) < 2f)
+                {
+                    _shouldBeStayingAtApogee = true;
+                    _rigidbody2D.gravityScale = jumpApogeeGravityScale;
+                }
+            }
+
+            if (_shouldBeStayingAtApogee)
+            {
+                _apogeeTimer += Time.deltaTime;
+                if (_apogeeTimer > jumpApogeeLength)
+                {
+                    _rigidbody2D.gravityScale = _initialPlayerGravityScale;
+                    _shouldBeStayingAtApogee = false;
+                    _apogeeTimer = 0;
+                }
             }
 
             float curveFactor;
