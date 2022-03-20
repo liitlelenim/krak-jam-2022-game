@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GameJam_Art/GameJam_Animations/PlayerWalk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/Movement/PlayerDefaultMovementMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +164,8 @@
       <workItem from="1646941160579" duration="3144000" />
       <workItem from="1647101116562" duration="3846000" />
       <workItem from="1647117511602" duration="2756000" />
+      <workItem from="1647715154645" duration="1894000" />
+      <workItem from="1647779254292" duration="5698000" />
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
