@@ -9591,11 +9591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: speed
-      value: 12.1
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpForce
-      value: 1610
+      value: 1620
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCooldown
@@ -9604,6 +9604,10 @@ PrefabInstance:
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: minJumpLength
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
+      propertyPath: maxFallingSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCutOffFactor
@@ -9624,6 +9628,10 @@ PrefabInstance:
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpBufferingDuration
       value: 0.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
+      propertyPath: midAirDirectionChangeSpeed
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.size
