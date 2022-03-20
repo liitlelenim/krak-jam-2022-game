@@ -9591,11 +9591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: speed
-      value: 12.5
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpForce
-      value: 1620
+      value: 1630
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCooldown
@@ -9675,15 +9675,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[0].inSlope
-      value: 1.0529972
+      value: 1.0359914
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].inSlope
-      value: 0.18886857
+      value: 0.086553305
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationCurve.m_Curve.Array.data[0].inSlope
-      value: -2.3076923
+      value: -2.6243565
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationCurve.m_Curve.Array.data[1].inSlope
@@ -9691,19 +9691,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[0].outSlope
-      value: 1.0529972
+      value: 1.0359914
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].inWeight
-      value: 0.17499998
+      value: 0.19166665
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[1].outSlope
-      value: 0.18886857
+      value: 0.086553305
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationCurve.m_Curve.Array.data[0].outSlope
-      value: -2.3076923
+      value: -2.6243565
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationCurve.m_Curve.Array.data[1].inWeight
@@ -9715,11 +9715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[0].outWeight
-      value: 0.054166663
+      value: 0.05833333
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: decelerationCurve.m_Curve.Array.data[0].outWeight
-      value: 0.054166667
+      value: 0.045833334
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationCurve.m_Curve.Array.data[0].tangentMode
@@ -9751,7 +9751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570391, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: m_GravityScale
-      value: 11.4
+      value: 11.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
