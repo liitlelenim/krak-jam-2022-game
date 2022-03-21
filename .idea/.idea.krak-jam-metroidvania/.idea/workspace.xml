@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="add apogee system">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/Map/Bg1.png" beforeDir="false" />
@@ -19,6 +20,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sptites/Map/TileMap.preset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Release_Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/PlayerPrototyping.unity" afterDir="false" />
+=======
+    <list default="true" id="b7b4aab2-de85-4088-ae4f-c290e6f53695" name="Default Changelist" comment="art update">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.krak-jam-metroidvania/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/ArtUpdatePrototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ReleaseScenes/ArtUpdatePrototyping.unity" afterDir="false" />
+>>>>>>> e6fd029 (art update)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +187,11 @@
       <workItem from="1647117511602" duration="2756000" />
       <workItem from="1647715154645" duration="1894000" />
       <workItem from="1647779254292" duration="5698000" />
+<<<<<<< HEAD
       <workItem from="1647886737669" duration="1516000" />
+=======
+      <workItem from="1647886737669" duration="2130000" />
+>>>>>>> e6fd029 (art update)
     </task>
     <task id="LOCAL-00001" summary="create basic horizontal movement">
       <created>1643225254912</created>
@@ -337,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647103217287</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="art update">
+      <created>1647889793481</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1647889793481</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +399,11 @@
     <MESSAGE value="player movement update wip" />
     <MESSAGE value="add jump feature to player default movement mode" />
     <MESSAGE value="add apogee system" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="add apogee system" />
+=======
+    <MESSAGE value="art update" />
+    <option name="LAST_COMMIT_MESSAGE" value="art update" />
+>>>>>>> e6fd029 (art update)
   </component>
 </project>
