@@ -9610,12 +9610,16 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
+      propertyPath: jumpApogeeLength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpCutOffFactor
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: accelerationLength
-      value: 0.116
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: coyoteTimeDuration
@@ -9628,6 +9632,10 @@ PrefabInstance:
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: jumpBufferingDuration
       value: 0.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
+      propertyPath: jumpApogeeGravityScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570385, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: midAirDirectionChangeSpeed
@@ -9747,7 +9755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570391, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: m_Mass
-      value: 1.1
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 4698856500110570391, guid: c906b92f340e5144ba677c75674b7a91, type: 3}
       propertyPath: m_GravityScale
