@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0062974244, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9055375, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3221152880840611194
 MonoBehaviour:
@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4698856500110570390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63, y: -1.43, z: 0}
+  m_LocalPosition: {x: -0.58, y: -1.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3221152880840611195}
@@ -204,10 +204,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 4
+  m_GravityScale: 11.2
   m_Material: {fileID: 6200000, guid: 59871e79a52bab64c97a426b86f34807, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -297,39 +297,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425b2dd1f61046a89d0bfe04919ff887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  horizontalMovementCurve:
+  speed: 13.5
+  accelerationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0
-      value: 0.6499632
-      inSlope: 1.1746485
-      outSlope: 1.1746485
+      time: 0.006034851
+      value: 0.50061035
+      inSlope: 1.0359914
+      outSlope: 1.0359914
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.058601134
+      outWeight: 0.05833333
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.086553305
+      outSlope: 0.086553305
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.19166665
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  accelerationLength: 1
-  jumpForce: 1100
-  jumpCooldown: 0.1
+  decelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.6243565
+      outSlope: -2.6243565
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.045833334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.0106799565
+      outSlope: -0.0106799565
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22083336
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  accelerationLength: 0.116
+  decelerationLength: 0.08
+  jumpForce: 1630
+  jumpCooldown: 0.06
   maxJumpLength: 0.3
-  minJumpLength: 0.1
-  jumpCutOffFactor: 0.4
-  coyoteTimeDuration: 0.2
-  jumpBufferingDuration: 0.2
+  minJumpLength: 0.08
+  jumpCutOffFactor: 0.5
+  maxFallingSpeed: 25
+  midAirDirectionChangeSpeed: 14
+  jumpApogeeGravityScale: 0.2
+  jumpApogeeLength: 0
+  coyoteTimeDuration: 0.133
+  jumpBufferingDuration: 0.066
 --- !u!1001 &3221152881469673280
 PrefabInstance:
   m_ObjectHideFlags: 0
