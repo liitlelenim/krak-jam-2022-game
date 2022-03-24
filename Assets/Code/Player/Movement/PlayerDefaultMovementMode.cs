@@ -53,9 +53,15 @@ namespace Player.Movement
         private PlayerControls _playerControls;
         private Rigidbody2D _rigidbody2D;
         private GroundChecker[] _groundCheckers;
-
+    
+        //Todo create proper player animation system
+        private Animator _animator;
+        private SpriteRenderer _spriteRenderer;
         protected override void Awake()
         {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<Animator>();
+            
             _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
             _playerControls = new PlayerControls();
             _groundCheckers = GetComponentsInChildren<GroundChecker>();
@@ -73,6 +79,15 @@ namespace Player.Movement
 
         private void Update()
         {
+            _animator.SetBool("IsWalking",_horizontalMovementAxis != 0 && !_isJumping);
+            if (_horizontalMovementAxis < 0)
+            {
+                _spriteRenderer.flipX = true;
+            }
+            else if(_horizontalMovementAxis > 0)
+            {
+                _spriteRenderer.flipX = false;
+            }
             _horizontalMovementTimer += Time.deltaTime;
             _timeSinceLastJump += Time.deltaTime;
             _timeSinceBeingGrounded += Time.deltaTime;
