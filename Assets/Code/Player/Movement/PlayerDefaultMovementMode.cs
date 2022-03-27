@@ -53,18 +53,17 @@ namespace Player.Movement
         private PlayerControls _playerControls;
         private Rigidbody2D _rigidbody2D;
         private GroundChecker[] _groundCheckers;
-    
-        //Todo create proper player animation system
-        private Animator _animator;
+        private PlayerMovementAnimatorController _playerMovementAnimatorController;
+        
         private SpriteRenderer _spriteRenderer;
         protected override void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _animator = GetComponent<Animator>();
             
             _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
             _playerControls = new PlayerControls();
             _groundCheckers = GetComponentsInChildren<GroundChecker>();
+            _playerMovementAnimatorController = GetComponent<PlayerMovementAnimatorController>();
             _initialPlayerGravityScale = _rigidbody2D.gravityScale;
             _playerControls.Movement.Horizontal.performed += ctx =>
             {
@@ -79,15 +78,6 @@ namespace Player.Movement
 
         private void Update()
         {
-            _animator.SetBool("IsWalking",_horizontalMovementAxis != 0 && !_isJumping);
-            if (_horizontalMovementAxis < 0)
-            {
-                _spriteRenderer.flipX = true;
-            }
-            else if(_horizontalMovementAxis > 0)
-            {
-                _spriteRenderer.flipX = false;
-            }
             _horizontalMovementTimer += Time.deltaTime;
             _timeSinceLastJump += Time.deltaTime;
             _timeSinceBeingGrounded += Time.deltaTime;
@@ -143,6 +133,7 @@ namespace Player.Movement
         private void OnBeingGrounded()
         {
             _timeSinceBeingGrounded = 0f;
+            _playerMovementAnimatorController.IsGrounded = true;
         }
 
         private void OnBeingUngrounded()
@@ -150,6 +141,7 @@ namespace Player.Movement
             if (!_isJumping)
             {
                 _midAirMomentum = _horizontalMovementAxis;
+                _playerMovementAnimatorController.IsGrounded = false;
             }
         }
 
