@@ -10,7 +10,7 @@ namespace Player.Movement
         private Animator _animator;
         
         private const string PlayerIsWalkingAnimationBool = "IsWalking";
-
+        private const string PlayerIsJumpingAnimationBool = "IsJumping";
         private bool _isGrounded = false;
 
         public bool IsGrounded
@@ -55,6 +55,7 @@ namespace Player.Movement
         private void AnimationUpdate()
         {
             _animator.SetBool(PlayerIsWalkingAnimationBool,IsGrounded&&HorizontalMovementValue!=0);
+            _animator.SetBool(PlayerIsJumpingAnimationBool, !IsGrounded);
         }
     }
 }
