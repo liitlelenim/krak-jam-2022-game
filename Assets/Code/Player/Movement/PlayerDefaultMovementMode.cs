@@ -94,19 +94,14 @@ namespace Player.Movement
             }
 
 
-            bool isGroundedDuringCurrentFrame = false;
             foreach (GroundChecker checker in _groundCheckers)
             {
                 if (checker.IsGrounded)
                 {
-                    isGroundedDuringCurrentFrame = true;
                     OnBeingGrounded();
                     break;
                 }
-            }
 
-            if (_timeSinceBeingGrounded == 0f && isGroundedDuringCurrentFrame == false)
-            {
                 OnBeingUngrounded();
             }
 
@@ -138,6 +133,8 @@ namespace Player.Movement
 
         private void OnBeingUngrounded()
         {
+            _playerMovementAnimatorController.IsGrounded = false;
+
             if (!_isJumping)
             {
                 _midAirMomentum = _horizontalMovementAxis;
@@ -243,6 +240,8 @@ namespace Player.Movement
                 _horizontalMovementAxis = 0;
                 _shouldDecelerate = true;
             }
+
+            _playerMovementAnimatorController.HorizontalMovementValue = _horizontalMovementAxis;
         }
 
         private void PerformJump()
