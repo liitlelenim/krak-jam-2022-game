@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6882742591489280848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6882742591489280855}
+  - component: {fileID: 6882742591489280849}
+  m_Layer: 5
+  m_Name: RamBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6882742591489280855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882742591489280848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 6, y: -15}
+  m_SizeDelta: {x: 8, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6882742591489280849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882742591489280848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef621966ceea42b58dc41975b409efad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 4
+  currentValue: 2
+  emptyImagePrefab: {fileID: 1883894971742760727, guid: 1d691fbff61adb344b2d9e60948bc282, type: 3}
+  leftRamSprite: {fileID: -944630889052334074, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  middleRamSprite: {fileID: -8806267072808141012, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  rightRamSprite: {fileID: -7647256003753267043, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  emptyRamSlotSprite: {fileID: -6571236367404528274, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
+  fullRamSlotSprite: {fileID: -3746373430414547503, guid: 766a4b558d3e8534e847552f042dc758, type: 3}

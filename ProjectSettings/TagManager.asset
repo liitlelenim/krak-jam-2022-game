@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rocket
+  - Bit
+  - YellowPos1
+  - YellowPos2
+  - YellowPlatform
+  - BrownPos1
+  - BrownPos2
+  - BrownPlatform
+  - BluePlatform
+  - GreenPlatform
+  - Cartridge
   layers:
   - Default
   - TransparentFX

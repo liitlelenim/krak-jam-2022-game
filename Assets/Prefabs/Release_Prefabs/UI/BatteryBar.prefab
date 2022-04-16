@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1231066908399687937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231066908399687942}
+  - component: {fileID: 1231066908399687943}
+  m_Layer: 5
+  m_Name: BatteryBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1231066908399687942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231066908399687937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 40}
+  m_SizeDelta: {x: 8, y: 8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1231066908399687943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231066908399687937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3accf22d218ffd41bbe09bec30ae1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 2
+  currentValue: 0
+  emptyImagePrefab: {fileID: 1883894971742760727, guid: 1d691fbff61adb344b2d9e60948bc282, type: 3}
+  leftBatterySprite: {fileID: 9050726598810274778, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  middleBatterySprite: {fileID: -9032313255463419265, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  rightBatterySprite: {fileID: 3155498194749032191, guid: bcf71c97e391ba1468cdde70232bf1ae, type: 3}
+  emptyBatterySlotSprite: {fileID: -2425084232261861794, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
+  fullBatterySlotSprite: {fileID: -3540050633958669759, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
