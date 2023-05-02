@@ -7,23 +7,25 @@ namespace Hacking
 {
     public class HackingModeController : MonoBehaviour
     {
+        #region Assignments In Script
+        private HackingUIController _hackingUIController;
+        private PlayerControls _playerControls;
+        private RamBarController _ramBarController;
+
+        #endregion
+        
         public int ChangedBitsAmount =>
             _hackingUIController.BitsControllers.Count((controller) =>
                 controller.CurrentValue != controller.InitialValue);
 
         [SerializeField] private GameObject hackingModeUI;
         [SerializeField] private float goingToNextBitCooldown = 0.15f;
-        private HackingUIController _hackingUIController;
-        private PlayerControls _playerControls;
+        
         private int BitsAmount => _hackingUIController.BitsAmount;
         private int _currentBitIndex = 0;
         private bool _isOpen = false;
         private int _currentBitGoingDirection = 0;
         private float _goingToNextBitTimer = 0f;
-
-
-        private RamBarController _ramBarController;
-
 
         private void Awake()
         {
@@ -32,6 +34,7 @@ namespace Hacking
             _hackingUIController = hackingModeUI.GetComponent<HackingUIController>();
             _ramBarController = FindObjectOfType<RamBarController>();
 
+            #region Input Actions
             _playerControls.Hacking.Activate.performed += _ => EnableHackingMode();
             _playerControls.Hacking.Activate.canceled += _ => DisableHackingMode();
 
@@ -57,7 +60,8 @@ namespace Hacking
             _playerControls.Hacking.NextBit.canceled += _ => _currentBitGoingDirection = 0;
             _playerControls.Hacking.PreviousBit.canceled += _ => _currentBitGoingDirection = 0;
         }
-
+        #endregion
+        
         private void Update()
         {
             if (_currentBitGoingDirection != 0)
@@ -75,11 +79,12 @@ namespace Hacking
             }
         }
 
+        #region Hacking Mode Activation/Disactivation
         private void EnableHackingMode()
         {
             _isOpen = true;
             hackingModeUI.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0.2f;
         }
 
         private void DisableHackingMode()
@@ -89,7 +94,9 @@ namespace Hacking
             Time.timeScale = 1;
             _currentBitGoingDirection = 0;
         }
+        #endregion
 
+        #region Bit Actions
         private void ChangeCurrentBit()
         {
             if (_isOpen)
@@ -118,7 +125,9 @@ namespace Hacking
 
             _hackingUIController.SetCurrentBitIndicatorAccordingly(_currentBitIndex);
         }
+        #endregion
 
+        #region On Enable - On Disable
         private void OnEnable()
         {
             _playerControls.Enable();
@@ -128,5 +137,6 @@ namespace Hacking
         {
             _playerControls.Disable();
         }
+        #endregion
     }
 }

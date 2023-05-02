@@ -22,6 +22,8 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+========
                 },
                 {
                     "name": "Interact",
@@ -31,6 +33,16 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "9d36ecd8-562c-4afa-ab48-2bdaedec7732",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
                 }
             ],
             "bindings": [
@@ -68,6 +80,8 @@
                     "isPartOfComposite": true
                 },
                 {
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+========
                     "name": "A|D",
                     "id": "9fb44344-9732-458e-b4be-a9d70f6eacf9",
                     "path": "1DAxis",
@@ -101,6 +115,40 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Joystick",
+                    "id": "b6be1e35-c64f-4ea4-8b13-95e848088de9",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "58ae1b85-7042-4547-a3ad-5a2a3d758ef8",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "d0fbde78-b523-405e-bb84-98fac63ada7e",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
                     "name": "",
                     "id": "86892d61-32c7-4221-a9ce-4eadb5a8ab82",
                     "path": "<Keyboard>/x",
@@ -121,11 +169,13 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+========
                 },
                 {
                     "name": "",
-                    "id": "f3ecf6a7-1323-4859-b0e4-5320dfdde09a",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "c50a737c-5ce1-49f9-a6ba-c87b97664563",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -154,6 +204,29 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32898610-cf3a-448b-9311-777be2f3baac",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d86ecf0-39d8-482c-a5d0-1ff97227c7be",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
                 }
             ]
         },
@@ -162,21 +235,12 @@
             "id": "0c2a02d8-529e-4679-8be1-c69e5943d2c6",
             "actions": [
                 {
-                    "name": "ChangeBit",
-                    "type": "Button",
-                    "id": "711f4679-4c02-4ca9-a074-7a3c2cbd9c43",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Activate",
                     "type": "Button",
                     "id": "35be4ba8-6849-4484-a08c-8c85f3f32696",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -198,9 +262,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "BackToMenu",
+                    "name": "ChangeBit",
                     "type": "Button",
-                    "id": "c201f34b-0dfa-48bb-9fc7-2252f0f3f9c8",
+                    "id": "711f4679-4c02-4ca9-a074-7a3c2cbd9c43",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -211,6 +275,9 @@
                 {
                     "name": "",
                     "id": "5b1c0b2d-b2a4-47bd-bd48-800778465cb0",
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+                    "path": "<Keyboard>/h",
+========
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
@@ -221,8 +288,9 @@
                 },
                 {
                     "name": "",
-                    "id": "63a06655-af82-4a55-92ce-c242589790be",
-                    "path": "<Keyboard>/leftShift",
+                    "id": "46916577-00da-4242-9f76-83fee9f9fa87",
+                    "path": "<Keyboard>/s",
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,6 +311,17 @@
                 },
                 {
                     "name": "",
+                    "id": "30b7e9e1-80e0-42a8-9313-b31a67e38258",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f924f40a-2cbd-4b1a-aba9-5d21a7962400",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
@@ -254,7 +333,20 @@
                 },
                 {
                     "name": "",
+                    "id": "07d9be0e-ba4d-408e-b129-dde3b1abd66c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "af675634-4c3e-4c7e-bed8-b50fde4ffdb9",
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+========
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
@@ -265,8 +357,8 @@
                 },
                 {
                     "name": "",
-                    "id": "6c5f4b34-7d42-47cf-8791-2633db0c7b92",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "ae3c991b-0b0c-456f-b93a-e649755610cf",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -276,8 +368,33 @@
                 },
                 {
                     "name": "",
+                    "id": "6c5f4b34-7d42-47cf-8791-2633db0c7b92",
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+<<<<<<<< Updated upstream:Assets/Misc/PlayerControls.inputactions
+========
+                },
+                {
+                    "name": "",
                     "id": "600ec9c1-5c05-4e5f-96b0-4a125d9beec4",
                     "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeBit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc0e5d0b-b4c2-4ae0-85e6-962159925a93",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -295,6 +412,7 @@
                     "action": "BackToMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
+>>>>>>>> Stashed changes:Assets/[Scripts]/[InputSystem]/PlayerControls.inputactions
                 }
             ]
         }
