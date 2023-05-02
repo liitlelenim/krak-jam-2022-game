@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Hacking.Mechanics
 {
-    public class DebugTestHackingMechanic : HackingMechanic
+    
+    public class GravityHacking : HackingMechanic
     {
         public override void Initialize()
         {
@@ -11,12 +13,12 @@ namespace Hacking.Mechanics
 
         public override void OnActivate()
         {
-            Debug.Log("ACTIVATE");
+            Physics2D.gravity = new Vector2(0, 9.81f);
         }
 
         public override void OnDeactivate()
         {
-            Debug.Log("DEACTIVATE");
+            Physics2D.gravity = new Vector2(0, -9.81f);
         }
     }
 }
