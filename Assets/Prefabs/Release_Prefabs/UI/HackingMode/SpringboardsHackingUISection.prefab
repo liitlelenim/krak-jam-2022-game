@@ -162,9 +162,9 @@ GameObject:
   - component: {fileID: 7985628180664931451}
   - component: {fileID: 7985628180664931450}
   - component: {fileID: 649388448940688930}
-  - component: {fileID: 4622962032637681784}
+  - component: {fileID: 3407032029564716085}
   m_Layer: 5
-  m_Name: Bit (1)
+  m_Name: Bit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,13 +240,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 0
-  bitMechanic: {fileID: 4622962032637681784}
+  bitMechanic: {fileID: 3407032029564716085}
   sprites:
   - {fileID: -6562478848240506237, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
   - {fileID: 3213234812733149288, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
   - {fileID: -5141993007292300003, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
   - {fileID: -3816365220285141303, guid: 766a4b558d3e8534e847552f042dc758, type: 3}
---- !u!114 &4622962032637681784
+--- !u!114 &3407032029564716085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7985628180664931452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46dd7d9ddaa950148a3a88c54e5629e9, type: 3}
+  m_Script: {fileID: 11500000, guid: bddf5ac56b2e3ac459c2a030d6ed6f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7985628180693645434
