@@ -164,7 +164,11 @@ GameObject:
   - component: {fileID: 649388448940688930}
   - component: {fileID: 8623193382616331514}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Bit (1)
+=======
+  m_Name: Bit
+>>>>>>> hacking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

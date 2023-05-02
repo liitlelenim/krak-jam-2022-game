@@ -3,6 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+  tags: []
+=======
+>>>>>>> hacking
   tags:
   - Rocket
   - Bit
@@ -15,6 +21,11 @@ TagManager:
   - BluePlatform
   - GreenPlatform
   - Cartridge
+<<<<<<< HEAD
+=======
+  - Springboard
+>>>>>>> Stashed changes
+>>>>>>> hacking
   layers:
   - Default
   - TransparentFX

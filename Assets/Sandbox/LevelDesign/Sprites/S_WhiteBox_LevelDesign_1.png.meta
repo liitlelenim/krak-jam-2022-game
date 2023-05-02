@@ -46,7 +46,15 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:Assets/Sandbox/LevelDesign/Sprites/S_WhiteBox_LevelDesign_1.png.meta
   spritePixelsToUnits: 8
+=======
+<<<<<<< Updated upstream:Assets/Sprites/Placeholders/PlayerPlaceholderSprite.png.meta
+  spritePixelsToUnits: 16
+=======
+  spritePixelsToUnits: 8
+>>>>>>> Stashed changes:Assets/Sandbox/LevelDesign/Sprites/S_WhiteBox_LevelDesign_5_Brown.png.meta
+>>>>>>> hacking:Assets/Sprites/Placeholders/PlayerPlaceholderSprite.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
