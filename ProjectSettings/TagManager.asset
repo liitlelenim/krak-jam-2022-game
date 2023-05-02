@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - Rocket
+  - Bit
+  - YellowPos1
+  - YellowPos2
+  - YellowPlatform
+  - BrownPos1
+  - BrownPos2
+  - BrownPlatform
+  - BluePlatform
+  - GreenPlatform
+  - Cartridge
+  - Springboard
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
