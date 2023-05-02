@@ -72,33 +72,18 @@
       "source": "builtin",
       "dependencies": {}
     },
-<<<<<<< HEAD
-    "com.unity.2d.tilemap.extras": {
-      "version": "file:C:/Users/gracjan.witos/Downloads/2d-extras-2020.3_2/2d-extras-2020.3/2d-extras-2020.3",
-      "depth": 0,
-      "source": "local",
-=======
-<<<<<<< Updated upstream
-=======
     "com.unity.2d.tilemap.extras": {
       "version": "1.8.4-preview",
       "depth": 0,
       "source": "registry",
->>>>>>> hacking
       "dependencies": {
         "com.unity.modules.tilemap": "1.0.0",
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-<<<<<<< HEAD
-      }
-    },
-=======
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> Stashed changes
->>>>>>> hacking
     "com.unity.collab-proxy": {
       "version": "1.15.4",
       "depth": 0,
